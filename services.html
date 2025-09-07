@@ -1,82 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - Servora</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>DigiChefs - Digital First Creative Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      color: #F9F9F9; /* White text for dark theme */
+    }
+    header {
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .logo {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      letter-spacing: -2px;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 30vh;
+      background: url('bg-city.jpg') center/cover no-repeat;
+      padding: 50px 30px 50px 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+        display: flex;
+  flex-direction: column;   /* stack title & desc */
+  justify-content: center;  /* center vertically (if height set) */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center text inside */
+  min-height: 30vh;  
+    }
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+      color: #F9F9F9; /* White */
+    }
+    .hero-title .creative {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.3rem;
+      color: #F9F9F9; /* White */
+      margin-bottom: 25px;
+      margin-top: 10px;
+    }
+
+  </style>
 </head>
 <body>
+  
   <!--Navbar!-->
-  <div id="navbar-container"></div>
+<div id="navbar-container"></div>
 
-  <main>
-    <section class="page-header">
-      <h1>Our Services</h1>
-      <p>Custom digital solutions tailored to your industry and business needs.</p>
-    </section>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+    <div class="col-lg-8 mt-2">
+      <div class="hero-title">
+        <span class="creative">Our Works</span>
+      </div>
+      <div class="hero-desc">
+        A full suite digital marketing agency <br>that help you to reach to your target audiance and enhance you bussiness
+      </div>
+      </div>
+  </section>
 
-    <section id="clinic" class="service-detail">
-      <h2>Run a Clinic?</h2>
-      <p>We help clinics modernize with appointment management, digital patient records, billing, and telemedicine solutions.</p>
-      <ul>
-        <li>Appointment scheduling & reminders</li>
-        <li>Electronic Health Records (EHR)</li>
-        <li>Billing & invoicing automation</li>
-        <li>Teleconsultation platform</li>
-      </ul>
-    </section>
-
-    <section id="logistics" class="service-detail">
-      <h2>In Logistics?</h2>
-      <p>Optimize your fleet and delivery operations with real-time tracking, route optimization, and dashboard analytics.</p>
-      <ul>
-        <li>Fleet tracking & GPS integration</li>
-        <li>Route planning & optimization</li>
-        <li>Delivery status dashboards</li>
-        <li>Driver management tools</li>
-      </ul>
-    </section>
-
-    <section id="store" class="service-detail">
-      <h2>Own a Store or Brand?</h2>
-      <p>Boost your retail business with POS systems, inventory management, and Shopify automation.</p>
-      <ul>
-        <li>Point of Sale (POS) integration</li>
-        <li>Inventory tracking & alerts</li>
-        <li>Shopify store automation</li>
-        <li>Sales analytics & reporting</li>
-      </ul>
-    </section>
-
-    <section id="education" class="service-detail">
-      <h2>In Education?</h2>
-      <p>Engage students and staff with custom learning management systems, attendance tracking, and communication tools.</p>
-      <ul>
-        <li>Learning Management System (LMS)</li>
-        <li>Attendance & performance tracking</li>
-        <li>Parent-teacher communication portals</li>
-        <li>Online exam & quiz modules</li>
-      </ul>
-    </section>
-
-    <section id="food" class="service-detail">
-      <h2>In Food & Beverage?</h2>
-      <p>Streamline your kitchen and delivery with order management, inventory, and customer feedback systems.</p>
-      <ul>
-        <li>Order & delivery management</li>
-        <li>Inventory & supplier management</li>
-        <li>Customer feedback & loyalty programs</li>
-        <li>Menu customization & pricing tools</li>
-      </ul>
-    </section>
-
-    <section class="contact-cta">
-      <h2>Ready to transform your business?</h2>
-      <a href="contact.html" class="btn">Contact Us</a>
-    </section>
-  </main>
-
+    <!--Footer!-->
 <div id="footer-container"></div>
 <script>
 
@@ -94,5 +113,6 @@
     })
     .catch(error => console.error('Error loading footer:', error));
 </script>
+
 </body>
 </html>

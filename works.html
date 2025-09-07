@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DigiChefs - Digital First Creative Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      color: #F9F9F9; /* White text for dark theme */
+    }
+    header {
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .logo {
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      letter-spacing: -2px;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 30vh;
+      background: url('bg-city.jpg') center/cover no-repeat;
+      padding: 50px 30px 50px 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+        display: flex;
+  flex-direction: column;   /* stack title & desc */
+  justify-content: center;  /* center vertically (if height set) */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center text inside */
+  min-height: 30vh;  
+    }
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+      color: #F9F9F9; /* White */
+    }
+    .hero-title .creative {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.3rem;
+      color: #F9F9F9; /* White */
+      margin-bottom: 25px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <!--Navbar!-->
+<div id="navbar-container"></div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+    <div class="col-lg-8 mt-2">
+      <div class="hero-title">
+        <span class="creative">Our Works</span>
+      </div>
+      <div class="hero-desc">
+        A full suite digital marketing agency <br>that help you to reach to your target audiance and enhance you bussiness
+      </div>
+      </div>
+  </section>
+
+<div style="
+  max-width:100%; 
+  margin:0px auto; 
+  padding:30px; 
+   
+  background:#F5F5F7;
+  color:#000000; 
+  border-radius:0px; 
+  box-shadow:0 4px 14px rgba(0,0,0,0.3); 
+  font-family:Arial, sans-serif; 
+  text-align:center;
+">
+  <h2 style="font-size:2rem; font-weight:700; margin-bottom:16px; color:#FF6B00;">
+    Trusted by Businesses Across Industries
+  </h2>
+  <p style="font-size:1.1rem; line-height:1.7; margin-bottom:0; color:#000000;">
+    At <span style="color:#FF6B00; font-weight:600;">17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
+    We focus on creating innovative solutions that help our clients grow <span style="color:#FF6B00; font-weight:600;">faster</span> and <span style="color:#FF6B00; font-weight:600;">smarter</span>.
+  </p>
+</div>
+
+
+  <!--Our Works!-->
+  <!--background:linear-gradient(135deg, #0A0A0A, #1C3C72);-->
+<section style="background:#F5F5F7;padding:20px 0 30px 0;text-align:center; width: 1351px; margin:0 0px 0 auto;">
+<!-- left -->
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap;">
+
+  <!-- Left side card -->
+<div style="flex:1; min-width:620px; max-width:400px;">
+  <div style="
+    background:#ffffff; 
+    padding:16px; 
+    border-radius:0px; 
+    text-align:center; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
+    transition:transform 0.3s ease;
+  " 
+  onmouseover="this.style.transform='scale(1.03)'" 
+  onmouseout="this.style.transform='scale(1)'">
+
+    <!-- Image -->
+    <img src="assets/images/default-impact-stories.jpeg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+
+    <!-- Full-width Button -->
+    <a href="#" style="
+      display:block; 
+      width:96%; 
+      padding:12px; 
+      border:2px solid #9B51E0; 
+      color:#9B51E0; 
+      font-size:14px; 
+      font-weight:600; 
+      border-radius:6px; 
+      text-decoration:none; 
+      transition:all 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
+    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
+      Visit Website
+    </a>
+  </div>
+</div>
+
+
+  <!-- Right side content -->
+  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
+
+    <!-- Logistics tag -->
+    <span style="
+      display: inline-block;
+      background: rgba(155, 81, 224, 0.1); 
+      color: #9B51E0; 
+      font-weight: 600; 
+      font-size: 14px; 
+      padding: 6px 14px; 
+      border-radius: 20px; 
+      margin-bottom:12px;
+    ">
+      Logistics
+    </span>
+
+    <!-- Company name header -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
+      Venture Catalysts
+    </h2>
+
+    <!-- Content -->
+    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
+      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+    </p>
+
+    <!-- Case study link -->
+
+    <!-- Review Card -->
+    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        
+        <!-- Image + Name -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+          <div>
+            <div style="font-weight:600; font-size:1rem; color:#222;">Rahul Sharma</div>
+            <div style="font-size:0.9rem; color:#666;">Founder, Venture Catalysts</div>
+          </div>
+        </div>
+
+        <!-- Rating Stars -->
+        <div style="color:#f5b50a; font-size:1rem;">
+          ★★★★☆
+        </div>
+      </div>
+
+      <!-- Review -->
+      <p style="font-size:0.95rem; color:#444; margin:0;">
+        "Great experience working with 17DOT, helped us scale with quality leads."
+      </p>
+    </div>
+  </div>
+</div>
+<!-- left -->
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top: 30px;">
+
+  <!-- Left side card -->
+<div style="flex:1; min-width:620px; max-width:400px;">
+  <div style="
+    background:#ffffff; 
+    padding:16px; 
+    border-radius:0px; 
+    text-align:center; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
+    transition:transform 0.3s ease;
+  " 
+  onmouseover="this.style.transform='scale(1.03)'" 
+  onmouseout="this.style.transform='scale(1)'">
+
+    <!-- Image -->
+    <img src="assets/images/default-impact-stories.jpeg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+
+    <!-- Full-width Button -->
+    <a href="#" style="
+      display:block; 
+      width:96%; 
+      padding:12px; 
+      border:2px solid #9B51E0; 
+      color:#9B51E0; 
+      font-size:14px; 
+      font-weight:600; 
+      border-radius:6px; 
+      text-decoration:none; 
+      transition:all 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
+    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
+      Visit Website
+    </a>
+  </div>
+</div>
+
+
+  <!-- Right side content -->
+  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
+
+    <!-- Logistics tag -->
+    <span style="
+      display: inline-block;
+      background: rgba(155, 81, 224, 0.1); 
+      color: #9B51E0; 
+      font-weight: 600; 
+      font-size: 14px; 
+      padding: 6px 14px; 
+      border-radius: 20px; 
+      margin-bottom:12px;
+    ">
+      Logistics
+    </span>
+
+    <!-- Company name header -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
+      Venture Catalysts
+    </h2>
+
+    <!-- Content -->
+    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
+      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+    </p>
+
+    <!-- Case study link -->
+
+    <!-- Review Card -->
+    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        
+        <!-- Image + Name -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+          <div>
+            <div style="font-weight:600; font-size:1rem; color:#222;">Rahul Sharma</div>
+            <div style="font-size:0.9rem; color:#666;">Founder, Venture Catalysts</div>
+          </div>
+        </div>
+
+        <!-- Rating Stars -->
+        <div style="color:#f5b50a; font-size:1rem;">
+          ★★★★☆
+        </div>
+      </div>
+
+      <!-- Review -->
+      <p style="font-size:0.95rem; color:#444; margin:0;">
+        "Great experience working with 17DOT, helped us scale with quality leads."
+      </p>
+    </div>
+  </div>
+</div>
+<!-- left -->
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top: 30px;">
+
+  <!-- Left side card -->
+<div style="flex:1; min-width:620px; max-width:400px; ">
+  <div style="
+    background:#ffffff; 
+    padding:16px; 
+    border-radius:0px; 
+    text-align:center; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
+    transition:transform 0.3s ease;
+  " 
+  onmouseover="this.style.transform='scale(1.03)'" 
+  onmouseout="this.style.transform='scale(1)'">
+
+    <!-- Image -->
+    <img src="assets/images/default-impact-stories.jpeg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+
+    <!-- Full-width Button -->
+    <a href="#" style="
+      display:block; 
+      width:96%; 
+      padding:12px; 
+      border:2px solid #9B51E0; 
+      color:#9B51E0; 
+      font-size:14px; 
+      font-weight:600; 
+      border-radius:6px; 
+      text-decoration:none; 
+      transition:all 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
+    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
+      Visit Website
+    </a>
+  </div>
+</div>
+
+
+  <!-- Right side content -->
+  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
+
+    <!-- Logistics tag -->
+    <span style="
+      display: inline-block;
+      background: rgba(155, 81, 224, 0.1); 
+      color: #9B51E0; 
+      font-weight: 600; 
+      font-size: 14px; 
+      padding: 6px 14px; 
+      border-radius: 20px; 
+      margin-bottom:12px;
+    ">
+      Logistics
+    </span>
+
+    <!-- Company name header -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
+      Venture Catalysts
+    </h2>
+
+    <!-- Content -->
+    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
+      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+    </p>
+
+    <!-- Case study link -->
+
+    <!-- Review Card -->
+    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        
+        <!-- Image + Name -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+          <div>
+            <div style="font-weight:600; font-size:1rem; color:#222;">Rahul Sharma</div>
+            <div style="font-size:0.9rem; color:#666;">Founder, Venture Catalysts</div>
+          </div>
+        </div>
+
+        <!-- Rating Stars -->
+        <div style="color:#f5b50a; font-size:1rem;">
+          ★★★★☆
+        </div>
+      </div>
+
+      <!-- Review -->
+      <p style="font-size:0.95rem; color:#444; margin:0;">
+        "Great experience working with 17DOT, helped us scale with quality leads."
+      </p>
+    </div>
+  </div>
+</div>
+<!-- right -->
+<!-- <div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; flex-direction:row-reverse;">
+  <div style="flex:1; min-width:620px; max-width:400px; margin-top: 40px;">
+    <div style="
+      background:#ffffff; 
+      padding:16px; 
+      border-radius:0px; 
+      text-align:center; 
+      box-shadow:0 2px 6px rgba(0,0,0,0.08); 
+      transition:transform 0.3s ease;
+    " 
+    onmouseover="this.style.transform='scale(1.03)'" 
+    onmouseout="this.style.transform='scale(1)'">
+
+      
+      <img src="assets/images/default-impact-stories.jpeg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+
+      
+      <a href="#" style="
+        display:block; 
+        width:96%; 
+        padding:12px; 
+        border:2px solid #9B51E0; 
+        color:#9B51E0; 
+        font-size:14px; 
+        font-weight:600; 
+        border-radius:6px; 
+        text-decoration:none; 
+        transition:all 0.3s ease;
+      " 
+      onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
+      onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
+        Visit Website
+      </a>
+    </div>
+  </div>
+
+  <div style="flex:2; margin-top:80px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:right;">
+
+    <span style="
+      display: inline-block;
+      background: rgba(155, 81, 224, 0.1); 
+      color: #9B51E0; 
+      font-weight: 600; 
+      font-size: 14px; 
+      padding: 6px 14px; 
+      border-radius: 20px; 
+      margin-bottom:12px;
+    ">
+      Logistics
+    </span>
+
+    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
+      Venture Catalysts
+    </h2>
+
+
+    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
+      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+    </p>
+
+    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        
+
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+          <div>
+            <div style="font-weight:600; font-size:1rem; color:#222;">Rahul Sharma</div>
+            <div style="font-size:0.9rem; color:#666;">Founder, Venture Catalysts</div>
+          </div>
+        </div>
+
+        <div style="color:#f5b50a; font-size:1rem;">
+          ★★★★☆
+        </div>
+      </div>
+
+      
+      <p style="font-size:0.95rem; color:#444; margin:0;">
+        "Great experience working with 17DOT, helped us scale with quality leads."
+      </p>
+    </div>
+  </div>
+</div> -->
+
+</section>
+
+
+  <!--Footer!-->
+<div id="footer-container"></div>
+<script>
+
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
+
+</body>
+</html>
