@@ -1,0 +1,149 @@
+<!-- navbar.html -->
+<header class="navbar dark-navbar">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <div class="logo">17 DOT</div>
+
+  <nav class="nav-links">
+    <a href="/17dot/about.html">Company</a>
+    <a href="/17dot/services.html">Services</a>
+    <a href="/17dot/Works.html">Our Work</a>
+    <a href="/17dot/contact.html">Contact Us</a>
+  </nav>
+
+  <div class="header-right">
+<div class="header-social">
+  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+</header>
+
+<style>
+    
+    .header-social a {
+  color: #F9F9F9; /* White */
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+.header-social a:hover {
+  color: #1C3C72; /* Orange on hover */
+}
+
+/* 🌙 Dark Navbar */
+.dark-navbar {
+  background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+/* Logo Gradient */
+.dark-navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FF6B00, #F4C542);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -2px;
+  cursor: pointer;
+}
+
+/* Nav Links */
+.nav-links a {
+  color: #F9F9F9;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  transition: 0.4s;
+}
+.nav-links a:hover {
+  background: linear-gradient(90deg, #FF6B00, #F4C542);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hiring Badge */
+.header-hiring {
+  font-weight: bold;
+  color: #fff;
+  background: #1C3C72;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* 📢 Header Right (social + hiring + hamburger) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header-social img {
+  height: 18px;
+  filter: brightness(0) invert(1); /* makes icons white */
+  transition: 0.3s;
+}
+.header-social img:hover {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(87%) hue-rotate(360deg) saturate(600%); /* Orange tint */
+}
+
+/* Hiring Badge */
+.header-hiring {
+  font-weight: bold;
+  color: #111;
+  background: #fffbe5;
+  border-radius: 5px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-hiring .dot {
+  width: 8px;
+  height: 8px;
+  background: #29d918;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* 🍔 Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  flex-direction: column;
+  display: none;
+  gap: 6px;
+}
+.hamburger .bar {
+  width: 28px;
+  height: 4px;
+  background: #FF6B00; /* Orange bars */
+  border-radius: 2px;
+}
+
+/* 📱 Responsive */
+@media (max-width:960px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+</style>

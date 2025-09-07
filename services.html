@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Servora</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!--Navbar!-->
+  <div id="navbar-container"></div>
+
+  <main>
+    <section class="page-header">
+      <h1>Our Services</h1>
+      <p>Custom digital solutions tailored to your industry and business needs.</p>
+    </section>
+
+    <section id="clinic" class="service-detail">
+      <h2>Run a Clinic?</h2>
+      <p>We help clinics modernize with appointment management, digital patient records, billing, and telemedicine solutions.</p>
+      <ul>
+        <li>Appointment scheduling & reminders</li>
+        <li>Electronic Health Records (EHR)</li>
+        <li>Billing & invoicing automation</li>
+        <li>Teleconsultation platform</li>
+      </ul>
+    </section>
+
+    <section id="logistics" class="service-detail">
+      <h2>In Logistics?</h2>
+      <p>Optimize your fleet and delivery operations with real-time tracking, route optimization, and dashboard analytics.</p>
+      <ul>
+        <li>Fleet tracking & GPS integration</li>
+        <li>Route planning & optimization</li>
+        <li>Delivery status dashboards</li>
+        <li>Driver management tools</li>
+      </ul>
+    </section>
+
+    <section id="store" class="service-detail">
+      <h2>Own a Store or Brand?</h2>
+      <p>Boost your retail business with POS systems, inventory management, and Shopify automation.</p>
+      <ul>
+        <li>Point of Sale (POS) integration</li>
+        <li>Inventory tracking & alerts</li>
+        <li>Shopify store automation</li>
+        <li>Sales analytics & reporting</li>
+      </ul>
+    </section>
+
+    <section id="education" class="service-detail">
+      <h2>In Education?</h2>
+      <p>Engage students and staff with custom learning management systems, attendance tracking, and communication tools.</p>
+      <ul>
+        <li>Learning Management System (LMS)</li>
+        <li>Attendance & performance tracking</li>
+        <li>Parent-teacher communication portals</li>
+        <li>Online exam & quiz modules</li>
+      </ul>
+    </section>
+
+    <section id="food" class="service-detail">
+      <h2>In Food & Beverage?</h2>
+      <p>Streamline your kitchen and delivery with order management, inventory, and customer feedback systems.</p>
+      <ul>
+        <li>Order & delivery management</li>
+        <li>Inventory & supplier management</li>
+        <li>Customer feedback & loyalty programs</li>
+        <li>Menu customization & pricing tools</li>
+      </ul>
+    </section>
+
+    <section class="contact-cta">
+      <h2>Ready to transform your business?</h2>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+  </main>
+
+<div id="footer-container"></div>
+<script>
+
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>
+</body>
+</html>
