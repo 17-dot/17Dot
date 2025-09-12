@@ -418,7 +418,7 @@
 
   <div style="background:#fff; padding: 29px 40px; overflow: hidden; display:flex; align-items:center; height: 20vh;">
   <div style="border-left: 4px solid #1e90ff; padding-left: 10px; color: #444; font-weight: 600; white-space: nowrap; font-family: Arial, sans-serif; font-size: 1rem; flex-shrink: 0;">
-    Our Clients From Different Sector : 
+    Our Clients From Different Sector :
   </div>
   <div style="flex-grow: 1; overflow: hidden; margin-left: 40px; white-space: nowrap;">
     <div id="marquee" style="display: flex; gap: 60px; animation: marquee 40s linear infinite;">
@@ -439,6 +439,31 @@
     @keyframes marquee {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+    @media (max-width: 768px) {
+      div[style*="background:#fff; padding: 29px 40px; overflow: hidden; display:flex; align-items:center; height: 20vh;"] {
+        padding: 20px 20px;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+      }
+      div[style*="border-left: 4px solid #1e90ff; padding-left: 10px; color: #444; font-weight: 600; white-space: nowrap; font-family: Arial, sans-serif; font-size: 1rem; flex-shrink: 0;"] {
+        border-left: none;
+        border-top: 4px solid #1e90ff;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+      }
+      div[style*="flex-grow: 1; overflow: hidden; margin-left: 40px; white-space: nowrap;"] {
+        margin-left: 0;
+      }
+      #marquee img {
+        height: 80px !important;
+        width: 120px !important;
+      }
+      #marquee {
+        gap: 30px !important;
+      }
     }
   </style>
 </div>

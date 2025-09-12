@@ -142,6 +142,69 @@ footer {
   }
 }
 
+/* Additional responsive styles for mobile friendliness */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 20px;
+  }
+  .hero {
+    padding: 40px 20px 30px 20px;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+  }
+  .service-card {
+    width: 100% !important;
+    max-width: 400px;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+  .service-card {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+  .header-social {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-desc {
+    font-size: 0.9rem;
+  }
+  .service-card {
+    padding: 15px !important;
+  }
+  .mobile-menu a {
+    font-size: 1.2rem !important;
+    padding: 10px 20px !important;
+  }
+}
+
 
 
 /**/
