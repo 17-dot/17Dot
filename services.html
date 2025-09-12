@@ -3,76 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <title>DigiChefs - Digital First Creative Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#FF6B00">
   <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9; /* White text for dark theme */
+      color: #F9F9F9;
+      overflow-x: hidden;
     }
+    
+    /* Header Styles */
     header {
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      padding: 12px 40px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1000;
     }
+    
     .logo {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
     }
+    
+    /* Hero Section */
     .hero {
       position: relative;
       width: 100%;
-      min-height: 30vh;
-      background: url('bg-city.jpg') center/cover no-repeat;
-      padding: 50px 30px 50px 30px;
+      min-height: 40vh;
+      background: url('assets/images/banner.jpg') center/cover no-repeat;
+      padding: 30px 20px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
     }
+    
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
+      background: rgba(0,0,0,0.7);
       pointer-events: none;
     }
+    
     .hero-content {
       position: relative;
       z-index: 2;
-        display: flex;
-  flex-direction: column;   /* stack title & desc */
-  justify-content: center;  /* center vertically (if height set) */
-  align-items: center;      /* center horizontally */
-  text-align: center;       /* center text inside */
-  min-height: 30vh;  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 40vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
+    
     .hero-title {
-      font-size: 3.8rem;
+      font-size: 2.5rem;
       font-weight: 900;
-      margin-bottom: 4px;
-      color: #F9F9F9; /* White */
+      margin-bottom: 15px;
+      color: #F9F9F9;
+      line-height: 1.2;
     }
+    
     .hero-title .creative {
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    
     .hero-desc {
-      font-size: 1.3rem;
-      color: #F9F9F9; /* White */
+      font-size: 1.1rem;
+      color: #F9F9F9;
       margin-bottom: 25px;
       margin-top: 10px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      header {
+        padding: 12px 40px;
+      }
+      
+      .logo {
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+      }
+      
+      .hero {
+        min-height: 50vh;
+        padding: 50px 30px;
+      }
+      
+      .hero-content {
+        min-height: 50vh;
+      }
+      
+      .hero-title {
+        font-size: 3.8rem;
+        margin-bottom: 4px;
+      }
+      
+      .hero-desc {
+        font-size: 1.3rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero {
+        min-height: 60vh;
+        padding: 60px 40px;
+      }
+      
+      .hero-content {
+        min-height: 60vh;
+      }
+      
+      .hero-title {
+        font-size: 4.2rem;
+      }
+      
+      .hero-desc {
+        font-size: 1.4rem;
+      }
+    }
+    
+    /* Mobile-specific optimizations */
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      
+      .hero-desc {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+      
+      .hero {
+        min-height: 35vh;
+        padding: 20px 15px;
+      }
+      
+      .hero-content {
+        min-height: 35vh;
+        padding: 0 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 10px 15px;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+      }
+      
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      
+      .hero-desc {
+        font-size: 0.9rem;
+      }
+      
+      .hero {
+        min-height: 30vh;
+        padding: 15px 10px;
+      }
+      
+      .hero-content {
+        min-height: 30vh;
+        padding: 0 5px;
+      }
+    }
+    
+    /* Landscape orientation for mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .hero {
+        min-height: 60vh;
+      }
+      
+      .hero-content {
+        min-height: 60vh;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
+      
+      .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+    }
+    
+    /* High DPI displays */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .hero {
+        background-image: url('assets/images/banner.jpg');
+      }
+    }
+    
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      }
     }
 
   </style>
