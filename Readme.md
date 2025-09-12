@@ -409,6 +409,11 @@
         <!-- If you use video, replace <img> with <video> -->
       </div>
     </div>
+    <!-- <div class="social-vertical">
+      <span>social links</span>
+      <a href="#"><img src="instagram.png" alt="IG" width="22"></a>
+      <a href="#"><img src="linkedin.png" alt="LI" width="22"></a>
+    </div> -->
   </section>
   <div class="chat-popup">
     <img src="chat-photo.png" class="chat-img" alt="Chat">
@@ -474,13 +479,16 @@
       <div style="position:relative; width:330px; height:200px; border-radius:22px; overflow:hidden; margin:0 auto; box-shadow:0 4px 22px rgba(255, 107, 0, 0.2);">
         <!-- <video src="./assets/images/17dott.mp4" alt="Showreel Preview" style="width:100%;height:100%;object-fit:cover;"></video> -->
                     <video src="./assets/images/17dott.mp4"style="width:100%;height:100%;object-fit:cover;"  autoplay muted loop playsinline></video>
+        <!-- <button style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border:none;border-radius:50%;width:54px;height:54px;font-size:2rem;color:#FF6B00;cursor:pointer;">
+          ▶
+        </button> -->
       </div>
     </div>
   </div>
 </section>
 
 <!--Our Services -->
-<section style="padding: 1px 20px 40px 20px; background: #fffbe5; color: #1C3C72; width: 100%; box-sizing: border-box;">
+<section style="padding: 1px 20px 40px 20px; background: #fffbe5; color: #1C3C72; width: 1351px; box-sizing: border-box;">
   <h2 style="font-weight: 700; font-size: 2.4rem; margin-bottom: 31px; text-align: center;">Our Services</h2>
   <div style="position: relative; max-width: 1300px; margin: 0 auto;">
     <button id="prevBtn"
@@ -642,6 +650,22 @@
   </div>
 </section>
 
+<!-- Intro & Description Section -->
+<!-- <section style="background:#fff; text-align:center; padding:35px 12px 25px;">
+  <h2 style="color:#F54D23; font-size:2.1rem; font-weight:700; margin-bottom:10px;">
+    We’re An ROI Driven Digital Marketing Agency In Mumbai &lt;3
+  </h2>
+  <p style="max-width:820px; margin:20px auto 10px; font-size:1.16rem; color:#444;">
+    We’re a boutique digital marketing company & agency in Mumbai offering integrated digital marketing services.
+  </p>
+  <p style="max-width:820px; margin:10px auto; font-size:1.1rem; color:#444;">
+    We offer end to end digital marketing services, right from content production for digital & offline, technology & UI UX design services, branding & marketing execution using activities like SEO, Social Media & Influencer Management, Ads on Google & Social Channels, Programmatic & Affiliate Marketing, Email Marketing & Marketing Automation and much more.
+  </p>
+  <p style="max-width:820px; margin:10px auto; font-size:1.04rem; color:#444;">
+    We’ve worked with 400+ startups & established brands since 2015, and the rich experience from the hundreds of social media campaigns, thousands of keywords ranked on the first page of Google, plentiful of motion & static content produced, millions of sessions recorded, crores of media money spent & revenues generated for them – have strengthened us as a new age digital marketing agency.
+  </p>
+</section> -->
+
 <!-- Core Offerings Section -->
 <section style="background:#fafafa; padding:25px 0;">
   <div style="max-width:1200px; margin:0 auto;">
@@ -682,11 +706,102 @@
   </div>
 </section>
 
+<!-- Services Icons Section -->
+<!-- <section style="background:#fff; text-align:center; padding:38px 0;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <h2 style="font-size:2rem; font-weight:700; background:linear-gradient(90deg,#F54D23 30%,#F7B533 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Our Services</h2>
+    <div style="color:#999; margin-bottom:45px; font-size:1.15rem;">End to End Digital Marketing Services Agency</div>
+    <div style="display:flex; gap:55px; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-bottom:32px;">
+      <div style="min-width:140px;">
+        <img src="icon-social-media.svg" alt="Social Media Marketing" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Social Media Marketing</div>
+      </div>
+      <div style="min-width:140px;">
+        <img src="icon-design.svg" alt="Design & Branding" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Design & Branding</div>
+      </div>
+      <div style="min-width:140px;">
+        <img src="icon-seo.svg" alt="Search Engine Optimization" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Search Engine Optimization</div>
+      </div>
+      <div style="min-width:140px;">
+        <img src="icon-paid-ads.svg" alt="Paid Advertising" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Paid Advertising using Google Ads, Social</div>
+      </div>
+      <div style="min-width:140px;">
+        <img src="icon-mobile.svg" alt="Mobile Marketing" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Mobile Marketing</div>
+      </div>
+      <div style="min-width:140px;">
+        <img src="icon-email.svg" alt="Email Marketing" style="height:52px;">
+        <div style="border-top:4px solid #F54D23; width:36px; margin:8px auto 16px;"></div>
+        <div style="color:#444; font-weight:600;">Email Marketing</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <span style="width:12px;height:12px;background:#ddd;border-radius:50%;display:inline-block;"></span>
+      <span style="width:12px;height:12px;background:#F54D23;border-radius:50%;display:inline-block;"></span>
+      <span style="width:12px;height:12px;background:#ddd;border-radius:50%;display:inline-block;"></span>
+    </div>
+  </div>
+</section> -->
+
 <!-- Scorecard CTA -->
 <section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%); padding:34px;text-align:center;">
   <h3 style="color:#fff;font-size:1.12rem;">Need help in choosing a digital agency? Here’s an unbiased scorecard you could use to narrow down on the agency that’s right for your needs.</h3>
   <button style="margin-top:18px;padding:10px 32px;background:none;border:2px solid #fff;border-radius:4px;color:#fff;font-weight:600;font-size:1.08rem;cursor:pointer;letter-spacing:2px;">Try Now</button>
 </section>
+
+<!-- Brands Who Trust Us -->
+<!-- <section style="background:#fff;padding:44px 0 20px 0;text-align:center;">
+  <h2 style="background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;font-size:2rem;font-weight:bold;margin-bottom:8px;">Brands Who Trust Us</h2>
+  <div style="color:#888;font-size:1.15rem;margin-bottom:36px;">Here’s who we've been serving value meals to since over 8 years</div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px;">
+    <img src="logo-jio.png" alt="Jio" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-bajaj.png" alt="Bajaj" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-tata-motors.png" alt="Tata Motors" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-tata-housing.png" alt="Tata Housing" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-hindustan.png" alt="Hindustan Platinum" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-rbl.png" alt="RBL Bank" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-eris.png" alt="Eris" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-lupin.png" alt="Lupin" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-jubilant.png" alt="Jubilant" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-justintime.png" alt="Just In Time" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-ram.png" alt="Ram Bandhu" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-pfchangs.png" alt="PF Changs" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+    <img src="logo-somaiya.png" alt="Somaiya" style="height:54px;background:#fff;padding:8px;border-radius:8px;">
+  </div>
+</section> -->
+
+<!-- Our Work -->
+<!-- <section style="background:#fffbe5;padding:44px 0 25px 0;text-align:center; width: 1351px; margin:0 auto;">
+  <h2 style="background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;font-size:2rem;font-weight:bold; margin-bottom:15px;">Our Work</h2>
+  <div style="color:#888;font-size:1.1rem;margin-bottom:20px;">Winning Recipes</div>
+  
+  <div style="display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap;">
+    <div style="flex:1; min-width:320px; max-width:520px;">
+      <img src="assets/images/default-impact-stories.jpeg" alt="Venture Catalysts" style="width:100%; height:auto; border-radius:12px; object-fit:cover;">
+    </div>
+    <div style="flex:1; min-width:320px; max-width:520px; color:#444; font-weight:500; font-size:1.22rem; text-align:left;">
+      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40% | Venture Catalysts
+      <a href="#" style="font-size:1rem; color:#666; text-decoration:none; border-bottom:2px solid #222; padding-bottom:2px; margin-top:8px; display:inline-block;">View Case Study</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap; margin-top:10px;">
+    <div style="flex:1; min-width:320px; max-width:520px; color:#444; font-weight:500; font-size:1.22rem; text-align:left;">
+      2X Organic Traffic Growth Using SEO for Phillips Machine Tools<br>
+      <a href="#" style="font-size:1rem; color:#666; text-decoration:none; border-bottom:2px solid #222; padding-bottom:2px; margin-top:8px; display:inline-block;">View Case Study</a>
+    </div>
+    <div style="flex:1; min-width:320px; max-width:520px;">
+      <img src="assets/images/default-impact-stories.jpeg" alt="Phillips Case" style="width:100%; height:auto; border-radius:12px; object-fit:cover;">
+    </div>
+  </div>
+</section> -->
 
 <section style="background: #F5F5F7; padding: 30px 0 30px 0; ;">
     <!-- <h2 style="margin-left: 610px;  background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;font-size:2rem;font-weight:bold; margin-bottom:25px;">Our Work</h2> -->
@@ -702,38 +817,38 @@
     <div style="display:flex; flex-direction:column; gap:34px;">
       <!-- Top marquee row: cards move left -->
       <div id="topMarqueeRow" style="overflow:hidden; width:100%; position:relative; height:370px;">
-        <div id="topMarqueeInner" style="display:flex; gap:34px; animation: marquee-left 12s linear infinite;">
+        <div id="topMarqueeInner" style="display:flex; gap:34px; animation: marquee-left 28s linear infinite;">
           <!-- ALL cards, UPDATED width/height and NO curve edges -->
-          <div style="width:60vw;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case1.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60vw;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case2.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60vw;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case3.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60vw;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case4.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <!-- Duplicate all for seamless marquee effect -->
-          <div style="width:60%;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case1.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60%;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case2.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60%;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case3.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
-          <div style="width:60%;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
+          <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case4.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
         </div>
       </div>
       <!-- Bottom marquee row: cards move right -->
       <div id="bottomMarqueeRow" style="overflow:hidden; width:100%; position:relative; height:350px;">
-        <div id="bottomMarqueeInner" style="display:flex; gap:34px; animation: marquee-right 12s linear infinite;">
+        <div id="bottomMarqueeInner" style="display:flex; gap:34px; animation: marquee-right 28s linear infinite;">
           <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
             <img src="./assets/images/case5.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
@@ -782,7 +897,7 @@
     #topMarqueeInner img, #bottomMarqueeInner img { height:100%; width:100%; object-fit:cover; border-radius:0; }
     @media (max-width:1200px) {
       #topMarqueeRow, #bottomMarqueeRow { height:200px;}
-      #topMarqueeInner>div, #bottomMarqueeInner>div { width:620px; height:320px; min-width:620px; }
+      #topMarqueeInner>div, #bottomMarqueeInner>div { min-width:240px; width:240px; height:200px;}
       #topMarqueeInner img, #bottomMarqueeInner img { height:100%; width:100%; }
     }
   </style>
@@ -869,6 +984,90 @@
 
   renderTestimonial(currentIndexs);
 </script>
+
+
+<!--Industry Wise Case Studies-->
+<!-- <section style="text-align:center; padding:40px 30px;">
+  <h2 style="font-size:2rem; font-weight:bold; background: linear-gradient(to right, #f04711, #f7b533); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom:24px;">Industry Wise Case Studies</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; max-width:1100px; margin:auto;">
+    <div style="max-width:100px;">
+      <img src="icon-automobile.svg" alt="Automobile" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Automobile</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-realestate.svg" alt="Real Estate" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Real Estate</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-beauty.svg" alt="Beauty" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Beauty</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-bfsi.svg" alt="BFSI" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>BFSI</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-socialwelfare.svg" alt="Social Welfare" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Social Welfare</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-education.svg" alt="Education" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Education</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-healthfitness.svg" alt="Health & Fitness" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Health & Fitness</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-foodnutrition.svg" alt="Food & Nutrition" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Food & Nutrition</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-lifestyle.svg" alt="Lifestyle & Entertainment" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Lifestyle & Entertainment</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-shipping.svg" alt="Shipping & Logistics" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Shipping & Logistics</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-consumer.svg" alt="Consumer Electronics" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Consumer Electronics</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-travel.svg" alt="Travel, F&B & Hospitality" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>Travel, F&B & Hospitality</div>
+    </div>
+    <div style="max-width:100px;">
+      <img src="icon-b2b.svg" alt="B2B SAAS / Consulting / Manufacturing" style="width:64px; height:64px; margin-bottom:12px; filter: brightness(0) saturate(100%) invert(25%) sepia(40%) saturate(428%) hue-rotate(4deg) brightness(95%) contrast(86%);">
+      <div>B2B SAAS / Consulting / Manufacturing</div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section style="display:flex;justify-content:space-between;align-items:center; padding:30px 60px; background:#f9f9fb;">
+  <div style="max-width:480px;">
+    <h2 style="color:#f04711; font-weight:bold; margin-bottom:14px;">Connect With Us!</h2>
+    <ul style="padding-left:20px; font-size:1rem; color:#444;">
+      <li>To keep up with the latest trends in digital</li>
+      <li>To see glimpses of our work</li>
+      <li>To see what’s up with our chefs</li>
+    </ul>
+    <div style="margin-top:18px; display:flex; gap:18px;">
+      <a href="#" style="background:#0077b5; color:#fff; text-decoration:none; padding:10px 24px; border-radius:4px; display:flex; align-items:center; gap:8px; font-weight:bold; font-size:0.95rem;">
+        <img src="linkedin.png" alt="LinkedIn" style="width:18px; height:18px;">
+        CONNECT WITH US!
+      </a>
+      <a href="#" style="background: linear-gradient(to right, #ff6a00, #ee0979); color:#fff; text-decoration:none; padding:10px 24px; border-radius:4px; display:flex; align-items:center; gap:8px; font-weight:bold; font-size:0.95rem;">
+        <img src="instagram.png" alt="Instagram" style="width:18px; height:18px;">
+        FOLLOW US NOW!
+      </a>
+    </div>
+  </div>
+  <div style="max-width:400px;">
+    <img src="connect-illustration.png" alt="Connect Illustration" style="max-width:100%; height:auto;">
+  </div>
+</section> -->
 
 <section style="display:flex;justify-content:space-between;align-items:center; padding:30px 40px; background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%); color: #F9F9F9;">
   <div style="max-width:480px;">
