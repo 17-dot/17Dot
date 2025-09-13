@@ -2,41 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DigiChefs - Digital First Creative Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>17dot.in - About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#FF6B00">
   <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9; /* White text for dark theme */
+      color: #F9F9F9;
+      overflow-x: hidden;
     }
+    
+    /* Header Styles */
     header {
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      padding: 12px 40px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1000;
     }
+    
     .logo {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
     }
+
     .hero {
       position: relative;
       width: 100%;
       min-height: 30vh;
       background: url('bg-city.jpg') center/cover no-repeat;
-      padding: 50px 30px 50px 30px;
+      padding: 50px 30px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
     .hero-overlay {
       position: absolute;
@@ -50,355 +68,973 @@
     .hero-content {
       position: relative;
       z-index: 2;
-        display: flex;
-  flex-direction: column;   /* stack title & desc */
-  justify-content: center;  /* center vertically (if height set) */
-  align-items: center;      /* center horizontally */
-  text-align: center;       /* center text inside */
-  min-height: 30vh;  
     }
-    .hero-title {
-      font-size: 3.8rem;
+    
+    /* About Us Section */
+    .about-us {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .about-title {
+      font-size: 2.5rem;
       font-weight: 900;
-      margin-bottom: 4px;
-      color: #F9F9F9; /* White */
+      color: #F9F9F9;
+      margin-bottom: 20px;
     }
-    .hero-title .creative {
+    
+    .about-title .highlight {
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .hero-desc {
-      font-size: 1.3rem;
-      color: #F9F9F9; /* White */
-      margin-bottom: 25px;
-      margin-top: 10px;
-    }
-
-  </style>
-</head>
-<body>
-  
-  <!--Navbar!-->
-<div id="navbar-container"></div>
-
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="col-lg-8 mt-2">
-        <div class="hero-title">
-          <span class="creative">Our 17 Services</span>
-        </div>
-        <div class="hero-desc">
-          We offer 17 comprehensive digital solutions to transform your business
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 17 Dots Roadmap Section -->
-  <section class="roadmap-section" style="padding: 80px 20px; background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 100%); overflow: hidden;">
-    <div class="container" style="max-width: 1140px; margin: 0 auto; position: relative; min-height: 2400px;">
-      <!-- The snake path with gradient and glow effect -->
-      <svg class="snake-path" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3));">
-        <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FF6B00" />
-            <stop offset="100%" stop-color="#F4C542" />
-          </linearGradient>
-          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <path id="snake" d="" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
-      </svg>
-      
-      <!-- Service items -->
-      <div class="services-container" style="position: relative; height: 100%;">
-        <!-- Service items will be added here -->
-      </div>
-    </div>
-  </section>
-  
-  <style>
-    /* Roadmap Styles */
-    .service-item {
-      position: absolute;
-      width: 38%;
-      padding: 25px;
-      background: rgba(28, 60, 114, 0.15);
-      border-radius: 16px;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.6s forwards;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .service-item {
-        width: 80%;
-        left: 10% !important;
-        padding: 15px;
-      }
-      .service-number {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
-      }
-      .service-title {
-        font-size: 1rem;
-      }
-      .service-desc {
-        font-size: 0.8rem;
-      }
-      .service-dot {
-        width: 20px;
-        height: 20px;
-      }
-      .roadmap-section {
-        padding: 40px 10px;
-      }
-      .hero {
-        padding: 30px 20px;
-        min-height: 25vh;
-      }
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      .hero-desc {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .service-item {
-        width: 90%;
-        left: 5% !important;
-        padding: 12px;
-      }
-      .service-title {
-        font-size: 0.9rem;
-      }
-      .service-desc {
-        font-size: 0.75rem;
-      }
-      .hero-title {
-        font-size: 2rem;
-      }
-      .hero-desc {
-        font-size: 0.9rem;
-      }
-      .roadmap-section {
-        padding: 30px 5px;
-      }
+    
+    .about-desc {
+      font-size: 1.2rem;
+      color: #F9F9F9;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
     }
     
-    .service-item:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(255, 107, 0, 0.2);
-      border-color: rgba(255, 107, 0, 0.3);
-    }
-
-    .service-dot {
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      background: linear-gradient(135deg, #FF6B00, #F4C542);
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.3), 0 0 25px rgba(255, 107, 0, 0.8);
-      z-index: 2;
-      transition: all 0.3s ease;
+    .about-values {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
     }
     
-    .service-item:hover .service-dot {
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.4), 0 0 30px rgba(255, 107, 0, 1);
+    .value-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .service-number {
-      position: absolute;
-      top: -15px;
-      left: 15px;
-      background: #FF6B00;
-      color: white;
-      width: 30px;
-      height: 30px;
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
-      font-size: 14px;
-      z-index: 3;
+      margin: 0 auto 20px;
     }
-
-    .service-title {
-      color: #F4C542;
-      font-size: 1.2rem;
+    
+    .value-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: #F9F9F9;
+    }
+    
+    .value-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #F9F9F9;
       margin-bottom: 10px;
-      font-weight: 600;
     }
-
-    .service-desc {
-      color: #e0e0e0;
-      font-size: 0.9rem;
+    
+    .value-desc {
+      font-size: 1rem;
+      color: #D1D1D1;
       line-height: 1.5;
-      margin: 5px 0 0 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      color: #0A0A0A;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    /* Team Section */
+    .team-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .team-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #F9F9F9;
+      margin-bottom: 20px;
+    }
+    
+    .team-title .highlight {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .team-desc {
+      font-size: 1.2rem;
+      color: #F9F9F9;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .team-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    
+    .team-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #F9F9F9;
+      margin: 0 auto 15px;
+    }
+    
+    .team-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #F9F9F9;
+      margin-bottom: 5px;
+    }
+    
+    .team-role {
+      font-size: 1rem;
+      color: #D1D1D1;
+      margin-bottom: 10px;
+    }
+    
+    .team-bio {
+      font-size: 0.9rem;
+      color: #D1D1D1;
+      line-height: 1.5;
+    }
+    
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .testimonials-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #F9F9F9;
+      margin-bottom: 20px;
+    }
+    
+    .testimonials-title .highlight {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .testimonials-desc {
+      font-size: 1.2rem;
+      color: #F9F9F9;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    
+    .testimonial-quote {
+      font-size: 1rem;
+      color: #D1D1D1;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    
+    .testimonial-author {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #F9F9F9;
+    }
+    
+    .testimonial-role {
+      font-size: 0.9rem;
+      color: #D1D1D1;
+    }
+    
+    /* Portfolio Section */
+    .portfolio-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .portfolio-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #F9F9F9;
+      margin-bottom: 20px;
+    }
+    
+    .portfolio-title .highlight {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .portfolio-desc {
+      font-size: 1.2rem;
+      color: #F9F9F9;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .portfolio-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    
+    .portfolio-image {
+      width: 100%;
+      height: 200px;
+      background: #F9F9F9;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .portfolio-title-card {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #F9F9F9;
+      margin-bottom: 10px;
+    }
+    
+    .portfolio-desc-card {
+      font-size: 1rem;
+      color: #D1D1D1;
+      line-height: 1.5;
+    }
+    
+    /* Process Section */
+    .process-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+    .process-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #F9F9F9;
+      margin-bottom: 20px;
+    }
+
+    .process-title .highlight {
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .process-desc {
+      font-size: 1.2rem;
+      color: #F9F9F9;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .timeline {
+      position: relative;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      width: 4px;
+      background-color: #FF6B00;
+    }
+
+    .timeline-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+    }
+
+    .step.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .step-content {
+      width: 50%;
+      padding: 0 2rem;
+      text-align: right;
+    }
+
+    .step.reverse .step-content {
+      text-align: left;
+    }
+
+    .step-circle {
+      width: 2rem;
+      height: 2rem;
+      background-color: #FF6B00;
+      border-radius: 50%;
+      margin: 40px ;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #F9F9F9;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      color: #D1D1D1;
+      line-height: 1.5;
+    }
+    
+    /* CTA Banner Section */
+    .cta-banner {
+      padding: 60px 20px;
+      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      text-align: center;
+    }
+    
+    .cta-banner-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #0A0A0A;
+      margin-bottom: 20px;
+    }
+    
+    .cta-banner-desc {
+      font-size: 1.2rem;
+      color: #0A0A0A;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    
+    .cta-banner-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #0A0A0A;
+      color: #F9F9F9;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .cta-banner-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      header {
+        padding: 12px 40px;
+      }
+      
+      .logo {
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+      }
+      
+      .about-us, .team-section, .testimonials-section, .portfolio-section, .process-section {
+        padding: 80px 30px;
+      }
+      
+      .about-title, .team-title, .testimonials-title, .portfolio-title, .process-title {
+        font-size: 3.8rem;
+      }
+      
+      .about-desc, .team-desc, .testimonials-desc, .portfolio-desc, .process-desc {
+        font-size: 1.3rem;
+      }
+      
+      .about-values, .team-grid, .testimonials-grid, .portfolio-grid, .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .cta-banner {
+        padding: 80px 30px;
       }
     }
     
-    /* Add a subtle pulse animation to the snake path */
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
-      50% { filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.5)); }
-      100% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
+    @media (min-width: 1024px) {
+      .about-us, .team-section, .testimonials-section, .portfolio-section, .process-section {
+        padding: 100px 40px;
+      }
+      
+      .about-title, .team-title, .testimonials-title, .portfolio-title, .process-title {
+        font-size: 4.2rem;
+      }
+      
+      .about-desc, .team-desc, .testimonials-desc, .portfolio-desc, .process-desc {
+        font-size: 1.4rem;
+      }
+      
+      .cta-banner {
+        padding: 100px 40px;
+      }
     }
     
-    .snake-path {
-      animation: pulse 4s infinite ease-in-out;
+    @media (max-width: 767px) {
+      .about-title, .team-title, .testimonials-title, .portfolio-title, .process-title {
+        font-size: 2rem;
+      }
+
+      .about-desc, .team-desc, .testimonials-desc, .portfolio-desc, .process-desc {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .about-us, .team-section, .testimonials-section, .portfolio-section, .process-section {
+        padding: 40px 15px;
+      }
+
+      .value-card, .team-card, .testimonial-card, .portfolio-card {
+        padding: 20px;
+      }
+
+      .timeline-steps {
+        gap: 2rem;
+      }
+
+      .timeline-line {
+        display: none;
+      }
+
+      .step, .step.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .step-content {
+        width: 100%;
+        padding: 0 1rem;
+        text-align: center;
+      }
+
+      .step-circle {
+        order: -1;
+        margin-bottom: 1rem;
+      }
+
+      .cta-banner {
+        padding: 40px 15px;
+      }
     }
-  </style>
+    
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      flex-direction: column;
+      padding: 1rem 0;
+      display: none;
+      z-index: 1001;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .hamburger {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      padding: 10px 15px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .about-title, .team-title, .testimonials-title, .portfolio-title, .process-title {
+      font-size: 1.8rem;
+    }
+
+    .about-desc, .team-desc, .testimonials-desc, .portfolio-desc, .process-desc {
+      font-size: 0.9rem;
+    }
+
+    .about-us, .team-section, .testimonials-section, .portfolio-section, .process-section {
+      padding: 30px 10px;
+    }
+
+    .cta-banner {
+      padding: 30px 10px;
+    }
+  }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      }
+    }
+     /* Numbers That Speak Section */
+  .stats-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
   
+  .stats-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #F9F9F9;
+    margin-bottom: 20px;
+  }
+  
+  .stats-title .highlight {
+    background: linear-gradient(90deg, #FF6B00, #F4C542);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .stats-desc {
+    font-size: 1.2rem;
+    color: #F9F9F9;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  }
+  
+  .stat-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(90deg, #FF6B00, #F4C542);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .stat-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: #F9F9F9;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F9F9F9;
+    margin-bottom: 10px;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: #D1D1D1;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .stats-section {
+      padding: 80px 30px;
+    }
+    
+    .stats-title {
+      font-size: 3.8rem;
+    }
+    
+    .stats-desc {
+      font-size: 1.3rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .stats-section {
+      padding: 100px 40px;
+    }
+    
+    .stats-title {
+      font-size: 4.2rem;
+    }
+    
+    .stats-desc {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .stats-title {
+      font-size: 2rem;
+    }
+    
+    .stats-desc {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+    
+    .stats-section {
+      padding: 40px 15px;
+    }
+    
+    .stat-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-title {
+      font-size: 1.8rem;
+    }
+    
+    .stats-desc {
+      font-size: 0.9rem;
+    }
+    
+    .stats-section {
+      padding: 30px 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div>
+        <h1 class="about-title">About <span class="highlight">17dot.in</span></h1>
+        <p class="about-desc">
+          We are a dynamic digital agency crafting innovative solutions that empower businesses to thrive online.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <p class="about-desc">
+      At 17dot.in, we’re a dynamic digital agency crafting innovative web solutions and digital strategies that empower businesses to thrive online. Based in India, our team blends creativity, technology, and strategy to deliver tailored experiences that connect brands with their audiences.
+    </p>
+    <div class="about-values">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
+        </div>
+        <h3 class="value-title">Innovation-Driven</h3>
+        <p class="value-desc">We push boundaries with cutting-edge web design, development, and digital marketing to keep your brand ahead of the curve.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
+        </div>
+        <h3 class="value-title">Client-Centric</h3>
+        <p class="value-desc">Your success is our mission. We tailor solutions to your unique goals, ensuring measurable impact and lasting partnerships.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14h-2v6H6v2h4v4h2v-4h4v-2h-4V6z"/></svg>
+        </div>
+        <h3 class="value-title">Results-Focused</h3>
+        <p class="value-desc">From SEO to social media, our strategies drive traffic, engagement, and conversions to elevate your business.</p>
+      </div>
+    </div>
+   <a href="https://wa.me/919022274924" class="cta-button" target="_blank">
+  Get Started with Us
+</a>
+
+  </section>
+
+  <!-- Team Section -->
+  <!-- <section class="team-section">
+    <h2 class="team-title">Meet Our <span class="highlight">Team</span></h2>
+    <p class="team-desc">
+      Our passionate team of experts brings together diverse skills in design, development, and digital strategy to deliver exceptional results for your business.
+    </p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-image"></div>
+        <h3 class="team-name">Aarav Sharma</h3>
+        <p class="team-role">Lead Developer</p>
+        <p class="team-bio">Aarav specializes in full-stack development, crafting seamless web experiences with a focus on performance and scalability.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-image"></div>
+        <h3 class="team-name">Priya Patel</h3>
+        <p class="team-role">UI/UX Designer</p>
+        <p class="team-bio">Priya creates intuitive and visually stunning designs that prioritize user experience and brand identity.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-image"></div>
+        <h3 class="team-name">Vikram Singh</h3>
+        <p class="team-role">Digital Marketing Strategist</p>
+        <p class="team-bio">Vikram drives growth through data-driven SEO, social media, and content strategies that maximize ROI.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Testimonials Section -->
+
+
+  <!-- Portfolio Section -->
+  <!-- <section class="portfolio-section">
+    <h2 class="portfolio-title">Our <span class="highlight">Work</span></h2>
+    <p class="portfolio-desc">
+      Explore some of our recent projects that showcase our expertise in creating innovative and impactful digital solutions.
+    </p>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-image"></div>
+        <h3 class="portfolio-title-card">E-Commerce Platform</h3>
+        <p class="portfolio-desc-card">A fully custom e-commerce website with advanced search, payment integration, and a user-friendly interface.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-image"></div>
+        <h3 class="portfolio-title-card">Corporate Website</h3>
+        <p class="portfolio-desc-card">A sleek, responsive website for a tech startup, optimized for lead generation and brand visibility.</p>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-image"></div>
+        <h3 class="portfolio-title-card">Mobile App</h3>
+        <p class="portfolio-desc-card">A cross-platform mobile app for a fitness brand, featuring real-time tracking and social integration.</p>
+      </div>
+    </div>
+  </section> -->
+<section class="stats-section">
+  <h2 class="stats-title">Numbers That <span class="highlight">Speak</span></h2>
+  <p class="stats-desc">
+    Our achievements reflect our commitment to excellence and client success. Here’s a glimpse of our impact.
+  </p>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
+      </div>
+      <h3 class="stat-number">50+</h3>
+      <p class="stat-label">Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
+      </div>
+      <h3 class="stat-number">95%</h3>
+      <p class="stat-label">Client Satisfaction</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14h-2v6H6v2h4v4h2v-4h4v-2h-4V6z"/></svg>
+      </div>
+      <h3 class="stat-number">5+</h3>
+      <p class="stat-label">Years Experience</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
+      </div>
+      <h3 class="stat-number">20+</h3>
+      <p class="stat-label">Team Members</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <h2 class="process-title">Our <span class="highlight">Process</span></h2>
+    <p class="process-desc">
+      We follow a proven methodology to ensure your project is delivered on time, within budget, and exceeds expectations.
+    </p>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-steps">
+        <div class="step">
+          <div class="step-content">
+            <h3 class="step-title">01. Discovery</h3>
+            <p class="step-desc">We analyze your needs, goals, and audience to create a tailored strategy.</p>
+          </div>
+          <div class="step-circle"></div>
+        </div>
+        <div class="step reverse">
+          <div class="step-content">
+            <h3 class="step-title">02. Design & Prototype</h3>
+            <p class="step-desc">Our designers craft wireframes and prototypes to visualize your solution.</p>
+          </div>
+          <div class="step-circle"></div>
+        </div>
+        <div class="step">
+          <div class="step-content">
+            <h3 class="step-title">03. Development & Launch</h3>
+            <p class="step-desc">We build, test, and deploy your project with precision and quality.</p>
+          </div>
+          <div class="step-circle"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials-section">
+    <h2 class="testimonials-title">What Our <span class="highlight">Clients Say</span></h2>
+    <p class="testimonials-desc">
+      We’re proud to have empowered businesses across industries. Hear from our clients about their experiences with 17dot.in.
+    </p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"17dot.in transformed our online presence with a stunning website and a targeted marketing strategy. Their team is professional and results-driven!"</p>
+        <p class="testimonial-author">Neha Gupta</p>
+        <p class="testimonial-role">CEO, TechTrend Innovations</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"The custom app developed by 17dot.in streamlined our operations and boosted customer engagement. Highly recommend their services!"</p>
+        <p class="testimonial-author">Rahul Mehta</p>
+        <p class="testimonial-role">Founder, UrbanEats</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"From concept to launch, 17dot.in delivered a seamless experience. Their attention to detail and creativity are unmatched."</p>
+        <p class="testimonial-author">Anjali Desai</p>
+        <p class="testimonial-role">Marketing Director, GrowEasy Solutions</p>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <h2 class="cta-banner-title">Ready to Elevate Your Brand?</h2>
+    <p class="cta-banner-desc">
+      Let’s collaborate to create a digital solution that drives growth and connects with your audience. Contact us today!
+    </p>
+    <a href="contact.html" class="cta-banner-button">Start Your Project</a>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
   <script>
-    // Services data
-    const services = [
-      { title: 'Web Design', desc: 'Custom, responsive websites that convert visitors into customers with stunning UI/UX.' },
-      { title: 'SEO Optimization', desc: 'Improve your search rankings and drive organic traffic with our proven SEO strategies.' },
-      { title: 'Social Media Marketing', desc: 'Engage your audience and build brand loyalty through strategic social media campaigns.' },
-      { title: 'PPC Advertising', desc: 'Maximize ROI with targeted pay-per-click advertising campaigns.' },
-      { title: 'Content Marketing', desc: 'Compelling content that tells your brand story and drives engagement.' },
-      { title: 'E-commerce Solutions', desc: 'Complete online store setup with seamless shopping experience.' },
-      { title: 'Brand Identity', desc: 'Create a memorable brand that stands out in the digital landscape.' },
-      { title: 'Video Production', desc: 'High-quality video content that captivates and converts.' },
-      { title: 'Email Marketing', desc: 'Automated email campaigns that nurture leads and drive sales.' },
-      { title: 'Mobile App Development', desc: 'Native and cross-platform mobile applications for your business.' },
-      { title: 'UI/UX Design', desc: 'Intuitive user experiences that keep visitors engaged.' },
-      { title: 'Conversion Rate Optimization', desc: 'Turn more visitors into customers with data-driven optimizations.' },
-      { title: 'Influencer Marketing', desc: 'Leverage influencer partnerships to expand your reach.' },
-      { title: 'Web Analytics', desc: 'Data-driven insights to optimize your digital strategy.' },
-      { title: 'Local SEO', desc: 'Dominate local search results and attract nearby customers.' },
-      { title: 'Graphic Design', desc: 'Visually stunning graphics for all your marketing needs.' },
-      { title: 'Digital Strategy', desc: 'Comprehensive digital roadmap tailored to your business goals.' }
-    ];
-
-    // Generate service items and snake path with smooth curves
-    document.addEventListener('DOMContentLoaded', function() {
-      const container = document.querySelector('.services-container');
-      const svgPath = document.getElementById('snake');
-      const containerWidth = container.offsetWidth;
-      
-      // Calculate dynamic height based on number of services
-      const itemHeight = 140; // Slightly taller items
-      const spacing = 100; // More spacing between items
-      const totalHeight = (itemHeight + spacing) * services.length + 200;
-      container.parentElement.style.minHeight = totalHeight + 'px';
-      
-      let pathData = '';
-      let firstPoint = true;
-      let previousX = 0;
-      let previousY = 0;
-      
-      services.forEach((service, index) => {
-        // Calculate vertical position with proper spacing
-        const top = index * (itemHeight + spacing) + 100;
-        
-        // Alternate between left and right positions with more space
-        const isLeft = index % 2 === 0;
-        const left = isLeft ? '3%' : '57%';
-        
-        // Calculate path points with more space between sides
-        const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
-        const y = top + (itemHeight / 2);
-        
-        // Add to SVG path with smooth bezier curves
-        if (firstPoint) {
-          pathData += `M ${x},${y}`;
-          firstPoint = false;
-        } else {
-          // Create control points for smooth bezier curves
-          const cp1x = previousX + (x - previousX) / 3;
-          const cp1y = previousY;
-          const cp2x = x - (x - previousX) / 3;
-          const cp2y = y;
-          pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+        // Add mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+          hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+          });
         }
-        
-        // Store current point for next iteration
-        previousX = x;
-        previousY = y;
-        
-        // Create service item with improved spacing
-        const serviceElement = document.createElement('div');
-        serviceElement.className = 'service-item';
-        serviceElement.style.top = `${top}px`;
-        serviceElement.style.left = left;
-        serviceElement.style.animationDelay = `${index * 0.1}s`;
-        serviceElement.style.minHeight = `${itemHeight}px`;
-        
-        // Position dot on the opposite side
-        const dotPosition = isLeft ? 'left' : 'right';
-        const dotOffset = isLeft ? '-12px' : 'calc(100% - 12px)';
-        
-        serviceElement.innerHTML = `
-          <div class="service-number">${index + 1}</div>
-          <div class="service-dot" style="${dotPosition}: ${dotOffset};"></div>
-          <h3 class="service-title">${service.title}</h3>
-          <p class="service-desc">${service.desc}</p>
-        `;
-        
-        container.appendChild(serviceElement);
-      });
-      
-      // Set the path data
-      svgPath.setAttribute('d', pathData);
-      
-      // Animate the path drawing
-      const pathLength = svgPath.getTotalLength();
-      svgPath.style.strokeDasharray = pathLength;
-      svgPath.style.strokeDashoffset = pathLength;
-      
-      // Trigger the animation
-      setTimeout(() => {
-        svgPath.style.transition = 'stroke-dashoffset 2s ease-in-out';
-        svgPath.style.strokeDashoffset = '0';
-      }, 500);
-    });
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
   </script>
-
-    <!--Footer!-->
-<div id="footer-container"></div>
-<script>
-
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-</script>
-
 </body>
 </html>
