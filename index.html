@@ -391,6 +391,7 @@
   
   <!--Navbar!-->
   <div id="navbar-container"></div>
+
   
   <section class="hero">
     <div class="hero-overlay"></div>
@@ -410,6 +411,7 @@
       </div>
     </div>
   </section>
+
   <div class="chat-popup">
     <img src="./assets/images/logog.PNG" class="chat-img" alt="Chat">
 
@@ -770,6 +772,17 @@
       width: 45px;
     }
   }
+
+  .mobile-menu {
+  display: none;
+  /* other styles */
+}
+
+.mobile-menu.active {
+  display: flex;
+  /* visible styles */
+}
+
 </style>
 
 <script>
@@ -1509,11 +1522,11 @@
     </ul>
     <div style="margin-top: 18px; display: flex; gap: 18px;">
       <a href="#" style="background: #1C3C72; color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
-        <img src="linkedin.png" alt="LinkedIn" style="width: 18px; height: 18px;">
+        <img src="./assets/images/linkedin-app-icon.svg" alt="LinkedIn" style="width: 18px; height: 18px;">
         CONNECT WITH US!
       </a>
       <a href="#" style="background: linear-gradient(to right, #FF6B00, #F4C542); color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
-        <img src="instagram.png" alt="Instagram" style="width: 18px; height: 18px;">
+        <img src="./assets/images/ig-instagram-icon.svg" alt="Instagram" style="width: 18px; height: 18px;">
         FOLLOW US NOW!
       </a>
     </div>
@@ -1524,14 +1537,33 @@
 </section>
 
 <div id="footer-container"></div>
+
+  <!-- Include navbar.js -->
+  <script src="js/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadNavbar();
+      // You can also load footer here if needed
+    });
+  </script>
+  
 <script>
 
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
+    // fetch('navbar.html')
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById('navbar-container').innerHTML = data;
+    //     // Add mobile menu toggle
+    //     console.log("he;;p");
+    //     const hamburger = document.querySelector('.hamburger');
+    //     const navLinks = document.querySelector('.nav-links');
+    //     if (hamburger && navLinks) {
+    //       hamburger.addEventListener('click', function() {
+    //         navLinks.classList.toggle('show');
+    //       });
+    //     }
+    //   })
+    //   .catch(error => console.error('Error loading navbar:', error));
 
   fetch('footer.html')
     .then(response => response.text())
