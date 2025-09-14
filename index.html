@@ -630,10 +630,15 @@
     display: none;
   }
   .modal-content {
+      background: rgba(255, 255, 255, 0.18); /* Translucent white */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* For Safari */
+  border-radius: 16px;
+  border: 1px solid rgba(220, 220, 220, 0.28);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
     overflow-y: auto;
     overflow-x: hidden;
     flex-wrap: nowrap;
-    background: linear-gradient(135deg, #1C3C72 0%, #0A0A0A 100%);
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #FF6B00;
@@ -662,10 +667,10 @@
   .modal-details {
     flex: 1;
     min-width: 0;
-    color: #F9F9F9;
+    color: #ffffff;
   }
   .modal-details h2 {
-    color: #F4C542;
+    color: #FF6B00;
     margin-bottom: 15px;
   }
   .modal-details p {
@@ -696,7 +701,7 @@
     display: flex;
     align-items: center;
     max-width: 100%;
-    color: #F4C542;
+    color: #FF6B00;
   }
   .ref-label {
     font-weight: 600;
@@ -740,12 +745,12 @@
   .benefits-heading {
     margin-top: 24px;
     margin-bottom: 10px;
-    color: #F4C542;
+    color: #FF6B00;
   }
   .benefits-list {
     list-style-type: disc;
     padding-left: 20px;
-    color: #E0E0E0;
+    color: #ffffff;
     font-size: 1rem;
   }
   @keyframes marquee {
@@ -793,8 +798,8 @@
     {
       title: "Run a Clinic?",
       desc:
-        "Manage appointments, digital records and more to modernize your clinic with Servora.",
-      btnText: "See What Servora Offers",
+        "Manage appointments, digital records and more to modernize your clinic with 17 Dot.",
+      btnText: "See What We Offers",
       image: "./assets/images/webdesign.jpg",
       details:
         "We provide specialized digital solutions customized for healthcare clinics, improving patient management and records digitally. We provide specialized digital solutions customized for healthcare clinics, improving patient management and records digitally.",
@@ -804,8 +809,9 @@
         "Improved operational efficiency",
       ],
       refs: [
-        { img: "./assets/images/ref1.jpg", url: "https://healthcare.example.com" },
-        { img: "./assets/images/ref2.jpg", url: "https://medtech.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Healthcare",
     },
@@ -823,8 +829,9 @@
         "Comprehensive delivery analytics",
       ],
       refs: [
-        { img: "./assets/images/ref3.jpg", url: "https://logistics.example.com" },
-        { img: "./assets/images/ref4.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Logistics",
     },
@@ -842,8 +849,9 @@
         "E-commerce platform automation",
       ],
       refs: [
-        { img: "./assets/images/ref5.jpg", url: "https://retail.example.com" },
-        { img: "./assets/images/ref6.jpg", url: "https://ecommerce.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Retail & E-commerce",
     },
@@ -861,8 +869,9 @@
         "Tailoring workflow automation",
       ],
       refs: [
-        { img: "./assets/images/ref7.jpg", url: "https://tailoring.example.com" },
-        { img: "./assets/images/ref8.jpg", url: "https://stitching.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Apparel & Tailoring",
     },
@@ -880,8 +889,9 @@
         "Advanced academic reporting",
       ],
       refs: [
-        { img: "./assets/images/ref9.jpg", url: "https://education.example.com" },
-        { img: "./assets/images/ref10.jpg", url: "https://edtech.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Education",
     },
@@ -899,8 +909,9 @@
         "Table reservation and billing",
       ],
       refs: [
-        { img: "./assets/images/ref11.jpg", url: "https://restauranttech.example.com" },
-        { img: "./assets/images/ref12.jpg", url: "https://foodservice.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Food & Beverage",
     },
@@ -917,7 +928,9 @@
         "Automation of processes",
       ],
       refs: [
-        { img: "./assets/images/ref13.jpg", url: "https://manufacturing.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Manufacturing",
     },
@@ -934,7 +947,9 @@
         "Performance analytics",
       ],
       refs: [
-        { img: "./assets/images/ref14.jpg", url: "https://professionalservices.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Professional Services",
     },
@@ -951,7 +966,9 @@
         "Dealer-customer portals",
       ],
       refs: [
-        { img: "./assets/images/ref15.jpg", url: "https://automotive.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Automotive",
     },
@@ -968,7 +985,9 @@
         "CRM for hospitality",
       ],
       refs: [
-        { img: "./assets/images/ref16.jpg", url: "https://travel.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Travel & Hospitality",
     },
@@ -985,7 +1004,9 @@
         "Virtual property tours",
       ],
       refs: [
-        { img: "./assets/images/ref17.jpg", url: "https://realestate.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Real Estate",
     },
@@ -1002,7 +1023,9 @@
         "Financial reporting and dashboards",
       ],
       refs: [
-        { img: "./assets/images/ref18.jpg", url: "https://finance.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Finance & Banking",
     },
@@ -1019,7 +1042,9 @@
         "Cloud & DevOps solutions",
       ],
       refs: [
-        { img: "./assets/images/ref19.jpg", url: "https://software.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Technology & Software",
     },
@@ -1036,7 +1061,9 @@
         "Multi-platform distribution",
       ],
       refs: [
-        { img: "./assets/images/ref20.jpg", url: "https://media.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Media & Entertainment",
     },
@@ -1053,7 +1080,9 @@
         "Volunteer management tools",
       ],
       refs: [
-        { img: "./assets/images/ref21.jpg", url: "https://ngo.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Non-Profit & NGOs",
     },
@@ -1070,7 +1099,9 @@
         "Billing & support automation",
       ],
       refs: [
-        { img: "./assets/images/ref22.jpg", url: "https://telecom.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Telecommunication",
     },
@@ -1087,7 +1118,9 @@
         "Performance reporting dashboards",
       ],
       refs: [
-        { img: "./assets/images/ref23.jpg", url: "https://government.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Government & Public Sector",
     },
@@ -1104,7 +1137,9 @@
         "Automated billing systems",
       ],
       refs: [
-        { img: "./assets/images/ref24.jpg", url: "https://energy.example.com" },
+        { img: "./assets/images/worksankatservice1.png", url: "https://logistics.example.com" },
+        { img: "./assets/images/mezbancard.jpg", url: "https://fleet.example.com" },
+        { img: "./assets/images/ammcard.png", url: "https://fleet.example.com" },
       ],
       domain: "Energy & Utilities",
     },
@@ -1243,14 +1278,14 @@
     <div style="text-align:center; color:#999; margin-bottom:28px;font-size:1.12rem;">Executive Menu</div>
     <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom: 40px;">
       <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;">
-        <img src="https://www.svgrepo.com/show/16182/pen.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
+        <img src="./assets/images/edit-video-clip-icon.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
         <h3 style="color:#444; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
         <p style="color:#666;max-width:330px;margin:0 auto;">
           We deliver creative campaigns to build a stronger top of funnel for your business. Right from your brand & content strategy to influencers & video production, we take care of it all. Our campaigns have won awards too!
         </p>
       </div>
       <div style="flex:1; min-width:290px; text-align:center;">
-        <img src="icon-seo.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
+        <img src="./assets/images/file-search-dual-tone-icon.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
         <h3 style="color:#444; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
         <p style="color:#666;max-width:330px;margin:0 auto;">
           We’re great at SEO and rank for the most competitive terms in digital domain ourselves! To drive great SEO results, we’ve built a robust tech team. We build word class websites as well as maintain websites to ensure your business creates the right first impression.
@@ -1259,14 +1294,14 @@
     </div>
         <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap;">
       <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;">
-        <img src="icon-storytelling.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
+        <img src="./assets/images/announcement-color-icon.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
         <h3 style="color:#444; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
         <p style="color:#666;max-width:330px;margin:0 auto;">
           We deliver creative campaigns to build a stronger top of funnel for your business. Right from your brand & content strategy to influencers & video production, we take care of it all. Our campaigns have won awards too!
         </p>
       </div>
       <div style="flex:1; min-width:290px; text-align:center;">
-        <img src="icon-seo.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
+        <img src="./assets/images/desktop-app-analytics-icon.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
         <h3 style="color:#444; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
         <p style="color:#666;max-width:330px;margin:0 auto;">
           We’re great at SEO and rank for the most competitive terms in digital domain ourselves! To drive great SEO results, we’ve built a robust tech team. We build word class websites as well as maintain websites to ensure your business creates the right first impression.
