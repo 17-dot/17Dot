@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DigiChefs - Digital First Creative Agency</title>
+  <title>17 Dot - Digital First Creative Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -417,7 +417,7 @@
   </section>
   <div class="chat-popup">
     <img src="chat-photo.png" class="chat-img" alt="Chat">
-    <span>Hi! I am Deep, Co-Founder of DigiChefs.<br>Let me help you :)</span>
+    <span>Hi! I am Deep, Co-Founder of 17 Dot.<br>Let me help you :)</span>
     <button class="chat-close" onclick="this.parentElement.style.display='none'">&times;</button>
   </div>
 
@@ -938,19 +938,19 @@
     {
       name: "Ileena Fernandes",
       title: "Marketing Manager - Business Standard",
-      quote: "I associated with DigiChefs for the SEO campaigns we were planning to run for Business Standard. In a highly competitive & sensitive space of publications in India, Business Standard has always been one of the best and we wanted to consistently hold on to...",
+      quote: "I associated with 17 Dot for the SEO campaigns we were planning to run for Business Standard. In a highly competitive & sensitive space of publications in India, Business Standard has always been one of the best and we wanted to consistently hold on to...",
       image: "./assets/images/default-impact-stories.jpeg"
     },
     {
       name: "Rajesh Kumar",
       title: "CEO - Tech Innovations",
-      quote: "DigiChefs helped us drastically improve our digital presence by revamping our SEO and social media strategies. Their team is proactive and extremely knowledgeable.",
+      quote: "17 Dot helped us drastically improve our digital presence by revamping our SEO and social media strategies. Their team is proactive and extremely knowledgeable.",
       image: "./assets/images/default-impact-stories2.jpeg"
     },
     {
       name: "Parvati Singh",
       title: "Founder - Creative Co.",
-      quote: "Working with DigiChefs was a game-changer for our brand awareness and customer engagement. Their creative storytelling truly sets them apart.",
+      quote: "Working with 17 Dot was a game-changer for our brand awareness and customer engagement. Their creative storytelling truly sets them apart.",
       image: "./assets/images/default-impact-stories3.jpeg"
     }
   ];

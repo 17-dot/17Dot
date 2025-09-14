@@ -2,289 +2,773 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DigiChefs - Digital First Creative Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="theme-color" content="#FF6B00">
+  <title>17 Dot - Digital First Creative Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-    
-    * {
-      box-sizing: border-box;
-    }
-    
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9;
-      overflow-x: hidden;
+      color: #F9F9F9; /* White text for dark theme */
     }
-    
-    /* Header Styles */
     header {
       background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      padding: 12px 20px;
+      padding: 12px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-      position: relative;
-      z-index: 1000;
     }
-    
     .logo {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
-      letter-spacing: -1px;
+      letter-spacing: -2px;
     }
-    
-    /* Hero Section */
     .hero {
       position: relative;
       width: 100%;
-      min-height: 40vh;
-      background: url('assets/images/banner.jpg') center/cover no-repeat;
-      padding: 30px 20px;
+      min-height: 30vh;
+      background: url('bg-city.jpg') center/cover no-repeat;
+      padding: 50px 30px 50px 30px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
     }
-    
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
       pointer-events: none;
     }
-    
     .hero-content {
       position: relative;
       z-index: 2;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 40vh;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      flex-direction: column;   /* stack title & desc */
+      justify-content: center;  /* center vertically (if height set) */
+      align-items: center;      /* center horizontally */
+      text-align: center;       /* center text inside */
+      min-height: 30vh;  
     }
-    
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 3.8rem;
       font-weight: 900;
-      margin-bottom: 15px;
-      color: #F9F9F9;
-      line-height: 1.2;
+      margin-bottom: 4px;
+      color: #F9F9F9; /* White */
     }
-    
     .hero-title .creative {
       background: linear-gradient(90deg, #FF6B00, #F4C542);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
     .hero-desc {
-      font-size: 1.1rem;
-      color: #F9F9F9;
+      font-size: 1.3rem;
+      color: #F9F9F9; /* White */
       margin-bottom: 25px;
       margin-top: 10px;
-      line-height: 1.6;
-      max-width: 600px;
     }
-    
-    /* Responsive Design */
-    @media (min-width: 768px) {
-      header {
-        padding: 12px 40px;
+
+    /* Roadmap Styles */
+    .service-item {
+      position: absolute;
+      width: 38%;
+      padding: 25px;
+      background: rgba(28, 60, 114, 0.15);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s forwards;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      cursor: pointer; /* Make clickable */
+    }
+
+    @media (max-width: 768px) {
+      .service-item {
+        width: 80%;
+        left: 10% !important;
+        padding: 15px;
       }
-      
-      .logo {
-        font-size: 2.2rem;
-        letter-spacing: -2px;
+      .service-number {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
       }
-      
+      .service-title {
+        font-size: 1rem;
+      }
+      .service-desc {
+        font-size: 0.8rem;
+      }
+      .service-dot {
+        width: 20px;
+        height: 20px;
+      }
+      .roadmap-section {
+        padding: 40px 10px;
+      }
       .hero {
-        min-height: 50vh;
-        padding: 50px 30px;
+        padding: 30px 20px;
+        min-height: 25vh;
       }
-      
-      .hero-content {
-        min-height: 50vh;
-      }
-      
       .hero-title {
-        font-size: 3.8rem;
-        margin-bottom: 4px;
+        font-size: 2.5rem;
       }
-      
-      .hero-desc {
-        font-size: 1.3rem;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .hero {
-        min-height: 60vh;
-        padding: 60px 40px;
-      }
-      
-      .hero-content {
-        min-height: 60vh;
-      }
-      
-      .hero-title {
-        font-size: 4.2rem;
-      }
-      
-      .hero-desc {
-        font-size: 1.4rem;
-      }
-    }
-    
-    /* Mobile-specific optimizations */
-    @media (max-width: 767px) {
-      .hero-title {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-      
       .hero-desc {
         font-size: 1rem;
-        padding: 0 10px;
-      }
-      
-      .hero {
-        min-height: 35vh;
-        padding: 20px 15px;
-      }
-      
-      .hero-content {
-        min-height: 35vh;
-        padding: 0 10px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      header {
-        padding: 10px 15px;
-      }
-      
-      .logo {
-        font-size: 1.5rem;
-      }
-      
-      .hero-title {
-        font-size: 1.8rem;
-      }
-      
-      .hero-desc {
-        font-size: 0.9rem;
-      }
-      
-      .hero {
-        min-height: 30vh;
-        padding: 15px 10px;
-      }
-      
-      .hero-content {
-        min-height: 30vh;
-        padding: 0 5px;
-      }
-    }
-    
-    /* Landscape orientation for mobile */
-    @media (max-height: 500px) and (orientation: landscape) {
-      .hero {
-        min-height: 60vh;
-      }
-      
-      .hero-content {
-        min-height: 60vh;
-      }
-      
-      .hero-title {
-        font-size: 2rem;
-        margin-bottom: 5px;
-      }
-      
-      .hero-desc {
-        font-size: 1rem;
-        margin-bottom: 15px;
-      }
-    }
-    
-    /* High DPI displays */
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .hero {
-        background-image: url('assets/images/banner.jpg');
-      }
-    }
-    
-    /* Accessibility improvements */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-    
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
       }
     }
 
+    @media (max-width: 480px) {
+      .service-item {
+        width: 90%;
+        left: 5% !important;
+        padding: 12px;
+      }
+      .service-title {
+        font-size: 0.9rem;
+      }
+      .service-desc {
+        font-size: 0.75rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-desc {
+        font-size: 0.9rem;
+      }
+      .roadmap-section {
+        padding: 30px 5px;
+      }
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(255, 107, 0, 0.2);
+      border-color: rgba(255, 107, 0, 0.3);
+    }
+
+    .service-dot {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background: linear-gradient(135deg, #FF6B00, #F4C542);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.3), 0 0 25px rgba(255, 107, 0, 0.8);
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    
+    .service-item:hover .service-dot {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.4), 0 0 30px rgba(255, 107, 0, 1);
+    }
+
+    .service-number {
+      position: absolute;
+      top: -15px;
+      left: 15px;
+      background: #FF6B00;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      z-index: 3;
+    }
+
+    .service-title {
+      color: #F4C542;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .service-desc {
+      color: #e0e0e0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 5px 0 0 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    /* Add a subtle pulse animation to the snake path */
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
+      50% { filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.5)); }
+      100% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
+    }
+    
+    .snake-path {
+      animation: pulse 4s infinite ease-in-out;
+    }
+
+    /* New Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Keep this for small screen scrolling */
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+
+
+
+.modal-content {
+      overflow-y: auto;  /* keep vertical scroll */
+  overflow-x: hidden; /* prevent horizontal scroll */
+  flex-wrap: nowrap;  /* prevent flex wrapping */
+  background: linear-gradient(135deg, #1C3C72 0%, #0A0A0A 100%);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #FF6B00;
+  width: 80%;          /* You can adjust percentage */
+  max-width: 800px;    /* Max width for desktop */
+  max-height: 80vh;    /* Max height relative to viewport height */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 8px 32px rgba(255, 107, 0, 0.2);
+  overflow-y: auto;    /* Scroll inside modal if content overflows vertically */
+  position: relative;  /* To anchor absolute .close */
+}
+
+.modal-image {
+  flex: 1;
+  max-width: 50%; /* increased from 40% if needed */
+  margin-right: 20px;
+  min-width: 0;  /* Important - prevents image from forcing overflow */
+}
+
+.modal-details {
+  flex: 1;
+  min-width: 0; /* Important - allows shrinking */
+  color: #F9F9F9;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 300px; /* increased height, adjust as needed */
+  object-fit: contain; /* or cover depending on how you want it displayed */
+  border-radius: 8px;
+}
+
+    .modal-details h2 {
+      color: #F4C542;
+      margin-bottom: 15px;
+    }
+    .modal-details p {
+      line-height: 1.6;
+    }
+    .close {
+      color: #FF6B00;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #F4C542;
+    }
+    @media (max-width: 768px) {
+      .modal-content {
+        flex-direction: column;
+      }
+      .modal-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
   </style>
+  <title>Contact Us - Servora</title>
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
 </head>
 <body>
   
   <!--Navbar!-->
-<div id="navbar-container"></div>
+  <div id="navbar-container"></div>
 
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-    <div class="col-lg-8 mt-2">
-      <div class="hero-title">
-        <span class="creative">Our Works</span>
+      <div class="col-lg-8 mt-2">
+        <div class="hero-title">
+          <span class="creative">Our Services</span>
+        </div>
+        <div class="hero-desc">
+          A full suite digital marketing agency <br>We offer 17 comprehensive digital solutions to transform your business
+        </div>
       </div>
-      <div class="hero-desc">
-        A full suite digital marketing agency <br>that help you to reach to your target audiance and enhance you bussiness
-      </div>
-      </div>
+    </div>
   </section>
 
-    <!--Footer!-->
-<div id="footer-container"></div>
-<script>
+  <main>
+    <!-- 17 Dots Roadmap Section -->
+    <section class="roadmap-section" style="padding: 20px 20px; background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 100%); overflow: hidden;">
+      <!-- <div class="hero-desc" style="text-align: center;">
+        Check Our Offering<br>We offer 17 comprehensive digital solutions to transform your business
+      </div> -->
+      <div 
+      style="
+  max-width:100%; 
+  margin:-30px auto; 
+  padding:30px; 
+  color:#ffffff; 
+  border-radius:5px;  
+  font-family:Arial, sans-serif; 
+  text-align:center;
+">
+  <h2 style="font-size:2rem; font-weight:700; margin-bottom:0px; color:#FF6B00;">
+    Trusted by Businesses Across Industries
+  </h2>
+  <p style="font-size:1.1rem; line-height:1.7; margin-bottom:0; color:#ffffff;">
+    At <span style="color:#FF6B00; font-weight:600;">17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
+    We focus on creating innovative solutions that help our clients grow <span style="color:#FF6B00; font-weight:600;">faster</span> and <span style="color:#FF6B00; font-weight:600;">smarter</span>.
+  </p>
+</div>
+      <div class="container" style="max-width: 1140px; margin: 0 auto; position: relative; min-height: 2400px;">
+        <!-- The snake path with gradient and glow effect -->
+        <svg class="snake-path" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3));">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF6B00" />
+              <stop offset="100%" stop-color="#F4C542" />
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <path id="snake" d="" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+        </svg>
+        
+        <!-- Service items -->
+        <div class="services-container" style="position: relative; height: 100%;">
+          <!-- Service items will be added here -->
+        </div>
+      </div>
+    </section>
 
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
+    <!-- New Modal Structure -->
+    <!-- <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-image">
+          <img id="modalImage" src="" alt="Service Image">
+        </div>
+        <div class="modal-details">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDetails"></p>
+        </div>
+      </div>
+    </div> -->
 
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-</script>
+    <!-- Modified Modal Structure -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <!-- Left side: Image + ref card below -->
+    <div class="modal-image">
+      <img id="modalImage" src="" alt="Service Image">
+      
+      <!-- Ref Card with marquee -->
+      <div class="ref-card">
+        <span class="ref-label">Ref</span>
+        <div class="marquee-container">
+          <div class="marquee-content" id="marqueeContent">
+            <!-- Images with links inserted dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right side: details + benefits -->
+    <div class="modal-details">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDetails"></p>
+      
+      <!-- Benefits heading and points -->
+      <h3 class="benefits-heading">Benefit</h3>
+      <ul id="benefitPoints" class="benefits-list">
+        <!-- Benefit points inserted dynamically -->
+      </ul>
+    </div>
+  </div>
+</div>
+<style>
+  /* Close button moved to top right inside modal-content */
+.modal .close {
+  position: absolute; /* Important: Position relative to modal-content */
+  top: 16px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  float: none; /* Remove float so it doesn't shift */
+}
 
+
+  
+  /* Ref card styling */
+  .ref-card {
+    margin-top: 15px;
+    background:transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .ref-label {
+    font-weight: 600;
+    color: #F4C542;
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+  
+  /* Marquee container */
+  .marquee-container {
+    overflow: hidden;
+
+    flex: 1;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .marquee-content:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Small rectangular images in marquee */
+  .marquee-content a {
+    display: inline-block;
+    margin-right: 120px;
+  }
+  
+.marquee-content img {
+  height: 90px;
+  width: 200px;
+  margin-left: 50px;
+  row-gap: 10px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  max-width: 300%;
+  display: block;
+  flex-shrink: 0;
+}
+
+  
+  .marquee-content img:hover {
+    border-color: #FF6B00;
+  }
+  
+  /* Benefits heading */
+  .benefits-heading {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    color: #F4C542;
+  }
+  
+  /* Benefits list */
+  .benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #E0E0E0;
+    font-size: 1rem;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .modal-content {
+      flex-direction: column;
+      position: relative;
+    }
+    .modal .close {
+      top: 10px;
+      right: 10px;
+    }
+
+    .marquee-content img {
+      height: 30px;
+      width: 45px;
+    }
+  }
+</style>
+  </main>
+
+  <!--Footer!-->
+  <div id="footer-container"></div>
+
+  <script>
+    // Extended Services data with image and detailed description
+    const services = [
+      { title: 'Web Design', desc: 'Custom, responsive websites that convert visitors into customers with stunning UI/UX.', image: './assets/images/webdesign.jpg', details: 'Our web design service focuses on creating visually appealing and user-friendly websites tailored to your brand. We use the latest technologies to ensure responsiveness across all devices, incorporating SEO best practices from the start. This includes custom layouts, interactive elements, and performance optimization for faster load times.' },
+      { title: 'SEO Optimization', desc: 'Improve your search rankings and drive organic traffic with our proven SEO strategies.', image: './assets/images/seo.jpg', details: 'SEO optimization involves in-depth keyword research, on-page and off-page strategies, technical audits, and content optimization. We help your site rank higher on search engines like Google, increasing visibility and attracting qualified traffic that converts into leads.' },
+      { title: 'Social Media Marketing', desc: 'Engage your audience and build brand loyalty through strategic social media campaigns.', image: './assets/images/socialmedia.jpg', details: 'We craft targeted campaigns on platforms like Facebook, Instagram, and LinkedIn. This includes content creation, audience targeting, analytics tracking, and community management to foster engagement and grow your follower base organically.' },
+      { title: 'PPC Advertising', desc: 'Maximize ROI with targeted pay-per-click advertising campaigns.', image: './assets/images/ppc.jpg', details: 'Our PPC services include ad creation, keyword bidding, A/B testing, and performance monitoring on Google Ads and social platforms. We focus on high-ROI keywords to drive immediate traffic and conversions while optimizing budgets.' },
+      { title: 'Content Marketing', desc: 'Compelling content that tells your brand story and drives engagement.', image: './assets/images/content.jpg', details: 'We develop content strategies including blogs, infographics, videos, and ebooks. Our approach emphasizes storytelling, SEO integration, and distribution across channels to build authority and nurture leads through the sales funnel.' },
+      { title: 'E-commerce Solutions', desc: 'Complete online store setup with seamless shopping experience.', image: './assets/images/ecommerce.jpg', details: 'From platform selection (e.g., Shopify, WooCommerce) to custom integrations, we build secure e-commerce sites with features like payment gateways, inventory management, and user-friendly checkouts to boost online sales.' },
+      { title: 'Brand Identity', desc: 'Create a memorable brand that stands out in the digital landscape.', image: './assets/images/brandidentity.jpg', details: 'We design logos, color schemes, typography, and brand guidelines. This service ensures consistent messaging across all touchpoints, helping your brand resonate with your target audience and build long-term recognition.' },
+      { title: 'Video Production', desc: 'High-quality video content that captivates and converts.', image: './assets/images/video.jpg', details: 'Professional video production includes scripting, filming, editing, and animation. We create promotional videos, tutorials, and ads optimized for social media and websites to engage viewers and drive action.' },
+      { title: 'Email Marketing', desc: 'Automated email campaigns that nurture leads and drive sales.', image: './assets/images/email.jpg', details: 'We set up automated workflows using tools like Mailchimp, including segmentation, personalized content, and analytics. This helps in lead nurturing, cart abandonment recovery, and customer retention through targeted emails.' },
+      { title: 'Mobile App Development', desc: 'Native and cross-platform mobile applications for your business.', image: './assets/images/mobile.jpg', details: 'We develop apps for iOS and Android using React Native or native languages. Features include push notifications, offline capabilities, and API integrations to extend your business reach via mobile devices.' },
+      { title: 'UI/UX Design', desc: 'Intuitive user experiences that keep visitors engaged.', image: './assets/images/uiux.jpg', details: 'Focusing on user research, wireframing, prototyping, and testing, we create intuitive interfaces that enhance usability and satisfaction, reducing bounce rates and increasing conversions.' },
+      { title: 'Conversion Rate Optimization', desc: 'Turn more visitors into customers with data-driven optimizations.', image: './assets/images/conversion.jpg', details: 'Using analytics and A/B testing, we identify bottlenecks in your funnel and implement changes like improved CTAs, page speed enhancements, and personalized experiences to boost conversion rates.' },
+      { title: 'Influencer Marketing', desc: 'Leverage influencer partnerships to expand your reach.', image: './assets/images/influencer.jpg', details: 'We identify and collaborate with influencers in your niche for authentic promotions. This includes campaign planning, content guidelines, and performance tracking to amplify brand awareness.' },
+      { title: 'Web Analytics', desc: 'Data-driven insights to optimize your digital strategy.', image: './assets/images/webanalytics.jpg', details: 'Setup and analysis using Google Analytics and other tools to track user behavior, measure campaign effectiveness, and provide actionable insights for continuous improvement.' },
+      { title: 'Local SEO', desc: 'Dominate local search results and attract nearby customers.', image: './assets/images/localseo.jpg', details: 'Optimizing for local searches with Google My Business management, local citations, reviews, and geo-targeted content to drive foot traffic and local leads.' },
+      { title: 'Graphic Design', desc: 'Visually stunning graphics for all your marketing needs.', image: './assets/images/graphics.jpg', details: 'Custom graphics for social media, ads, brochures, and more. We ensure designs align with your brand and communicate messages effectively through visual storytelling.' },
+      { title: 'Digital Strategy', desc: 'Comprehensive digital roadmap tailored to your business goals.', image: './assets/images/digitalstrategy.jpg', details: 'We create holistic strategies encompassing all digital channels, goal setting, timeline planning, and KPI tracking to achieve measurable growth and ROI.' }
+    ];
+
+    // Generate service items and snake path with smooth curves
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.services-container');
+      const svgPath = document.getElementById('snake');
+      const containerWidth = container.offsetWidth;
+      
+      // Calculate dynamic height based on number of services
+      const itemHeight = 140; // Slightly taller items
+      const spacing = 100; // More spacing between items
+      const totalHeight = (itemHeight + spacing) * services.length + 200;
+      container.parentElement.style.minHeight = totalHeight + 'px';
+      
+      let pathData = '';
+      let firstPoint = true;
+      let previousX = 0;
+      let previousY = 0;
+      
+      services.forEach((service, index) => {
+        // Calculate vertical position with proper spacing
+        const top = index * (itemHeight + spacing) + 100;
+        
+        // Alternate between left and right positions with more space
+        const isLeft = index % 2 === 0;
+        const left = isLeft ? '3%' : '57%';
+        
+        // Calculate path points with more space between sides
+        const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
+        const y = top + (itemHeight / 2);
+        
+        // Add to SVG path with smooth bezier curves
+        if (firstPoint) {
+          pathData += `M ${x},${y}`;
+          firstPoint = false;
+        } else {
+          // Create control points for smooth bezier curves
+          const cp1x = previousX + (x - previousX) / 3;
+          const cp1y = previousY;
+          const cp2x = x - (x - previousX) / 3;
+          const cp2y = y;
+          pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
+        }
+        
+        // Store current point for next iteration
+        previousX = x;
+        previousY = y;
+        
+        // Create service item with improved spacing
+        const serviceElement = document.createElement('div');
+        serviceElement.className = 'service-item';
+        serviceElement.style.top = `${top}px`;
+        serviceElement.style.left = left;
+        serviceElement.style.animationDelay = `${index * 0.1}s`;
+        serviceElement.style.minHeight = `${itemHeight}px`;
+        
+        // Position dot on the opposite side
+        const dotPosition = isLeft ? 'left' : 'right';
+        const dotOffset = isLeft ? '-12px' : 'calc(100% - 12px)';
+        
+        serviceElement.innerHTML = `
+          <div class="service-number">${index + 1}</div>
+          <div class="service-dot" style="${dotPosition}: ${dotOffset};"></div>
+          <h3 class="service-title">${service.title}</h3>
+          <p class="service-desc">${service.desc}</p>
+        `;
+        
+        // Add click event to open modal
+        serviceElement.addEventListener('click', () => openModal(service));
+        
+        container.appendChild(serviceElement);
+      });
+      
+      // Set the path data
+      svgPath.setAttribute('d', pathData);
+      
+      // Animate the path drawing
+      const pathLength = svgPath.getTotalLength();
+      svgPath.style.strokeDasharray = pathLength;
+      svgPath.style.strokeDashoffset = pathLength;
+      
+      // Trigger the animation
+      setTimeout(() => {
+        svgPath.style.transition = 'stroke-dashoffset 2s ease-in-out';
+        svgPath.style.strokeDashoffset = '0';
+      }, 500);
+
+      // Modal functionality
+      const modal = document.getElementById('serviceModal');
+      const closeBtn = document.querySelector('.close');
+
+      closeBtn.onclick = () => {
+        modal.style.display = 'none';
+      };
+
+      window.onclick = (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      };
+    });
+
+    // Function to open modal with service data
+    // function openModal(service) {
+    //   const modal = document.getElementById('serviceModal');
+    //   document.getElementById('modalTitle').textContent = service.title;
+    //   document.getElementById('modalDetails').textContent = service.details;
+    //   document.getElementById('modalImage').src = service.image;
+    //   modal.style.display = 'block';
+    // }
+
+    function openModal(service) {
+  const modal = document.getElementById('serviceModal');
+  document.getElementById('modalTitle').textContent = service.title;
+  document.getElementById('modalDetails').textContent = service.details;
+  document.getElementById('modalImage').src = service.image;
+  
+  // Example benefit points for demonstration
+  const benefits = [
+    "Increase brand visibility",
+    "Drive more conversions",
+    "Enhance customer engagement",
+    "Improve SEO rankings"
+  ];
+  
+  // Insert benefit points dynamically
+  const benefitList = document.getElementById('benefitPoints');
+  benefitList.innerHTML = ''; // Clear existing
+  
+  benefits.forEach(point => {
+    const li = document.createElement('li');
+    li.textContent = point;
+    benefitList.appendChild(li);
+  });
+  
+  // Insert marquee images with links dynamically
+  const marqueeContent = document.getElementById('marqueeContent');
+  marqueeContent.innerHTML = ''; // Clear existing
+  
+  // Example refs with image src and link
+  const refs = [
+    { img: './assets/images/worksankatservice1.PNG', url: 'https://example1.com' },
+    { img: './assets/images/mezbancard.jpg', url: 'https://example2.com' },
+    { img: './assets/images/ammcard.png', url: 'https://example3.com' },
+    { img: './assets/images/worksankatcard2.png', url: 'https://example4.com' }
+  ];
+  
+  refs.forEach(ref => {
+    const a = document.createElement('a');
+    a.href = ref.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    const img = document.createElement('img');
+    img.src = ref.img;
+    img.alt = 'Reference Image';
+    a.appendChild(img);
+    marqueeContent.appendChild(a);
+  });
+  
+  modal.style.display = 'block';
+}
+
+    // Fetch navbar and footer
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+
+    // Optional: AJAX form submission for better UX (unchanged)
+    const form = document.getElementById('contactForm');
+    const responseDiv = document.getElementById('formResponse');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.text())
+      .then(data => {
+        responseDiv.textContent = data;
+        form.reset();
+      })
+      .catch(() => {
+        responseDiv.textContent = 'Oops! Something went wrong.';
+      });
+    });
+  </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DigiChefs - Digital First Creative Agency</title>
+  <title>17 Dot - All in One Digital Solution</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -411,8 +411,9 @@
     </div>
   </section>
   <div class="chat-popup">
-    <img src="chat-photo.png" class="chat-img" alt="Chat">
-    <span>Hi! I am Deep, Co-Founder of DigiChefs.<br>Let me help you :)</span>
+    <img src="./assets/images/logog.PNG" class="chat-img" alt="Chat">
+
+    <span>Hi! We are 17 Dot <br>Let's Build together :)</span>
     <button class="chat-close" onclick="this.parentElement.style.display='none'">&times;</button>
   </div>
 
@@ -505,21 +506,62 @@
 </section>
 
 <!--Our Services -->
+<!-- Our Services Section -->
+<!-- Our Services Section -->
 <section style="padding: 1px 20px 40px 20px; background: #fffbe5; color: #1C3C72; width: 100%; box-sizing: border-box;">
   <h2 style="font-weight: 700; font-size: 2.4rem; margin-bottom: 31px; text-align: center;">Our Services</h2>
   <div style="position: relative; max-width: 1300px; margin: 0 auto;">
-    <button id="prevBtn"
-      style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: transparent; color: #1C3C72; border: none; font-size: 2rem; line-height: 1; cursor: pointer; padding: 0; z-index: 10;"
-      aria-label="Previous">&#8592;</button>
-    <div id="cardContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; overflow: hidden;">
-      <!-- Cards will be dynamically injected here -->
+    <button id="prevBtn" aria-label="Previous">&#8592;</button>
+    <div id="cardContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; overflow: hidden; padding:0 40px;">
+      <!-- Cards injected here -->
     </div>
-    <button id="nextBtn"
-      style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: transparent; color: #1C3C72; border: none; font-size: 2rem; line-height: 1; cursor: pointer; padding: 0; z-index: 10;"
-      aria-label="Next">&#8594;</button>
+    <button id="nextBtn" aria-label="Next">&#8594;</button>
   </div>
 </section>
+
+<!-- Modal -->
+<div id="serviceModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="modalClose">&times;</span>
+    <div class="modal-image">
+      <img id="modalImage" src="" alt="Service Image" />
+      <div class="ref-card">
+        <span class="ref-label">Ref</span>
+        <div class="marquee-container">
+          <div class="marquee-content" id="marqueeContent"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-details">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDetails"></p>
+      <h3 class="benefits-heading">Benefit</h3>
+      <ul id="benefitPoints" class="benefits-list"></ul>
+    </div>
+  </div>
+</div>
+
 <style>
+  /* Your original styles from previous code */
+
+  section button#prevBtn,
+  section button#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #1C3C72;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+  #prevBtn { left: 0;}
+  #nextBtn { right: 0;}
+  #prevBtn:hover, #nextBtn:hover { color: #FF6B00; z-index:11; }
+
   .service-card {
     background: #fff;
     border-radius: 12px;
@@ -572,77 +614,604 @@
     transform: scale(1.08);
     box-shadow: 0 6px 12px rgba(28, 60, 114, 0.2);
   }
-  #prevBtn, #nextBtn {
+
+
+  /* Modal Styles */
+
+  .modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 0;
+    box-sizing: border-box;
+    display: none;
+  }
+  .modal-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    background: linear-gradient(135deg, #1C3C72 0%, #0A0A0A 100%);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #FF6B00;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 8px 32px rgba(255, 107, 0, 0.2);
+    position: relative;
+  }
+  .modal-image {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .modal-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .modal-details {
+    flex: 1;
+    min-width: 0;
+    color: #F9F9F9;
+  }
+  .modal-details h2 {
+    color: #F4C542;
+    margin-bottom: 15px;
+  }
+  .modal-details p {
+    line-height: 1.6;
+  }
+  .close {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: #1C3C72;
-    border: none;
-    font-size: 2rem;
-    line-height: 1;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FF6B00;
     cursor: pointer;
-    padding: 0;
+    float: none;
     z-index: 10;
   }
-  #prevBtn { left: 0; }
-  #nextBtn { right: 0; }
-  #prevBtn:hover, #nextBtn:hover {
-    color: #FF6B00;
-    z-index: 11;
+  .close:hover {
+    color: #F4C542;
+  }
+
+  /* Ref card styling */
+  .ref-card {
+    margin-top: 15px;
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    color: #F4C542;
+  }
+  .ref-label {
+    font-weight: 600;
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+  /* Marquee container */
+  .marquee-container {
+    overflow: hidden;
+    flex: 1;
+  }
+  /* Marquee content */
+  .marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  .marquee-content:hover {
+    animation-play-state: paused;
+  }
+  .marquee-content a {
+    display: inline-block;
+    margin-right: 120px;
+  }
+  .marquee-content img {
+    height: 90px;
+    width: 200px;
+    margin-left: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    max-width: 300%;
+    display: block;
+    flex-shrink: 0;
+  }
+  .marquee-content img:hover {
+    border-color: #FF6B00;
+  }
+  /* Benefits heading and list */
+  .benefits-heading {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    color: #F4C542;
+  }
+  .benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #E0E0E0;
+    font-size: 1rem;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-120%); }
+  }
+  @media (max-width: 768px) {
+    .modal-content {
+      flex-direction: column;
+      position: relative;
+    }
+    .modal .close {
+      top: 10px; right: 10px;
+    }
+    .marquee-content img {
+      height: 30px;
+      width: 45px;
+    }
   }
 </style>
+
 <script>
-  const servicesData = [
-    { icon: "⚕", title: "Run a Clinic?", desc: "Manage appointments, digital records and more to modernize your clinic with Servora.", btnText: "See What Servora Offers" },
-    { icon: "🚚", title: "In Logistics?", desc: "Fleet tracking, route optimization and delivery dashboards made simple.", btnText: "Explore Services" },
-    { icon: "🛒", title: "Own a Store or Brand?", desc: "POS, inventory and Shopify automation to power your retail experience.", btnText: "Check Solutions" },
-    { icon: "👕", title: "Tailoring Unit?", desc: "Manage orders, customer measurements and production with ease.", btnText: "See Features" },
-    { icon: "🎓", title: "In Education?", desc: "Class scheduling, student portals and academic tools built for institutes.", btnText: "Check Tools" },
-    { icon: "🍴", title: "Run a Restaurant?", desc: "Menus, orders and table management made effortless with Servora.", btnText: "See How It Works" },
-    { icon: "⚙", title: "Service 7", desc: "Description for service 7", btnText: "Learn More" },
-    { icon: "💼", title: "Service 8", desc: "Description for service 8", btnText: "Discover" },
-    { icon: "🔧", title: "Service 9", desc: "Description for service 9", btnText: "See Details" },
-        { icon: "⚕", title: "Run a Clinic?", desc: "Manage appointments, digital records and more to modernize your clinic with Servora.", btnText: "See What Servora Offers" },
-    { icon: "🚚", title: "In Logistics?", desc: "Fleet tracking, route optimization and delivery dashboards made simple.", btnText: "Explore Services" },
-    { icon: "🛒", title: "Own a Store or Brand?", desc: "POS, inventory and Shopify automation to power your retail experience.", btnText: "Check Solutions" },
-    { icon: "👕", title: "Tailoring Unit?", desc: "Manage orders, customer measurements and production with ease.", btnText: "See Features" },
-    { icon: "🎓", title: "In Education?", desc: "Class scheduling, student portals and academic tools built for institutes.", btnText: "Check Tools" },
-    { icon: "🍴", title: "Run a Restaurant?", desc: "Menus, orders and table management made effortless with Servora.", btnText: "See How It Works" }
+  const domains = [
+    "Healthcare",
+    "Logistics",
+    "Retail & E-commerce",
+    "Apparel & Tailoring",
+    "Education",
+    "Food & Beverage",
+    "Manufacturing",
+    "Professional Services",
+    "Automotive",
+    "Travel & Hospitality",
+    "Real Estate",
+    "Finance & Banking",
+    "Technology & Software",
+    "Media & Entertainment",
+    "Non-Profit & NGOs",
+    "Telecommunication",
+    "Government & Public Sector",
+    "Energy & Utilities",
   ];
-  const cardContainer = document.getElementById('cardContainer');
+
+  const servicesData = [
+    {
+      title: "Run a Clinic?",
+      desc:
+        "Manage appointments, digital records and more to modernize your clinic with Servora.",
+      btnText: "See What Servora Offers",
+      image: "./assets/images/webdesign.jpg",
+      details:
+        "We provide specialized digital solutions customized for healthcare clinics, improving patient management and records digitally. We provide specialized digital solutions customized for healthcare clinics, improving patient management and records digitally.",
+      benefits: [
+        "Streamlined appointment scheduling",
+        "Secure digital patient records",
+        "Improved operational efficiency",
+      ],
+      refs: [
+        { img: "./assets/images/ref1.jpg", url: "https://healthcare.example.com" },
+        { img: "./assets/images/ref2.jpg", url: "https://medtech.example.com" },
+      ],
+      domain: "Healthcare",
+    },
+    {
+      title: "In Logistics?",
+      desc:
+        "Fleet tracking, route optimization and delivery dashboards made simple.",
+      btnText: "Explore Services",
+      image: "./assets/images/seo.jpg",
+      details:
+        "Enable real-time fleet tracking and optimize routes to maximize efficiency and reduce operational costs.",
+      benefits: [
+        "Real-time vehicle tracking",
+        "Dynamic route optimization",
+        "Comprehensive delivery analytics",
+      ],
+      refs: [
+        { img: "./assets/images/ref3.jpg", url: "https://logistics.example.com" },
+        { img: "./assets/images/ref4.jpg", url: "https://fleet.example.com" },
+      ],
+      domain: "Logistics",
+    },
+    {
+      title: "Own a Store or Brand?",
+      desc:
+        "POS, inventory and Shopify automation to power your retail experience.",
+      btnText: "Check Solutions",
+      image: "./assets/images/socialmedia.jpg",
+      details:
+        "Integrate seamless POS systems, automate inventory and Shopify operations, and streamline retail workflows.",
+      benefits: [
+        "Automated inventory management",
+        "Integrated POS & payment processing",
+        "E-commerce platform automation",
+      ],
+      refs: [
+        { img: "./assets/images/ref5.jpg", url: "https://retail.example.com" },
+        { img: "./assets/images/ref6.jpg", url: "https://ecommerce.example.com" },
+      ],
+      domain: "Retail & E-commerce",
+    },
+    {
+      title: "Tailoring Unit?",
+      desc:
+        "Manage orders, customer measurements and production with ease.",
+      btnText: "See Features",
+      image: "./assets/images/ppc.jpg",
+      details:
+        "Digital order management and customer profile maintenance designed specifically for tailoring businesses.",
+      benefits: [
+        "Customer measurement database",
+        "Order tracking & production planning",
+        "Tailoring workflow automation",
+      ],
+      refs: [
+        { img: "./assets/images/ref7.jpg", url: "https://tailoring.example.com" },
+        { img: "./assets/images/ref8.jpg", url: "https://stitching.example.com" },
+      ],
+      domain: "Apparel & Tailoring",
+    },
+    {
+      title: "In Education?",
+      desc:
+        "Class scheduling, student portals and academic tools built for institutes.",
+      btnText: "Check Tools",
+      image: "./assets/images/content.jpg",
+      details:
+        "Comprehensive digital platforms for schools and colleges with tools for scheduling, student management, and academic reporting.",
+      benefits: [
+        "Online class and exam scheduling",
+        "Student information portals",
+        "Advanced academic reporting",
+      ],
+      refs: [
+        { img: "./assets/images/ref9.jpg", url: "https://education.example.com" },
+        { img: "./assets/images/ref10.jpg", url: "https://edtech.example.com" },
+      ],
+      domain: "Education",
+    },
+    {
+      title: "Run a Restaurant?",
+      desc:
+        "Menus, orders and table management made effortless with Servora.",
+      btnText: "See How It Works",
+      image: "./assets/images/ecommerce.jpg",
+      details:
+        "Digital solutions designed for hospitality to manage menus, online orders and restaurant floor operations seamlessly.",
+      benefits: [
+        "Digital menu management",
+        "Order tracking & kitchen coordination",
+        "Table reservation and billing",
+      ],
+      refs: [
+        { img: "./assets/images/ref11.jpg", url: "https://restauranttech.example.com" },
+        { img: "./assets/images/ref12.jpg", url: "https://foodservice.example.com" },
+      ],
+      domain: "Food & Beverage",
+    },
+    {
+      title: "Manufacturing Solutions",
+      desc: "Smart factory and supply chain management solutions.",
+      btnText: "Learn More",
+      image: "./assets/images/brandidentity.jpg",
+      details:
+        "Optimize manufacturing workflows and supply chain with IoT and digital automation tools.",
+      benefits: [
+        "Real-time production monitoring",
+        "Supply chain analytics",
+        "Automation of processes",
+      ],
+      refs: [
+        { img: "./assets/images/ref13.jpg", url: "https://manufacturing.example.com" },
+      ],
+      domain: "Manufacturing",
+    },
+    {
+      title: "Professional Services",
+      desc: "Software and process automation for service firms.",
+      btnText: "Discover",
+      image: "./assets/images/video.jpg",
+      details:
+        "Enabling professional service firms to automate tasks, manage clients, and drive efficiency.",
+      benefits: [
+        "Client management tools",
+        "Project workflow automation",
+        "Performance analytics",
+      ],
+      refs: [
+        { img: "./assets/images/ref14.jpg", url: "https://professionalservices.example.com" },
+      ],
+      domain: "Professional Services",
+    },
+    {
+      title: "Automotive Solutions",
+      desc: "Vehicle management and digital showroom integration.",
+      btnText: "See Details",
+      image: "./assets/images/email.jpg",
+      details:
+        "Digital platforms connecting dealers, workshops, and customers for improved automotive services.",
+      benefits: [
+        "Online vehicle catalogue",
+        "Service scheduling systems",
+        "Dealer-customer portals",
+      ],
+      refs: [
+        { img: "./assets/images/ref15.jpg", url: "https://automotive.example.com" },
+      ],
+      domain: "Automotive",
+    },
+    {
+      title: "Travel & Hospitality",
+      desc: "Booking, CRM, and guest engagement softwares.",
+      btnText: "Explore",
+      image: "./assets/images/mobile.jpg",
+      details:
+        "End-to-end travel and hospitality management solutions to enhance guest experiences.",
+      benefits: [
+        "Online booking engines",
+        "Guest engagement tools",
+        "CRM for hospitality",
+      ],
+      refs: [
+        { img: "./assets/images/ref16.jpg", url: "https://travel.example.com" },
+      ],
+      domain: "Travel & Hospitality",
+    },
+    {
+      title: "Real Estate",
+      desc: "Property management and virtual tours.",
+      btnText: "Learn More",
+      image: "./assets/images/uiux.jpg",
+      details:
+        "Integrated real estate portals with property listings, CRM, and virtual tours.",
+      benefits: [
+        "Listing management",
+        "Client communications",
+        "Virtual property tours",
+      ],
+      refs: [
+        { img: "./assets/images/ref17.jpg", url: "https://realestate.example.com" },
+      ],
+      domain: "Real Estate",
+    },
+    {
+      title: "Finance & Banking",
+      desc: "Secure fintech applications and analytics.",
+      btnText: "Check Solutions",
+      image: "./assets/images/conversion.jpg",
+      details:
+        "Robust fintech software for secure transactions, lending, and financial analytics.",
+      benefits: [
+        "Secure online banking",
+        "Loan management",
+        "Financial reporting and dashboards",
+      ],
+      refs: [
+        { img: "./assets/images/ref18.jpg", url: "https://finance.example.com" },
+      ],
+      domain: "Finance & Banking",
+    },
+    {
+      title: "Technology & Software",
+      desc: "Custom software development and platform integrations.",
+      btnText: "Discover",
+      image: "./assets/images/influencer.jpg",
+      details:
+        "Tailored software solutions boosting business operations with API integrations & custom platforms.",
+      benefits: [
+        "Custom application development",
+        "API & platform integration",
+        "Cloud & DevOps solutions",
+      ],
+      refs: [
+        { img: "./assets/images/ref19.jpg", url: "https://software.example.com" },
+      ],
+      domain: "Technology & Software",
+    },
+    {
+      title: "Media & Entertainment",
+      desc: "Content creation platforms and distribution tools.",
+      btnText: "Learn More",
+      image: "./assets/images/webanalytics.jpg",
+      details:
+        "Creative platforms and digital distribution solutions for media houses and entertainment.",
+      benefits: [
+        "Content management",
+        "Digital rights management",
+        "Multi-platform distribution",
+      ],
+      refs: [
+        { img: "./assets/images/ref20.jpg", url: "https://media.example.com" },
+      ],
+      domain: "Media & Entertainment",
+    },
+    {
+      title: "Non-Profit & NGOs",
+      desc: "Donor management and campaign platforms.",
+      btnText: "Explore",
+      image: "./assets/images/localseo.jpg",
+      details:
+        "Digital platforms for fundraising, volunteer coordination, and campaign management.",
+      benefits: [
+        "Donor database systems",
+        "Campaign monitoring",
+        "Volunteer management tools",
+      ],
+      refs: [
+        { img: "./assets/images/ref21.jpg", url: "https://ngo.example.com" },
+      ],
+      domain: "Non-Profit & NGOs",
+    },
+    {
+      title: "Telecommunication",
+      desc: "Customer management and network monitoring.",
+      btnText: "See Features",
+      image: "./assets/images/graphics.jpg",
+      details:
+        "Comprehensive teleco solutions including customer portals and network performance tools.",
+      benefits: [
+        "Customer self-service portals",
+        "Network analytics",
+        "Billing & support automation",
+      ],
+      refs: [
+        { img: "./assets/images/ref22.jpg", url: "https://telecom.example.com" },
+      ],
+      domain: "Telecommunication",
+    },
+    {
+      title: "Government & Public Sector",
+      desc: "Citizen services portals and digital document management.",
+      btnText: "Learn More",
+      image: "./assets/images/digitalstrategy.jpg",
+      details:
+        "Digital transformation platforms for government services with citizen engagement focus.",
+      benefits: [
+        "Citizen service portals",
+        "E-document management",
+        "Performance reporting dashboards",
+      ],
+      refs: [
+        { img: "./assets/images/ref23.jpg", url: "https://government.example.com" },
+      ],
+      domain: "Government & Public Sector",
+    },
+    {
+      title: "Energy & Utilities",
+      desc: "Smart metering and resource management software.",
+      btnText: "Discover",
+      image: "./assets/images/strategy.jpg",
+      details:
+        "Digital tools for energy monitoring, smart meters, and utility billing automation.",
+      benefits: [
+        "Smart metering integration",
+        "Resource consumption analytics",
+        "Automated billing systems",
+      ],
+      refs: [
+        { img: "./assets/images/ref24.jpg", url: "https://energy.example.com" },
+      ],
+      domain: "Energy & Utilities",
+    },
+  ];
+
+  const cardContainer = document.getElementById("cardContainer");
+  const prevsBtn = document.getElementById("prevBtn");
+  const nextsBtn = document.getElementById("nextBtn");
+  const modal = document.getElementById("serviceModal");
+  const modalClose = document.getElementById("modalClose");
   let currentIndex = 0;
   const cardsPerPage = 9;
+
   function renderCards(index) {
-    cardContainer.innerHTML = '';
-    for (let i = index; i < index + cardsPerPage && i < servicesData.length; i++) {
+    cardContainer.innerHTML = "";
+    for (
+      let i = index;
+      i < index + cardsPerPage && i < servicesData.length;
+      i++
+    ) {
       const s = servicesData[i];
-      const card = document.createElement('div');
-      card.className = 'service-card';
+      const card = document.createElement("div");
+      card.className = "service-card";
+      card.setAttribute("tabindex", "0");
       card.innerHTML = `
-        <span class="service-icon">${s.icon}</span>
+        <span class="service-icon" aria-hidden="true">${s.icon || "⚙"}</span>
         <div class="service-content">
           <h3 class="service-title">${s.title}</h3>
           <p class="service-desc">${s.desc}</p>
-          <button class="service-btn">${s.btnText}</button>
+          <button class="service-btn" data-index="${i}" aria-label="Open details for ${s.title}">${s.btnText}</button>
         </div>
       `;
       cardContainer.appendChild(card);
     }
   }
-  document.getElementById('prevBtn').addEventListener('click', () => {
+
+  prevBtn.addEventListener("click", () => {
     currentIndex -= cardsPerPage;
     if (currentIndex < 0) currentIndex = 0;
     renderCards(currentIndex);
   });
-  document.getElementById('nextBtn').addEventListener('click', () => {
+
+  nextBtn.addEventListener("click", () => {
     if (currentIndex + cardsPerPage < servicesData.length) {
       currentIndex += cardsPerPage;
     }
     renderCards(currentIndex);
   });
+
+  cardContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("service-btn")) {
+      let i = +e.target.getAttribute("data-index");
+      openModal(servicesData[i]);
+    }
+  });
+
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  function openModal(service) {
+    document.getElementById("modalTitle").textContent = service.title;
+    document.getElementById("modalDetails").textContent = service.details;
+    document.getElementById("modalImage").src = service.image;
+
+    // Insert benefits
+    const benefitList = document.getElementById("benefitPoints");
+    benefitList.innerHTML = "";
+    service.benefits.forEach((b) => {
+      const li = document.createElement("li");
+      li.textContent = b;
+      benefitList.appendChild(li);
+    });
+
+    // Insert refs in marquee
+    const marqueeContent = document.getElementById("marqueeContent");
+    marqueeContent.innerHTML = "";
+    service.refs.forEach((ref) => {
+      const a = document.createElement("a");
+      a.href = ref.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      const img = document.createElement("img");
+      img.src = ref.img;
+      img.alt = "Reference Image";
+      a.appendChild(img);
+      marqueeContent.appendChild(a);
+    });
+
+    modal.style.display = "block";
+  }
+
+  // Initialize icons in servicesData (optional)
+  for (let i = 0; i < servicesData.length; i++) {
+    // Add a default icon (you can customize)
+    servicesData[i].icon = ["⚕️","🚚","🛒","👗","🎓","🍴","🏭","💼","🚗","✈️","🏠","💰","💻","🎬","🤝","📡","🏛️","⚡️"][i] || "⚙";
+  }
+
   renderCards(currentIndex);
 </script>
+
 
 
   <!-- Performance Stats Section -->
@@ -674,7 +1243,7 @@
     <div style="text-align:center; color:#999; margin-bottom:28px;font-size:1.12rem;">Executive Menu</div>
     <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom: 40px;">
       <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;">
-        <img src="icon-storytelling.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
+        <img src="https://www.svgrepo.com/show/16182/pen.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
         <h3 style="color:#444; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
         <p style="color:#666;max-width:330px;margin:0 auto;">
           We deliver creative campaigns to build a stronger top of funnel for your business. Right from your brand & content strategy to influencers & video production, we take care of it all. Our campaigns have won awards too!
@@ -730,16 +1299,16 @@
         <div id="topMarqueeInner" style="display:flex; gap:34px; animation: marquee-left 12s linear infinite;">
           <!-- ALL cards, UPDATED width/height and NO curve edges -->
           <div style="width:60vw;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case1.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/worksankat1.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:60vw;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case2.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/mezban.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:60vw;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case3.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/amm.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:60vw;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case4.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/worksankat2.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <!-- Duplicate all for seamless marquee effect -->
           <div style="width:60%;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
@@ -760,16 +1329,16 @@
       <div id="bottomMarqueeRow" style="overflow:hidden; width:100%; position:relative; height:350px;">
         <div id="bottomMarqueeInner" style="display:flex; gap:34px; animation: marquee-right 12s linear infinite;">
           <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case5.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/amm.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:620px;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case6.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/worksankat2.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:620px;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case7.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/mezban.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <div style="width:620px;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case8.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+            <img src="./assets/images/worksankat1.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
           </div>
           <!-- Duplicate all for seamless marquee effect -->
           <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
@@ -848,19 +1417,19 @@
     {
       name: "Ileena Fernandes",
       title: "Marketing Manager - Business Standard",
-      quote: "I associated with DigiChefs for the SEO campaigns we were planning to run for Business Standard. In a highly competitive & sensitive space of publications in India, Business Standard has always been one of the best and we wanted to consistently hold on to...",
+      quote: "I associated with 17 Dot for the SEO campaigns we were planning to run for Business Standard. In a highly competitive & sensitive space of publications in India, Business Standard has always been one of the best and we wanted to consistently hold on to...",
       image: "./assets/images/default-impact-stories.jpeg"
     },
     {
       name: "Rajesh Kumar",
       title: "CEO - Tech Innovations",
-      quote: "DigiChefs helped us drastically improve our digital presence by revamping our SEO and social media strategies. Their team is proactive and extremely knowledgeable.",
+      quote: "17 Dot helped us drastically improve our digital presence by revamping our SEO and social media strategies. Their team is proactive and extremely knowledgeable.",
       image: "./assets/images/default-impact-stories2.jpeg"
     },
     {
       name: "Parvati Singh",
       title: "Founder - Creative Co.",
-      quote: "Working with DigiChefs was a game-changer for our brand awareness and customer engagement. Their creative storytelling truly sets them apart.",
+      quote: "Working with 17 Dot was a game-changer for our brand awareness and customer engagement. Their creative storytelling truly sets them apart.",
       image: "./assets/images/default-impact-stories3.jpeg"
     }
   ];
