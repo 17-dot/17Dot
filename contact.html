@@ -19,14 +19,14 @@
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
       color: #F9F9F9;
       overflow-x: hidden;
     }
     
     /* Header Styles */
     header {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
       padding: 12px 20px;
       display: flex;
       align-items: center;
@@ -410,17 +410,16 @@
       overflow: hidden;
     }
     
-    .contact-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 107, 0, 0.1);
-      z-index: -1;
-      border-radius: 12px;
-    }
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
     
     .contact-title {
       font-size: 2.5rem;
@@ -453,6 +452,7 @@
     }
     
     .contact-item {
+      cursor: pointer;
       background: rgba(255, 255, 255, 0.1);
       padding: 20px;
       border-radius: 12px;
@@ -750,7 +750,7 @@
     
     @media (prefers-color-scheme: dark) {
       body {
-        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
       }
     }
   </style>
@@ -759,125 +759,7 @@
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
-  <!-- About Us Section -->
-  <!-- <section class="about-us">
-    <h2 class="about-title">About <span class="highlight">17dot.in</span></h2>
-    <p class="about-desc">
-      At 17dot.in, we’re a dynamic digital agency crafting innovative web solutions and digital strategies that empower businesses to thrive online. Based in India, our team blends creativity, technology, and strategy to deliver tailored experiences that connect brands with their audiences.
-    </p>
-    <div class="about-values">
-      <div class="value-card">
-        <div class="value-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
-        </div>
-        <h3 class="value-title">Innovation-Driven</h3>
-        <p class="value-desc">We push boundaries with cutting-edge web design, development, and digital marketing to keep your brand ahead of the curve.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
-        </div>
-        <h3 class="value-title">Client-Centric</h3>
-        <p class="value-desc">Your success is our mission. We tailor solutions to your unique goals, ensuring measurable impact and lasting partnerships.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14h-2v6H6v2h4v4h2v-4h4v-2h-4V6z"/></svg>
-        </div>
-        <h3 class="value-title">Results-Focused</h3>
-        <p class="value-desc">From SEO to social media, our strategies drive traffic, engagement, and conversions to elevate your business.</p>
-      </div>
-    </div>
-    <a href="#contact" class="cta-button">Get Started with Us</a>
-  </section> -->
 
-  <!-- Numbers That Speak Section -->
-  <!-- <section class="stats-section">
-    <h2 class="stats-title">Numbers That <span class="highlight">Speak</span></h2>
-    <p class="stats-desc">
-      Our achievements reflect our commitment to excellence and client success. Here’s a glimpse of our impact.
-    </p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
-        </div>
-        <h3 class="stat-number">50+</h3>
-        <p class="stat-label">Projects Completed</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v-2H9v-2h2V7z"/></svg>
-        </div>
-        <h3 class="stat-number">95%</h3>
-        <p class="stat-label">Client Satisfaction</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14h-2v6H6v2h4v4h2v-4h4v-2h-4V6z"/></svg>
-        </div>
-        <h3 class="stat-number">5+</h3>
-        <p class="stat-label">Years Experience</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h2v2h-2v2h-2v--remove2H9v-2h2V7z"/></svg>
-        </div>
-        <h3 class="stat-number">20+</h3>
-        <p class="stat-label">Team Members</p>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Process Section -->
-  <!-- <section class="process-section">
-    <h2 class="process-title">Our <span class="highlight">Process</span></h2>
-    <p class="process-desc">
-      We follow a proven methodology to ensure your project is delivered on time, within budget, and exceeds expectations.
-    </p>
-    <div class="process-grid">
-      <div class="process-card">
-        <div class="process-number">01</div>
-        <h3 class="process-title-card">Discovery</h3>
-        <p class="process-desc-card">We analyze your needs, goals, and audience to create a tailored strategy.</p>
-      </div>
-      <div class="process-card">
-        <div class="process-number">02</div>
-        <h3 class="process-title-card">Design & Prototype</h3>
-        <p class="process-desc-card">Our designers craft wireframes and prototypes to visualize your solution.</p>
-      </div>
-      <div class="process-card">
-        <div class="process-number">03</div>
-        <h3 class="process-title-card">Development & Launch</h3>
-        <p class="process-desc-card">We build, test, and deploy your project with precision and quality.</p>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Testimonials Section -->
-  <!-- <section class="testimonials-section">
-    <h2 class="testimonials-title">What Our <span class="highlight">Clients Say</span></h2>
-    <p class="testimonials-desc">
-      We’re proud to have empowered businesses across industries. Hear from our clients about their experiences with 17dot.in.
-    </p>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"17dot.in transformed our online presence with a stunning website and a targeted marketing strategy. Their team is professional and results-driven!"</p>
-        <p class="testimonial-author">Neha Gupta</p>
-        <p class="testimonial-role">CEO, TechTrend Innovations</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"The custom app developed by 17dot.in streamlined our operations and boosted customer engagement. Highly recommend their services!"</p>
-        <p class="testimonial-author">Rahul Mehta</p>
-        <p class="testimonial-role">Founder, UrbanEats</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">"From concept to launch, 17dot.in delivered a seamless experience. Their attention to detail and creativity are unmatched."</p>
-        <p class="testimonial-author">Anjali Desai</p>
-        <p class="testimonial-role">Marketing Director, GrowEasy Solutions</p>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Contact Us Section -->
   <section id="contact" class="contact-section">
@@ -948,14 +830,7 @@
     </form>
   </section>
 
-  <!-- CTA Banner Section -->
-  <!-- <section class="cta-banner">
-    <h2 class="cta-banner-title">Ready to Elevate Your Brand?</h2>
-    <p class="cta-banner-desc">
-      Let’s collaborate to create a digital solution that drives growth and connects with your audience. Contact us today!
-    </p>
-    <a href="#contact" class="cta-banner-button">Start Your Project</a>
-  </section> -->
+
 
   <!-- Footer -->
   <div id="footer-container"></div>
