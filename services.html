@@ -5,73 +5,86 @@
   <title>17 Dot - Digital First Creative Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(90deg, #121212 0%, #1C3C72 50%, #121212 100%);
-      color: #F9F9F9; /* White text for dark theme */
+      background: linear-gradient(135deg, #f0f2f5 0%, #d8e4f5 100%); /* Light gradient background */
+      color: #333; /* Dark text for light theme */
     }
+    
     header {
-      background: linear-gradient(90deg, #121212 0%, #1C3C72 50%, #121212 100%);
+      background: #ffffff; /* White background for header */
       padding: 12px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
     }
+    
     .logo {
       font-size: 2.2rem;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
       letter-spacing: -2px;
     }
+    
     .hero {
       position: relative;
       width: 100%;
       min-height: 30vh;
-      /* background: url('bg-city.jpg') center/cover no-repeat; */
+      background: url('https://placehold.co/1200x400/D0DCEB/4A90E2?text=Our+Services') center/cover no-repeat; /* New placeholder image */
       padding: 50px 30px 50px 30px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
+    
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.55); /* Dark overlay for better text visibility */
+      background: rgba(255, 255, 255, 0.75); /* Light overlay */
       pointer-events: none;
     }
+    
     .hero-content {
       position: relative;
       z-index: 2;
       display: flex;
-      flex-direction: column;   /* stack title & desc */
-      justify-content: center;  /* center vertically (if height set) */
-      align-items: center;      /* center horizontally */
-      text-align: center;       /* center text inside */
-      min-height: 30vh;  
-
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 30vh;
     }
+    
     .hero-title {
       font-size: 3.8rem;
       font-weight: 900;
       margin-bottom: 4px;
-      color: #F9F9F9; /* White */
+      color: #333; /* Dark text */
     }
+    
     .hero-title .creative {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    
     .hero-desc {
       font-size: 1.3rem;
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
       margin-bottom: 25px;
       margin-top: 10px;
     }
@@ -81,10 +94,8 @@
       position: absolute;
       width: 38%;
       padding: 25px;
-      background: rgba(28, 60, 114, 0.15);
+      background: #ffffff;
       border-radius: 16px;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       opacity: 0;
       transform: translateY(20px);
@@ -93,15 +104,29 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      cursor: pointer; /* Make clickable */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
       .service-item {
+        text-align: center;
+      }
+      .service-title, .service-desc, .service-number {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      .service-item {
         width: 80%;
         left: 10% !important;
-        padding: 15px;
+        padding: 2px 0px 0px 0px;
+        position: relative;
+        margin-bottom: 0px !important; /* No gap between services on mobile */
+        opacity: 1; /* Make visible on mobile */
+        transform: translateY(0);
+        animation: none;
       }
       .service-number {
         width: 25px;
@@ -115,8 +140,17 @@
         font-size: 0.8rem;
       }
       .service-dot {
-        width: 20px;
-        height: 20px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -18px;
+        transform: translateX(-50%);
+        width: 22px;
+        height: 22px;
+        z-index: 2;
+        background: linear-gradient(135deg, #4a90e2, #50e3c2);
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(255,255,255,0.3), 0 0 12px rgba(74,144,226,0.5);
       }
       .roadmap-section {
         padding: 40px 10px;
@@ -131,13 +165,43 @@
       .hero-desc {
         font-size: 1rem;
       }
+      .services-container {
+        min-height: 6800px; /* Adjust height on mobile */
+      }
+      .snake-path {
+        display: none; /* Hide snake path on mobile */
+      }
+      .snake-path-mobile {
+        display: block; /* Show new vertical path */
+      }
+      /* Fallback vertical line for mobile */
+      .services-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #4a90e2, #50e3c2);
+        z-index: 0;
+        border-radius: 2px;
+        opacity: 0.25;
+        pointer-events: none;
+      }
+      .service-item {
+          margin-bottom: 10px; /* Reduced gap between services on mobile */
+      }
+      .service-item.mobile-left, .service-item.mobile-right {
+          left: 10% !important;
+      }
     }
 
     @media (max-width: 480px) {
       .service-item {
         width: 90%;
         left: 5% !important;
-        padding: 12px;
+        padding: 1px 0px 0px 0px;
       }
       .service-title {
         font-size: 0.9rem;
@@ -154,37 +218,40 @@
       .roadmap-section {
         padding: 30px 5px;
       }
+      .service-item.mobile-left, .service-item.mobile-right {
+          left: 5% !important;
+      }
     }
 
     .service-item:hover {
       transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(255, 107, 0, 0.2);
-      border-color: rgba(255, 107, 0, 0.3);
+      box-shadow: 0 12px 40px rgba(74, 144, 226, 0.2);
+      border-color: rgba(74, 144, 226, 0.3);
     }
 
     .service-dot {
       position: absolute;
       width: 26px;
       height: 26px;
-      background: linear-gradient(135deg, #FF6B00, #F4C542);
+      background: linear-gradient(135deg, #4a90e2, #50e3c2);
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
-      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.3), 0 0 25px rgba(255, 107, 0, 0.8);
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 25px rgba(74, 144, 226, 0.8);
       z-index: 2;
       transition: all 0.3s ease;
     }
     
     .service-item:hover .service-dot {
       transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 0 0 4px rgba(28, 60, 114, 0.4), 0 0 30px rgba(255, 107, 0, 1);
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4), 0 0 30px rgba(74, 144, 226, 1);
     }
 
     .service-number {
       position: absolute;
       top: -15px;
       left: 15px;
-      background: #FF6B00;
+      background: #4a90e2; /* New color */
       color: white;
       width: 30px;
       height: 30px;
@@ -198,14 +265,14 @@
     }
 
     .service-title {
-      color: #F4C542;
+      color: #4a90e2;
       font-size: 1.2rem;
       margin-bottom: 10px;
       font-weight: 600;
     }
 
     .service-desc {
-      color: #e0e0e0;
+      color: #555; /* Dark text */
       font-size: 0.9rem;
       line-height: 1.5;
       margin: 5px 0 0 0;
@@ -218,103 +285,237 @@
       }
     }
     
-    /* Add a subtle pulse animation to the snake path */
     @keyframes pulse {
-      0% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
-      50% { filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.5)); }
-      100% { filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3)); }
+      0% { filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3)); }
+      50% { filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.5)); }
+      100% { filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3)); }
     }
     
     .snake-path {
       animation: pulse 4s infinite ease-in-out;
     }
 
-    /* New Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Keep this for small screen scrolling */
-  background-color: rgba(0,0,0,0.8);
-  padding-top: 0px;
-  box-sizing: border-box;
-}
-
-
-
-.modal-content {
-      overflow-y: auto;  /* keep vertical scroll */
-  overflow-x: hidden; /* prevent horizontal scroll */
-  flex-wrap: nowrap;  /* prevent flex wrapping */
-  background: linear-gradient(135deg, #1C3C72 0%, #0A0A0A 100%);
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #FF6B00;
-  width: 80%;          /* You can adjust percentage */
-  max-width: 800px;    /* Max width for desktop */
-  max-height: 80vh;    /* Max height relative to viewport height */
-  border-radius: 16px;
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 8px 32px rgba(255, 107, 0, 0.2);
-  overflow-y: auto;    /* Scroll inside modal if content overflows vertically */
-  position: relative;  /* To anchor absolute .close */
-}
-
-.modal-image {
-  flex: 1;
-  max-width: 50%; /* increased from 40% if needed */
-  margin-right: 20px;
-  min-width: 0;  /* Important - prevents image from forcing overflow */
-}
-
-.modal-details {
-  flex: 1;
-  min-width: 0; /* Important - allows shrinking */
-  color: #F9F9F9;
-}
-
-.modal-image img {
-  width: 100%;
-  height: 300px; /* increased height, adjust as needed */
-  object-fit: contain; /* or cover depending on how you want it displayed */
-  border-radius: 8px;
-}
-
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      padding-top: 0px;
+      box-sizing: border-box;
+    }
+    
+    .modal-content {
+      overflow-y: auto;
+      overflow-x: hidden;
+      flex-wrap: nowrap;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      border: 1px solid rgba(74, 144, 226, 0.28);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+      margin: 5% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 800px;
+      max-height: 80vh;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
+      position: relative;
+    }
+    
+    .modal-image {
+      flex: 1;
+      max-width: 50%;
+      margin-right: 20px;
+      min-width: 0;
+      overflow: hidden;
+    }
+    
+    .modal-details {
+      flex: 1;
+      min-width: 0;
+      color: #ffffff;
+    }
+    
+    .modal-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
     .modal-details h2 {
-      color: #F4C542;
+      color: #4a90e2;
       margin-bottom: 15px;
     }
     .modal-details p {
       line-height: 1.6;
     }
     .close {
-      color: #FF6B00;
-      float: right;
+      position: absolute;
+      top: 16px;
+      right: 16px;
       font-size: 28px;
       font-weight: bold;
+      color: #4a90e2;
       cursor: pointer;
+      float: none;
+      z-index: 10;
     }
     .close:hover {
-      color: #F4C542;
+      color: #50e3c2;
     }
+    
     @media (max-width: 768px) {
       .modal-content {
         flex-direction: column;
+        position: relative;
       }
-      .modal-image {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
+      .modal .close {
+        top: 10px;
+        right: 10px;
+      }
+      .marquee-content img {
+        height: 30px;
+        width: 45px;
+      }
+    }
+
+    /* Ref card styling */
+    .ref-card {
+      margin-top: 15px;
+      background: transparent;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-color: #f0f2f5;
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      color: #4a90e2;
+    }
+    
+    .ref-label {
+      font-weight: 600;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    
+    /* Marquee container */
+    .marquee-container {
+      overflow: hidden;
+      flex: 1;
+    }
+    
+    .marquee-content {
+      display: flex;
+      animation: marquee 10s linear infinite;
+    }
+    
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+    
+    .marquee-content a {
+      display: inline-block;
+      margin-right: 120px;
+    }
+    
+    .marquee-content img {
+      height: 90px;
+      width: 200px;
+      margin-left: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      max-width: 300%;
+      display: block;
+      flex-shrink: 0;
+    }
+    
+    .marquee-content img:hover {
+      border-color: #4a90e2;
+    }
+    
+    /* Benefits heading */
+    .benefits-heading {
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: #4a90e2;
+    }
+    
+    /* Benefits list */
+    .benefits-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+    
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-120%);
+      }
+    }
+    .main-section-intro {
+      max-width:100%; 
+      margin:-30px auto; 
+      padding:30px; 
+      color:#ffffff; 
+      border-radius:5px;  
+      font-family:Arial, sans-serif; 
+      text-align:center;
+      background: transparent;
+    }
+    .main-section-intro h2 {
+      font-size:2rem; 
+      font-weight:700; 
+      margin-bottom:0px; 
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .main-section-intro p {
+      font-size:1.1rem; 
+      line-height:1.7; 
+      margin-bottom:0; 
+      color:#555;
+    }
+    .main-section-intro span {
+      color: #4a90e2;
+      font-weight:600;
+    }
+    /* Mobile-specific snake path */
+    .snake-path-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+    }
+    @media (max-width: 768px) {
+      .snake-path-mobile {
+        display: block;
       }
     }
   </style>
   <title>Contact Us - Servora</title>
-  <!-- <link rel="stylesheet" href="css/style.css" /> -->
 </head>
 <body>
   
@@ -326,7 +527,7 @@
     <div class="hero-content">
       <div class="col-lg-8 mt-2">
         <div class="hero-title">
-          <span class="creative">Our Services</span>
+          <span style="color:#333; font-weight:900;">Our </span><span class="creative">Services</span>
         </div>
         <div class="hero-desc">
           A full suite digital marketing agency <br>We offer 17 comprehensive digital solutions to transform your business
@@ -336,36 +537,21 @@
   </section>
   <main>
     <!-- 17 Dots Roadmap Section -->
-    <section class="roadmap-section" style="padding: 20px 20px; background: linear-gradient(90deg, #121212 0%, #1C3C72 50%, #121212 100%);
-overflow: hidden;">
-      <!-- <div class="hero-desc" style="text-align: center;">
-        Check Our Offering<br>We offer 17 comprehensive digital solutions to transform your business
-      </div> -->
-      <div 
-      style="
-  max-width:100%; 
-  margin:-30px auto; 
-  padding:30px; 
-  color:#ffffff; 
-  border-radius:5px;  
-  font-family:Arial, sans-serif; 
-  text-align:center;
-">
-  <h2 style="font-size:2rem; font-weight:700; margin-bottom:0px; color:#FF6B00;">
-    Trusted by Businesses Across Industries
-  </h2>
-  <p style="font-size:1.1rem; line-height:1.7; margin-bottom:0; color:#ffffff;">
-    At <span style="color:#FF6B00; font-weight:600;">17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
-    We focus on creating innovative solutions that help our clients grow <span style="color:#FF6B00; font-weight:600;">faster</span> and <span style="color:#FF6B00; font-weight:600;">smarter</span>.
-  </p>
-</div>
-      <div class="container" style="max-width: 1140px; margin: 0 auto; position: relative; min-height: 2400px;">
+    <section class="roadmap-section" style="padding: 20px 20px; background: linear-gradient(135deg, #f0f2f5 0%, #d8e4f5 100%); overflow: hidden;">
+      <div class="main-section-intro">
+        <h2 >Trusted by Businesses Across Industries</h2>
+        <p>
+          At <span>17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
+          We focus on creating innovative solutions that help our clients grow <span>faster</span> and <span>smarter</span>.
+        </p>
+      </div>
+      <div class="container" style="max-width: 1140px; margin: 0 auto; position: relative; min: height 6800px;;">
         <!-- The snake path with gradient and glow effect -->
-        <svg class="snake-path" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.3));">
+        <svg class="snake-path" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FF6B00" />
-              <stop offset="100%" stop-color="#F4C542" />
+              <stop offset="0%" stop-color="#4a90e2" />
+              <stop offset="100%" stop-color="#50e3c2" />
             </linearGradient>
             <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4" result="blur" />
@@ -373,6 +559,16 @@ overflow: hidden;">
             </filter>
           </defs>
           <path id="snake" d="" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+        </svg>
+
+        <svg class="snake-path-mobile" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));">
+          <defs>
+            <linearGradient id="gradient-mobile" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#4a90e2" />
+              <stop offset="100%" stop-color="#50e3c2" />
+            </linearGradient>
+          </defs>
+          <path id="snake-mobile" d="" fill="none" stroke="url(#gradient-mobile)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         
         <!-- Service items -->
@@ -382,186 +578,40 @@ overflow: hidden;">
       </div>
     </section>
 
-    <!-- New Modal Structure -->
-    <!-- <div id="serviceModal" class="modal">
+    <!-- Modal Structure -->
+    <div id="serviceModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" id="modalClose">&times;</span>
         <div class="modal-image">
           <img id="modalImage" src="" alt="Service Image">
+          <div class="ref-card">
+            <span class="ref-label">Ref</span>
+            <div class="marquee-container">
+              <div class="marquee-content" id="marqueeContent"></div>
+            </div>
+          </div>
         </div>
         <div class="modal-details">
           <h2 id="modalTitle"></h2>
           <p id="modalDetails"></p>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Modified Modal Structure -->
-<div id="serviceModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    
-    <!-- Left side: Image + ref card below -->
-    <div class="modal-image">
-      <img id="modalImage" src="" alt="Service Image">
-      
-      <!-- Ref Card with marquee -->
-      <div class="ref-card">
-        <span class="ref-label">Ref</span>
-        <div class="marquee-container">
-          <div class="marquee-content" id="marqueeContent">
-            <!-- Images with links inserted dynamically -->
-          </div>
+          <h3 class="benefits-heading">Benefit</h3>
+          <ul id="benefitPoints" class="benefits-list"></ul>
         </div>
       </div>
     </div>
-    
-    <!-- Right side: details + benefits -->
-    <div class="modal-details">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDetails"></p>
-      
-      <!-- Benefits heading and points -->
-      <h3 class="benefits-heading">Benefit</h3>
-      <ul id="benefitPoints" class="benefits-list">
-        <!-- Benefit points inserted dynamically -->
-      </ul>
-    </div>
-  </div>
-</div>
-<style>
-  /* Close button moved to top right inside modal-content */
-.modal .close {
-  position: absolute; /* Important: Position relative to modal-content */
-  top: 16px;
-  right: 16px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10;
-  float: none; /* Remove float so it doesn't shift */
-}
-
-
-  
-  /* Ref card styling */
-  .ref-card {
-    margin-top: 15px;
-    background:transparent;
-    padding: 8px 12px;
-    border-radius: 8px;
-    border-color: #0A0A0A;
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-  }
-  
-  .ref-label {
-    font-weight: 600;
-    color: #F4C542;
-    margin-right: 8px;
-    white-space: nowrap;
-  }
-  
-  /* Marquee container */
-  .marquee-container {
-    overflow: hidden;
-
-    flex: 1;
-  }
-  
-  .marquee-content {
-    display: flex;
-    animation: marquee 10s linear infinite;
-  }
-  
-  .marquee-content:hover {
-    animation-play-state: paused;
-  }
-  
-  /* Small rectangular images in marquee */
-  .marquee-content a {
-    display: inline-block;
-    margin-right: 120px;
-  }
-  
-.marquee-content img {
-  height: 90px;
-  width: 200px;
-  margin-left: 50px;
-  row-gap: 10px;
-  object-fit: cover;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: border-color 0.3s ease;
-  max-width: 300%;
-  display: block;
-  flex-shrink: 0;
-}
-
-  
-  .marquee-content img:hover {
-    border-color: #e05e01;
-  }
-  
-  /* Benefits heading */
-  .benefits-heading {
-    margin-top: 24px;
-    margin-bottom: 10px;
-    color: #F4C542;
-  }
-  
-  /* Benefits list */
-  .benefits-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #E0E0E0;
-    font-size: 1rem;
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-120%);
-    }
-  }
-  
-  /* Responsive tweaks */
-  @media (max-width: 768px) {
-    .modal-content {
-      flex-direction: column;
-      position: relative;
-    }
-    .modal .close {
-      top: 10px;
-      right: 10px;
-    }
-
-    .marquee-content img {
-      height: 30px;
-      width: 45px;
-    }
-  }
-</style>
   </main>
 
   <!--Footer!-->
   <div id="footer-container"></div>
 
-    <!-- Include navbar.js -->
   <script src="js/navbar.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       loadNavbar();
-      // You can also load footer here if needed
     });
   </script>
   
   <script>
-    // Extended Services data with image and detailed description
     const services = [
       { title: 'Web Design', desc: 'Custom, responsive websites that convert visitors into customers with stunning UI/UX.', image: './assets/images/webdesign.jpg', details: 'Our web design service focuses on creating visually appealing and user-friendly websites tailored to your brand. We use the latest technologies to ensure responsiveness across all devices, incorporating SEO best practices from the start. This includes custom layouts, interactive elements, and performance optimization for faster load times.' },
       { title: 'SEO Optimization', desc: 'Improve your search rankings and drive organic traffic with our proven SEO strategies.', image: './assets/images/seo.jpg', details: 'SEO optimization involves in-depth keyword research, on-page and off-page strategies, technical audits, and content optimization. We help your site rank higher on search engines like Google, increasing visibility and attracting qualified traffic that converts into leads.' },
@@ -582,15 +632,14 @@ overflow: hidden;">
       { title: 'Digital Strategy', desc: 'Comprehensive digital roadmap tailored to your business goals.', image: './assets/images/digitalstrategy.jpg', details: 'We create holistic strategies encompassing all digital channels, goal setting, timeline planning, and KPI tracking to achieve measurable growth and ROI.' }
     ];
 
-    // Generate service items and snake path with smooth curves
     document.addEventListener('DOMContentLoaded', function() {
       const container = document.querySelector('.services-container');
       const svgPath = document.getElementById('snake');
+      const svgPathMobile = document.getElementById('snake-mobile');
       const containerWidth = container.offsetWidth;
       
-      // Calculate dynamic height based on number of services
-      const itemHeight = 140; // Slightly taller items
-      const spacing = 100; // More spacing between items
+      const itemHeight = 140;
+      const spacing = 100;
       const totalHeight = (itemHeight + spacing) * services.length + 200;
       container.parentElement.style.minHeight = totalHeight + 'px';
       
@@ -598,37 +647,35 @@ overflow: hidden;">
       let firstPoint = true;
       let previousX = 0;
       let previousY = 0;
+
+      let mobilePathData = '';
       
       services.forEach((service, index) => {
-        // Calculate vertical position with proper spacing
         const top = index * (itemHeight + spacing) + 100;
-        
-        // Alternate between left and right positions with more space
         const isLeft = index % 2 === 0;
         const left = isLeft ? '3%' : '57%';
         
-        // Calculate path points with more space between sides
         const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
         const y = top + (itemHeight / 2);
         
-        // Add to SVG path with smooth bezier curves
         if (firstPoint) {
           pathData += `M ${x},${y}`;
+          // For mobile, always use 50% width for x (center)
+          mobilePathData += `M ${containerWidth/2},${y}`;
           firstPoint = false;
         } else {
-          // Create control points for smooth bezier curves
           const cp1x = previousX + (x - previousX) / 3;
           const cp1y = previousY;
           const cp2x = x - (x - previousX) / 3;
           const cp2y = y;
           pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
+          // For mobile, vertical line at center
+          mobilePathData += ` L ${containerWidth/2},${y}`;
         }
         
-        // Store current point for next iteration
         previousX = x;
         previousY = y;
         
-        // Create service item with improved spacing
         const serviceElement = document.createElement('div');
         serviceElement.className = 'service-item';
         serviceElement.style.top = `${top}px`;
@@ -636,40 +683,47 @@ overflow: hidden;">
         serviceElement.style.animationDelay = `${index * 0.1}s`;
         serviceElement.style.minHeight = `${itemHeight}px`;
         
-        // Position dot on the opposite side
-        const dotPosition = isLeft ? 'left' : 'right';
-        const dotOffset = isLeft ? '-12px' : 'calc(100% - 12px)';
-        
+        // For mobile, dot will be centered at the top; for desktop, keep zig-zag
+        let dotStyle = '';
+        if (window.innerWidth <= 768) {
+          dotStyle = 'left: 50%; top: -18px; transform: translateX(-50%); width: 22px; height: 22px;';
+        } else {
+          const dotPosition = isLeft ? 'left' : 'right';
+          const dotOffset = isLeft ? '-12px' : 'calc(100% - 12px)';
+          dotStyle = `${dotPosition}: ${dotOffset};`;
+        }
         serviceElement.innerHTML = `
           <div class="service-number">${index + 1}</div>
-          <div class="service-dot" style="${dotPosition}: ${dotOffset};"></div>
+          <div class="service-dot" style="${dotStyle}"></div>
           <h3 class="service-title">${service.title}</h3>
           <p class="service-desc">${service.desc}</p>
         `;
         
-        // Add click event to open modal
         serviceElement.addEventListener('click', () => openModal(service));
         
         container.appendChild(serviceElement);
       });
       
-      // Set the path data
       svgPath.setAttribute('d', pathData);
+      svgPathMobile.setAttribute('d', mobilePathData);
       
-      // Animate the path drawing
       const pathLength = svgPath.getTotalLength();
       svgPath.style.strokeDasharray = pathLength;
       svgPath.style.strokeDashoffset = pathLength;
+
+      const pathLengthMobile = svgPathMobile.getTotalLength();
+      svgPathMobile.style.strokeDasharray = pathLengthMobile;
+      svgPathMobile.style.strokeDashoffset = pathLengthMobile;
       
-      // Trigger the animation
       setTimeout(() => {
         svgPath.style.transition = 'stroke-dashoffset 2s ease-in-out';
         svgPath.style.strokeDashoffset = '0';
+        svgPathMobile.style.transition = 'stroke-dashoffset 2s ease-in-out';
+        svgPathMobile.style.strokeDashoffset = '0';
       }, 500);
 
-      // Modal functionality
       const modal = document.getElementById('serviceModal');
-      const closeBtn = document.querySelector('.close');
+      const closeBtn = document.getElementById('modalClose');
 
       closeBtn.onclick = () => {
         modal.style.display = 'none';
@@ -682,73 +736,52 @@ overflow: hidden;">
       };
     });
 
-    // Function to open modal with service data
-    // function openModal(service) {
-    //   const modal = document.getElementById('serviceModal');
-    //   document.getElementById('modalTitle').textContent = service.title;
-    //   document.getElementById('modalDetails').textContent = service.details;
-    //   document.getElementById('modalImage').src = service.image;
-    //   modal.style.display = 'block';
-    // }
-
     function openModal(service) {
-  const modal = document.getElementById('serviceModal');
-  document.getElementById('modalTitle').textContent = service.title;
-  document.getElementById('modalDetails').textContent = service.details;
-  document.getElementById('modalImage').src = service.image;
-  
-  // Example benefit points for demonstration
-  const benefits = [
-    "Increase brand visibility",
-    "Drive more conversions",
-    "Enhance customer engagement",
-    "Improve SEO rankings"
-  ];
-  
-  // Insert benefit points dynamically
-  const benefitList = document.getElementById('benefitPoints');
-  benefitList.innerHTML = ''; // Clear existing
-  
-  benefits.forEach(point => {
-    const li = document.createElement('li');
-    li.textContent = point;
-    benefitList.appendChild(li);
-  });
-  
-  // Insert marquee images with links dynamically
-  const marqueeContent = document.getElementById('marqueeContent');
-  marqueeContent.innerHTML = ''; // Clear existing
-  
-  // Example refs with image src and link
-  const refs = [
-    { img: './assets/images/worksankatservice1.PNG', url: 'https://example1.com' },
-    { img: './assets/images/mezbancard.jpg', url: 'https://example2.com' },
-    { img: './assets/images/ammcard.png', url: 'https://example3.com' },
-    { img: './assets/images/worksankatcard2.png', url: 'https://example4.com' }
-  ];
-  
-  refs.forEach(ref => {
-    const a = document.createElement('a');
-    a.href = ref.url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    const img = document.createElement('img');
-    img.src = ref.img;
-    img.alt = 'Reference Image';
-    a.appendChild(img);
-    marqueeContent.appendChild(a);
-  });
-  
-  modal.style.display = 'block';
-}
-
-    // Fetch navbar and footer
-    // fetch('navbar.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('navbar-container').innerHTML = data;
-    //   })
-    //   .catch(error => console.error('Error loading navbar:', error));
+      const modal = document.getElementById('serviceModal');
+      document.getElementById('modalTitle').textContent = service.title;
+      document.getElementById('modalDetails').textContent = service.details;
+      document.getElementById('modalImage').src = service.image;
+      
+      const benefits = [
+        "Increase brand visibility",
+        "Drive more conversions",
+        "Enhance customer engagement",
+        "Improve SEO rankings"
+      ];
+      
+      const benefitList = document.getElementById('benefitPoints');
+      benefitList.innerHTML = '';
+      
+      benefits.forEach(point => {
+        const li = document.createElement('li');
+        li.textContent = point;
+        benefitList.appendChild(li);
+      });
+      
+      const marqueeContent = document.getElementById('marqueeContent');
+      marqueeContent.innerHTML = '';
+      
+      const refs = [
+        { img: './assets/images/worksankatservice1.png', url: 'https://example1.com' },
+        { img: './assets/images/mezbancard.jpg', url: 'https://example2.com' },
+        { img: './assets/images/ammcard.png', url: 'https://example3.com' },
+        { img: './assets/images/worksankatcard2.png', url: 'https://example4.com' }
+      ];
+      
+      refs.forEach(ref => {
+        const a = document.createElement('a');
+        a.href = ref.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        const img = document.createElement('img');
+        img.src = ref.img;
+        img.alt = 'Reference Image';
+        a.appendChild(img);
+        marqueeContent.appendChild(a);
+      });
+      
+      modal.style.display = 'block';
+    }
 
     fetch('footer.html')
       .then(response => response.text())
@@ -756,29 +789,6 @@ overflow: hidden;">
         document.getElementById('footer-container').innerHTML = data;
       })
       .catch(error => console.error('Error loading footer:', error));
-
-    // Optional: AJAX form submission for better UX (unchanged)
-    const form = document.getElementById('contactForm');
-    const responseDiv = document.getElementById('formResponse');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-      })
-      .then(response => response.text())
-      .then(data => {
-        responseDiv.textContent = data;
-        form.reset();
-      })
-      .catch(() => {
-        responseDiv.textContent = 'Oops! Something went wrong.';
-      });
-    });
   </script>
 </body>
 </html>
