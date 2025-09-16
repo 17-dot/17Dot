@@ -75,12 +75,238 @@
       margin-top: 10px;
     }
 
+ /* Section styles */
+  .our-work-section {
+    background: #F5F5F7;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* Row container for each work item */
+  .our-work-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Left card container */
+  .work-left-card {
+    flex: 1;
+    min-width: 620px;
+    max-width: 400px;
+  }
+
+  /* Full width left card */
+  .work-left-fullwidth {
+    flex: 1;
+    min-width: 620px;
+    max-width: 400px;
+  }
+
+  /* Card content styles */
+  .work-left-card > div,
+  .work-left-fullwidth > div {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 0;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  /* Hover effect on cards */
+  .work-left-card > div:hover,
+  .work-left-fullwidth > div:hover {
+    transform: scale(1.03);
+  }
+
+  /* Image inside card */
+  .work-left-card img,
+  .work-left-fullwidth img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    margin-bottom: 14px;
+  }
+
+  /* Full width button */
+  .work-left-card a,
+  .work-left-fullwidth a {
+    display: block;
+    width: 96%;
+    padding: 12px;
+    border: 2px solid #9B51E0;
+    color: #9B51E0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+  }
+
+  /* Button hover effects */
+  .work-left-card a:hover,
+  .work-left-fullwidth a:hover {
+    background-color: #9B51E0;
+    color: #fff;
+  }
+
+  /* Right content area */
+  .work-right-content {
+    flex: 2;
+    margin-top: 30px;
+    min-width: 320px;
+    max-width: 600px;
+    color: #444;
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+
+  /* Tag styling */
+  .work-right-content .tag {
+    display: inline-block;
+    background: rgba(155, 81, 224, 0.1);
+    color: #9B51E0;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  /* Company name header */
+  .work-right-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #222;
+  }
+
+  /* Content paragraph */
+  .work-right-content p.content {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  /* Review card container */
+  .work-right-content .review-card {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fafafa;
+  }
+
+  /* Review card header with image/name and rating */
+  .review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  /* Reviewer info group */
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Reviewer image */
+  .reviewer-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* Reviewer name and title */
+  .reviewer-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviewer-details .name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+  }
+
+  .reviewer-details .title {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  /* Rating stars style */
+  .rating-stars {
+    color: #f5b50a;
+    font-size: 1rem;
+  }
+
+  /* Review text */
+  .review-text {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+  }
+
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .our-work-row {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0 !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 12px 0 !important;
+      box-sizing: border-box;
+    }
+
+    .work-left-card,
+    .work-left-fullwidth,
+    .work-right-content {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      margin-bottom: 15px;
+      padding: 0 8px !important;
+      box-sizing: border-box;
+    }
+.work-left-fullwidth a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh; /* keep your height */
+  text-align: center; /* fallback for older browsers */
+}
+
+
+    .work-right-content {
+      margin-top: 6px !important;
+      text-align: left !important;
+    }
+  }
   </style>
 </head>
 <body>
   
   <!--Navbar!-->
 <div id="navbar-container"></div>
+
+
 
   <section class="hero">
     <div class="hero-overlay"></div>
@@ -119,392 +345,199 @@
 
   <!--Our Works!-->
   <!--background:linear-gradient(135deg, #0A0A0A, #1C3C72);-->
-<section style="background:#F5F5F7;padding:20px 0 30px 0;text-align:center; width: 1351px; margin:0 0px 0 auto;">
-<!-- left -->
-<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap;">
+<section class="our-work-section">
 
-  <!-- Left side card -->
-<div style="flex:1; min-width:620px; max-width:400px;">
-  <div style="
-    background:#ffffff; 
-    padding:16px; 
-    border-radius:0px; 
-    text-align:center; 
-    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
-    transition:transform 0.3s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.03)'" 
-  onmouseout="this.style.transform='scale(1)'">
+  <!-- First work item row -->
+  <div class="our-work-row">
 
-    <!-- Image -->
-    <img src="assets/images/worksankat1.PNG" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+    <!-- Left side card (full width variant) -->
+    <div class="work-left-fullwidth">
+      <div>
+        <!-- Image -->
+        <img src="assets/images/worksankat1.PNG" alt="Company Image" />
 
-    <!-- Full-width Button -->
-    <a href="#" style="
-      display:block; 
-      width:96%; 
-      padding:12px; 
-      border:2px solid #9B51E0; 
-      color:#9B51E0; 
-      font-size:14px; 
-      font-weight:600; 
-      border-radius:6px; 
-      text-decoration:none; 
-      transition:all 0.3s ease;
-    " 
-    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
-    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
-      Visit Website
-    </a>
-  </div>
-</div>
-
-
-  <!-- Right side content -->
-  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
-
-    <!-- Logistics tag -->
-    <span style="
-      display: inline-block;
-      background: rgba(155, 81, 224, 0.1); 
-      color: #9B51E0; 
-      font-weight: 600; 
-      font-size: 14px; 
-      padding: 6px 14px; 
-      border-radius: 20px; 
-      margin-bottom:12px;
-    ">
-      NGO
-    </span>
-
-    <!-- Company name header -->
-    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
-      Sankat Saathi
-    </h2>
-
-    <!-- Content -->
-    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
-      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
-    </p>
-
-    <!-- Case study link -->
-
-    <!-- Review Card -->
-    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        
-        <!-- Image + Name -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
-          <div>
-            <div style="font-weight:600; font-size:1rem; color:#222;">Sankat Saathi</div>
-            <div style="font-size:0.9rem; color:#666;">Founder, Sankat Saathi</div>
-          </div>
-        </div>
-
-        <!-- Rating Stars -->
-        <div style="color:#f5b50a; font-size:1rem;">
-          ★★★★☆
-        </div>
+        <!-- Full-width Button -->
+        <a href="#">
+          Visit Website
+        </a>
       </div>
-
-      <!-- Review -->
-      <p style="font-size:0.95rem; color:#444; margin:0;">
-        "Great experience working with 17DOT, helped us scale with quality leads."
-      </p>
     </div>
-  </div>
-</div>
-<!-- left -->
-<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top: 30px;">
 
-  <!-- Left side card -->
-<div style="flex:1; min-width:620px; max-width:400px;">
-  <div style="
-    background:#ffffff; 
-    padding:16px; 
-    border-radius:0px; 
-    text-align:center; 
-    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
-    transition:transform 0.3s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.03)'" 
-  onmouseout="this.style.transform='scale(1)'">
+    <!-- Right side content -->
+    <div class="work-right-content">
 
-    <!-- Image -->
-    <img src="assets/images/mezban.jpg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+      <!-- Logistics tag -->
+      <span class="tag">
+        NGO
+      </span>
 
-    <!-- Full-width Button -->
-    <a href="#" style="
-      display:block; 
-      width:96%; 
-      padding:12px; 
-      border:2px solid #9B51E0; 
-      color:#9B51E0; 
-      font-size:14px; 
-      font-weight:600; 
-      border-radius:6px; 
-      text-decoration:none; 
-      transition:all 0.3s ease;
-    " 
-    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
-    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
-      Visit Website
-    </a>
-  </div>
-</div>
+      <!-- Company name header -->
+      <h2>Sankat Saathi</h2>
 
+      <!-- Content -->
+      <p class="content">
+        Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+      </p>
 
-  <!-- Right side content -->
-  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
-
-    <!-- Logistics tag -->
-    <span style="
-      display: inline-block;
-      background: rgba(155, 81, 224, 0.1); 
-      color: #9B51E0; 
-      font-weight: 600; 
-      font-size: 14px; 
-      padding: 6px 14px; 
-      border-radius: 20px; 
-      margin-bottom:12px;
-    ">
-      Restaurant
-    </span>
-
-    <!-- Company name header -->
-    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
-      Mezbaan Hotel
-    </h2>
-
-    <!-- Content -->
-    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
-      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
-    </p>
-
-    <!-- Case study link -->
-
-    <!-- Review Card -->
-    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        
-        <!-- Image + Name -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
-          <div>
-            <div style="font-weight:600; font-size:1rem; color:#222;">Mezbaan Hotel</div>
-            <div style="font-size:0.9rem; color:#666;">Founder, Mezbaan Hotel</div>
+      <!-- Review Card -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <!-- Image + Name -->
+          <div class="reviewer-info">
+            <img src="assets/images/logo1png.png" alt="Company Logo" />
+            <div class="reviewer-details">
+              <div class="name">Sankat Saathi</div>
+              <div class="title">Founder, Sankat Saathi</div>
+            </div>
           </div>
+
+          <!-- Rating Stars -->
+          <div class="rating-stars">★★★★☆</div>
         </div>
 
-        <!-- Rating Stars -->
-        <div style="color:#f5b50a; font-size:1rem;">
-          ★★★★☆
-        </div>
+        <!-- Review -->
+        <p class="review-text">
+          "Great experience working with 17DOT, helped us scale with quality leads."
+        </p>
       </div>
-
-      <!-- Review -->
-      <p style="font-size:0.95rem; color:#444; margin:0;">
-        "Great experience working with 17DOT, helped us scale with quality leads."
-      </p>
     </div>
+
   </div>
-</div>
-<!-- left -->
-<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top: 30px;">
+  <!-- End of first work item row -->
 
-  <!-- Left side card -->
-<div style="flex:1; min-width:620px; max-width:400px; ">
-  <div style="
-    background:#ffffff; 
-    padding:16px; 
-    border-radius:0px; 
-    text-align:center; 
-    box-shadow:0 2px 6px rgba(0,0,0,0.08); 
-    transition:transform 0.3s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.03)'" 
-  onmouseout="this.style.transform='scale(1)'">
+  <!-- Second work item row -->
+  <div class="our-work-row">
 
-    <!-- Image -->
-    <img src="assets/images/amm.PNG" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
+    <!-- Left side card -->
+    <div class="work-left-fullwidth">
+      <div>
+        <!-- Image -->
+        <img src="assets/images/mezban.jpg" alt="Company Image" />
 
-    <!-- Full-width Button -->
-    <a href="#" style="
-      display:block; 
-      width:96%; 
-      padding:12px; 
-      border:2px solid #9B51E0; 
-      color:#9B51E0; 
-      font-size:14px; 
-      font-weight:600; 
-      border-radius:6px; 
-      text-decoration:none; 
-      transition:all 0.3s ease;
-    " 
-    onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
-    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
-      Visit Website
-    </a>
-  </div>
-</div>
+        <!-- Full-width Button -->
+        <a href="#">
+          Visit Website
+        </a>
+      </div>
+    </div>
 
+    <!-- Right side content -->
+    <div class="work-right-content">
 
-  <!-- Right side content -->
-  <div style="flex:2;margin-top: 30px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:left;">
+      <!-- Logistics tag -->
+      <span class="tag">
+        Restaurant
+      </span>
 
-    <!-- Logistics tag -->
-    <span style="
-      display: inline-block;
-      background: rgba(155, 81, 224, 0.1); 
-      color: #9B51E0; 
-      font-weight: 600; 
-      font-size: 14px; 
-      padding: 6px 14px; 
-      border-radius: 20px; 
-      margin-bottom:12px;
-    ">
-      Fashion
-    </span>
+      <!-- Company name header -->
+      <h2>Mezbaan Hotel</h2>
 
-    <!-- Company name header -->
-    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
-      Ammo'z Fashion
-    </h2>
+      <!-- Content -->
+      <p class="content">
+        Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
+      </p>
 
-    <!-- Content -->
-    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
-      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
-    </p>
-
-    <!-- Case study link -->
-
-    <!-- Review Card -->
-    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        
-        <!-- Image + Name -->
-        <div style="display:flex; align-items:center; gap:12px;">
-          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
-          <div>
-            <div style="font-weight:600; font-size:1rem; color:#222;">Ammo'z Fashion</div>
-            <div style="font-size:0.9rem; color:#666;">Founder, Ammo'z Fashion</div>
+      <!-- Review Card -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <!-- Image + Name -->
+          <div class="reviewer-info">
+            <img src="assets/images/logo1png.png" alt="Company Logo" />
+            <div class="reviewer-details">
+              <div class="name">Mezbaan Hotel</div>
+              <div class="title">Founder, Mezbaan Hotel</div>
+            </div>
           </div>
+
+          <!-- Rating Stars -->
+          <div class="rating-stars">★★★★☆</div>
         </div>
 
-        <!-- Rating Stars -->
-        <div style="color:#f5b50a; font-size:1rem;">
-          ★★★★☆
-        </div>
+        <!-- Review -->
+        <p class="review-text">
+          "Great experience working with 17DOT, helped us scale with quality leads."
+        </p>
       </div>
+    </div>
 
-      <!-- Review -->
-      <p style="font-size:0.95rem; color:#444; margin:0;">
-        "Great experience working with 17DOT, helped us scale with quality leads."
+  </div>
+  <!-- End of second work item row -->
+
+  <!-- Third work item row -->
+  <div class="our-work-row">
+
+    <!-- Left side card -->
+    <div class="work-left-fullwidth">
+      <div>
+        <!-- Image -->
+        <img src="assets/images/amm.PNG" alt="Company Image" />
+
+        <!-- Full-width Button -->
+        <a href="#">
+          Visit Website
+        </a>
+      </div>
+    </div>
+
+    <!-- Right side content -->
+    <div class="work-right-content">
+
+      <!-- Logistics tag -->
+      <span class="tag">
+        Fashion
+      </span>
+
+      <!-- Company name header -->
+      <h2>Ammo'z Fashion</h2>
+
+      <!-- Content -->
+      <p class="content">
+        Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
       </p>
-    </div>
-  </div>
-</div>
-<!-- right -->
-<!-- <div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; flex-direction:row-reverse;">
-  <div style="flex:1; min-width:620px; max-width:400px; margin-top: 40px;">
-    <div style="
-      background:#ffffff; 
-      padding:16px; 
-      border-radius:0px; 
-      text-align:center; 
-      box-shadow:0 2px 6px rgba(0,0,0,0.08); 
-      transition:transform 0.3s ease;
-    " 
-    onmouseover="this.style.transform='scale(1.03)'" 
-    onmouseout="this.style.transform='scale(1)'">
 
-      
-      <img src="assets/images/default-impact-stories.jpeg" alt="Company Image" style="width:100%; height:auto; border-radius:0px; object-fit:cover; margin-bottom:14px;">
-
-      
-      <a href="#" style="
-        display:block; 
-        width:96%; 
-        padding:12px; 
-        border:2px solid #9B51E0; 
-        color:#9B51E0; 
-        font-size:14px; 
-        font-weight:600; 
-        border-radius:6px; 
-        text-decoration:none; 
-        transition:all 0.3s ease;
-      " 
-      onmouseover="this.style.backgroundColor='#9B51E0'; this.style.color='#fff';" 
-      onmouseout="this.style.backgroundColor='transparent'; this.style.color='#9B51E0';">
-        Visit Website
-      </a>
-    </div>
-  </div>
-
-  <div style="flex:2; margin-top:80px; min-width:320px; max-width:600px; color:#444; font-family:Arial, sans-serif; text-align:right;">
-
-    <span style="
-      display: inline-block;
-      background: rgba(155, 81, 224, 0.1); 
-      color: #9B51E0; 
-      font-weight: 600; 
-      font-size: 14px; 
-      padding: 6px 14px; 
-      border-radius: 20px; 
-      margin-bottom:12px;
-    ">
-      Logistics
-    </span>
-
-    <h2 style="font-size:1.5rem; font-weight:700; margin:10px 0; color:#222;">
-      Venture Catalysts
-    </h2>
-
-
-    <p style="font-size:1.1rem; font-weight:500; color:#444; line-height:1.5; margin-bottom:16px;">
-      Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
-    </p>
-
-    <div style="margin-top:20px; padding:16px; border:1px solid #eee; border-radius:12px; background:#fafafa;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        
-
-        <div style="display:flex; align-items:center; gap:12px;">
-          <img src="assets/images/logo1png.png" alt="Company Logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
-          <div>
-            <div style="font-weight:600; font-size:1rem; color:#222;">Rahul Sharma</div>
-            <div style="font-size:0.9rem; color:#666;">Founder, Venture Catalysts</div>
+      <!-- Review Card -->
+      <div class="review-card">
+        <div class="review-card-header">
+          <!-- Image + Name -->
+          <div class="reviewer-info">
+            <img src="assets/images/logo1png.png" alt="Company Logo" />
+            <div class="reviewer-details">
+              <div class="name">Ammo'z Fashion</div>
+              <div class="title">Founder, Ammo'z Fashion</div>
+            </div>
           </div>
+
+          <!-- Rating Stars -->
+          <div class="rating-stars">★★★★☆</div>
         </div>
 
-        <div style="color:#f5b50a; font-size:1rem;">
-          ★★★★☆
-        </div>
+        <!-- Review -->
+        <p class="review-text">
+          "Great experience working with 17DOT, helped us scale with quality leads."
+        </p>
       </div>
-
-      
-      <p style="font-size:0.95rem; color:#444; margin:0;">
-        "Great experience working with 17DOT, helped us scale with quality leads."
-      </p>
     </div>
+
   </div>
-</div> -->
+  <!-- End of third work item row -->
 
 </section>
 
 
+
   <!--Footer!-->
 <div id="footer-container"></div>
+
+  <!-- Include navbar.js -->
+  <script src="js/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadNavbar();
+      // You can also load footer here if needed
+    });
+  </script>
+
 <script>
-
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {

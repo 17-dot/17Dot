@@ -835,14 +835,23 @@
   <!-- Footer -->
   <div id="footer-container"></div>
 
+    <!-- Include navbar.js -->
+  <script src="js/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadNavbar();
+      // You can also load footer here if needed
+    });
+  </script>
+
   <script>
     // Load navbar and footer
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading navbar:', error));
+    // fetch('navbar.html')
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById('navbar-container').innerHTML = data;
+    //   })
+    //   .catch(error => console.error('Error loading navbar:', error));
 
     fetch('footer.html')
       .then(response => response.text())
