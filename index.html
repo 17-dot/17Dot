@@ -59,23 +59,6 @@
       border-radius: 50%;
       display: inline-block;
     }
-    .hamburger {
-      margin-left: 18px;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-    }
-    .hamburger .bar {
-      width: 28px;
-      height: 4px;
-      background: #FF6B00; /* Orange */
-      border-radius: 2px;
-    }
     /* Hero Styles - Updated for dark theme */
     .hero {
       position: relative;
@@ -386,6 +369,387 @@
 }
 
   </style>
+
+  <style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Desktop styles */
+  .client-section {
+    background: #fff;
+    padding: 29px 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+  }
+  .client-text {
+    border-left: 4px solid #1e90ff;
+    padding-left: 10px;
+    color: #444;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .marquee-container {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-left: 40px;
+    white-space: nowrap;
+  }
+  #marquee {
+    display: flex;
+    gap: 60px;
+    animation: marquee 40s linear infinite;
+  }
+  #marquee img {
+    height: 150px;
+    width: 200px;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .client-section {
+      padding: 20px 20px;
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+    }
+    .client-text {
+      border-left: none;
+      border-top: 4px solid #1e90ff;
+      padding-top: 10px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      white-space: normal;
+      width: 100%;
+      text-align: center;
+    }
+    .marquee-container {
+      margin-left: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    #marquee {
+      gap: 30px !important;
+    }
+    #marquee img {
+      width: 100%;
+      max-width: 120px;
+      height: auto !important;
+      object-fit: contain;
+    }
+  }
+</style>
+
+<style>
+  .showreel-section {
+    background: linear-gradient(90deg, #111 0%, #1C3C72 60%, #FF6B00 100%);
+    color: #fff;
+    padding: 40px 0 30px 0;
+    width: 100%;
+  }
+
+  .showreel-container {
+    max-width: 1420px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: nowrap;
+  }
+
+  .showreel-details {
+    flex: 1 1 0px;
+    min-width: 0;
+    padding-left: 40px;
+  }
+
+  .showreel-heading {
+    font-size: 2.7rem;
+    font-weight: 900;
+    margin-bottom: 18px;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: #fff;
+    text-align: left;
+    /* Orange accent for "WATCH" only */
+  }
+  .showreel-heading strong {
+    color: #FF6B00;
+    display: block;
+  }
+
+  .showreel-stats-row {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 18px;
+    margin-top: 12px;
+  }
+  .showreel-stats-row > div {
+    text-align: left;
+    min-width: 110px;
+  }
+  .showreel-stats-row strong {
+    color: #FFD356;
+    font-size: 1.55rem;
+    font-weight: 700;
+  }
+  .showreel-stats-row span {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .showreel-video {
+    flex: 0 0 220px; /* fixed width for video column */
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .showreel-video-inner {
+    width: 340px;
+    height: 210px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #222;
+    box-shadow: 0 6px 38px rgba(255,107,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .showreel-video-inner video,
+  .showreel-video-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+  }
+
+  /* MOBILE VIEW */
+  @media (max-width: 767px) {
+    .showreel-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 0 10px;
+    }
+    .showreel-details {
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .showreel-heading {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      text-align: center;
+      letter-spacing: 0;
+    }
+    .showreel-stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 0;
+      margin: 14px 0 10px 0;
+      justify-items: center;
+    }
+    .showreel-stats-row > div {
+      text-align: center;
+      min-width: 0;
+    }
+    .showreel-video {
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .showreel-video-inner {
+      width: 98vw;
+      max-width: 320px;
+      height: 22vh;
+      margin: 0 auto 14px auto;
+    }
+  }
+</style>
+  <style>
+    /* All original footer inline styles converted to CSS (to avoid duplication) */
+    footer {
+      background: #111111;
+      color: #F4C542;
+      padding: 40px 0 20px 0;
+      margin-top: 0px;
+      position: relative;
+    }
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    footer .logo-section {
+      flex: 1;
+      min-width: 260px;
+    }
+    footer .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+    footer .description {
+      margin: 14px 0 30px 0;
+      font-size: 1.15rem;
+      color: #ddd;
+    }
+    footer .social-icons {
+      margin-top: 12px;
+    }
+    footer .social-icons a {
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-right: 16px;
+    }
+    footer .social-icons img {
+      height: 24px;
+      vertical-align: middle;
+    }
+    footer .quick-links {
+      flex: 1;
+      min-width: 240px;
+    }
+    footer .quick-links h4 {
+      font-weight: bold;
+      margin-bottom: 9px;
+      color: #ffffff;
+    }
+    footer .quick-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    footer .quick-links li a {
+      color: #ddd;
+      text-decoration: none;
+      line-height: 2;
+    }
+    footer .contact-us {
+      flex: 1;
+      min-width: 240px;
+    }
+    footer .contact-us h4 {
+      font-weight: bold;
+      margin-bottom: 9px;
+      color: #ffffff;
+    }
+    footer .contact-us div {
+      line-height: 2;
+      color: #ddd;
+    }
+    footer .contact-us a {
+      color: #ffffff;
+    }
+    footer .copyright {
+      text-align: center;
+      color: #ddd;
+      font-size: 0.98rem;
+      margin-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 14px;
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+      footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+      }
+      footer .container > div {
+        min-width: auto;
+        margin-bottom: 30px;
+        flex: none;
+        width: 100%;
+      }
+      footer .logo-section {
+        margin-bottom: 40px;
+      }
+      footer .logo {
+        font-size: 1.8rem;
+      }
+      footer .description {
+        font-size: 1rem;
+        margin: 10px 0 20px 0;
+      }
+      footer .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      footer .social-icons a {
+        margin-right: 0;
+        transition: transform 0.3s ease;
+      }
+      footer .social-icons a:hover {
+        transform: scale(1.1);
+      }
+      footer .quick-links h4,
+      footer .contact-us h4 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      footer .quick-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      footer .quick-links li {
+        margin: 5px 0;
+      }
+      footer .quick-links li a {
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+      footer .quick-links li a:hover {
+        color: #F4C542;
+      }
+      footer .contact-us > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+      }
+      footer .contact-us > div span {
+        margin: 5px 0;
+      }
+      footer .contact-us a {
+        transition: color 0.3s ease;
+      }
+      footer .contact-us a:hover {
+        color: #F4C542;
+      }
+      footer .copyright {
+        font-size: 0.9rem;
+        padding: 10px 20px 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
+
 </head>
 <body>
   
@@ -412,96 +776,123 @@
     </div>
   </section>
 
-  <div class="chat-popup">
-    <img src="./assets/images/logog.PNG" class="chat-img" alt="Chat">
+<!-- Chat icon component -->
+<div class="chat-popup">
+  <img src="./assets/images/logog.PNG" alt="Chat icon">
+  <!-- Keep the span/button in the markup if you still need them on desktop -->
+  <span>Hi! We are 17 Dot <br>Let's build together :)</span>
+  <button class="chat-close" onclick="this.parentElement.style.display='none'">&times;</button>
+</div>
 
-    <span>Hi! We are 17 Dot <br>Let's Build together :)</span>
-    <button class="chat-close" onclick="this.parentElement.style.display='none'">&times;</button>
-  </div>
+<style>
+/* Base (desktop) styles — keep whatever you already have */
+.chat-popup {
+  position: fixed;          /* example placement */
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;      /* your original background */
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+.chat-popup img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.chat-popup .chat-close {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
 
-  <div style="background:#fff; padding: 29px 40px; overflow: hidden; display:flex; align-items:center; height: 20vh;">
-  <div style="border-left: 4px solid #1e90ff; padding-left: 10px; color: #444; font-weight: 600; white-space: nowrap; font-family: Arial, sans-serif; font-size: 1rem; flex-shrink: 0;">
+/* MOBILE override — show ONLY the circular image with a dark-blue border */
+@media (max-width: 768px) {
+  .chat-popup {
+    display: hidden;
+    background: none;          /* remove white box */
+    padding: 0;
+    box-shadow: none;
+  }
+  .chat-popup img {
+    border: 3px solid #1C3C72; /* dark-blue border */
+  }
+  .chat-popup span,
+  .chat-popup .chat-close {
+    display: none !important;  /* hide text and × button */
+  }
+}
+</style>
+
+
+
+
+<div class="client-section">
+  <div class="client-text">
     Our Clients From Different Sector :
   </div>
-  <div style="flex-grow: 1; overflow: hidden; margin-left: 40px; white-space: nowrap;">
-    <div id="marquee" style="display: flex; gap: 60px; animation: marquee 40s linear infinite;">
-      <img src="./assets/images/logo1png.png" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo2png.png" alt="ctrl" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo1png.png" alt="welink" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo2png.png" alt="mama" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo1png.png" alt="moha" style="height: 150px; width: 200px;"/>
-      <!-- Repeat logos for seamless loop -->
-      <img src="./assets/images/logo2png.png" alt="dellcube" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo1png.png" alt="ctrl" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo2png.png" alt="welink" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo1png.png" alt="mama" style="height: 150px; width: 200px;" />
-      <img src="./assets/images/logo2png.png" alt="moha" style="height: 150px; width: 200px;" />
+
+  <div class="marquee-container">
+    <div id="marquee">
+      <img src="./assets/images/logo1png.png" alt="logo1" />
+      <img src="./assets/images/logo2png.png" alt="logo2" />
+      <img src="./assets/images/logo1png.png" alt="logo1" />
+      <img src="./assets/images/logo2png.png" alt="logo2" />
+      <img src="./assets/images/logo1png.png" alt="logo1" />
+      <img src="./assets/images/logo2png.png" alt="logo2" />
+      <img src="./assets/images/logo1png.png" alt="logo1" />
+      <img src="./assets/images/logo2png.png" alt="logo2" />
+      <img src="./assets/images/logo1png.png" alt="logo1" />
+      <img src="./assets/images/logo2png.png" alt="logo2" />
     </div>
   </div>
-  <style>
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    @media (max-width: 768px) {
-      div[style*="background:#fff; padding: 29px 40px; overflow: hidden; display:flex; align-items:center; height: 20vh;"] {
-        padding: 20px 20px;
-        height: auto;
-        flex-direction: column;
-        text-align: center;
-      }
-      div[style*="border-left: 4px solid #1e90ff; padding-left: 10px; color: #444; font-weight: 600; white-space: nowrap; font-family: Arial, sans-serif; font-size: 1rem; flex-shrink: 0;"] {
-        border-left: none;
-        border-top: 4px solid #1e90ff;
-        padding-top: 10px;
-        margin-bottom: 20px;
-        font-size: 0.9rem;
-      }
-      div[style*="flex-grow: 1; overflow: hidden; margin-left: 40px; white-space: nowrap;"] {
-        margin-left: 0;
-      }
-      #marquee img {
-        height: 80px !important;
-        width: 120px !important;
-      }
-      #marquee {
-        gap: 30px !important;
-      }
-    }
-  </style>
 </div>
 
 <!-- Showreel Stats Section -->
-<section style="background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%); color: #fff; padding: 35px 0 0 0; margin-bottom: 45px;">
-  <div style="max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-    <div style="min-width: 350px; padding-left: 35px;">
-      <h2 style="font-size: 2.3rem; font-weight: 900; margin-bottom: 8px;">WATCH<br>OUR SHOWREEL</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-top: 24px; font-size: 1.45rem;">
+<section class="showreel-section">
+  <div class="showreel-container">
+    <div class="showreel-details">
+      <div class="showreel-heading">
+        <strong>WATCH</strong>
+        OUR SHOWREEL
+      </div>
+      <div class="showreel-stats-row">
         <div>
-          <strong style="color: #F4C542;">9+</strong><br><span style="font-size:1rem; color: #F9F9F9;">Years</span>
+          <strong>9+</strong>
+          <span>Years</span>
         </div>
         <div>
-          <strong style="color: #F4C542;">65+</strong><br><span style="font-size:1rem; color: #F9F9F9;">Team Strength</span>
+          <strong>65+</strong>
+          <span>Team Strength</span>
         </div>
         <div>
-          <strong style="color: #F4C542;">400+</strong><br><span style="font-size:1rem; color: #F9F9F9;">Clients Served</span>
+          <strong>400+</strong>
+          <span>Clients Served</span>
         </div>
         <div>
-          <strong style="color: #F4C542;">5</strong><br><span style="font-size:1rem; color: #F9F9F9;">Continents served</span>
+          <strong>5</strong>
+          <span>Continents served</span>
         </div>
         <div>
-          <strong style="color: #F4C542;">25</strong><br><span style="font-size:1rem; color: #F9F9F9;">Brands Launched</span>
+          <strong>25</strong>
+          <span>Brands Launched</span>
         </div>
         <div>
-          <strong style="color: #F4C542;">30</strong><br><span style="font-size:1rem; color: #F9F9F9;">Global Clients</span>
+          <strong>30</strong>
+          <span>Global Clients</span>
         </div>
       </div>
     </div>
-    <div style="min-width: 380px; margin-left: 20px;">
-      <!-- Video or image preview placeholder -->
-      <div style="position:relative; width:330px; height:200px; border-radius:22px; overflow:hidden; margin:0 auto; box-shadow:0 4px 22px rgba(255, 107, 0, 0.2);">
-        <!-- <video src="./assets/images/17dott.mp4" alt="Showreel Preview" style="width:100%;height:100%;object-fit:cover;"></video> -->
-                    <video src="./assets/images/17dott.mp4"style="width:100%;height:100%;object-fit:cover;"  autoplay muted loop playsinline></video>
+    <div class="showreel-video">
+      <div class="showreel-video-inner">
+        <!-- Video or image preview placeholder -->
+
+        <video src="./assets/images/17dott.mp4" autoplay muted loop playsinline></video>
       </div>
     </div>
   </div>
@@ -544,6 +935,45 @@
 </div>
 
 <style>
+
+@media (max-width: 768px) {
+  #cardContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: 100%;
+    min-height: 300px;
+  }
+  .service-card {
+    flex: 0 0 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+    min-height: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.35s;
+  }
+  #prevBtn, #nextBtn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fffbe5;
+    color: #1C3C72;
+    border: none;
+    padding: 10px 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  #prevBtn { left: 0; }
+  #nextBtn { right: 0; }
+}
   /* Your original styles from previous code */
 
   section button#prevBtn,
@@ -632,6 +1062,7 @@
     display: none;
   }
   .modal-content {
+    
       background: rgba(255, 255, 255, 0.18); /* Translucent white */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px); /* For Safari */
@@ -662,7 +1093,7 @@
   }
   .modal-image img {
     width: 100%;
-    height: 300px;
+
     object-fit: contain;
     border-radius: 8px;
   }
@@ -692,6 +1123,7 @@
   .close:hover {
     color: #F4C542;
   }
+
 
   /* Ref card styling */
   .ref-card {
@@ -1159,8 +1591,8 @@
   ];
 
   const cardContainer = document.getElementById("cardContainer");
-  const prevsBtn = document.getElementById("prevBtn");
-  const nextsBtn = document.getElementById("nextBtn");
+  const prevButton = document.getElementById("prevBtn");
+  const nextButton = document.getElementById("nextBtn");
   const modal = document.getElementById("serviceModal");
   const modalClose = document.getElementById("modalClose");
   let currentIndex = 0;
@@ -1168,12 +1600,12 @@
 
   function renderCards(index) {
     cardContainer.innerHTML = "";
-    for (
-      let i = index;
-      i < index + cardsPerPage && i < servicesData.length;
-      i++
-    ) {
-      const s = servicesData[i];
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      // Clamp index within range
+      index = Math.min(Math.max(0, index), servicesData.length - 1);
+      currentIndex = index;
+      const s = servicesData[index];
       const card = document.createElement("div");
       card.className = "service-card";
       card.setAttribute("tabindex", "0");
@@ -1182,25 +1614,77 @@
         <div class="service-content">
           <h3 class="service-title">${s.title}</h3>
           <p class="service-desc">${s.desc}</p>
-          <button class="service-btn" data-index="${i}" aria-label="Open details for ${s.title}">${s.btnText}</button>
+          <button class="service-btn" data-index="${index}" aria-label="Open details for ${s.title}">${s.btnText}</button>
         </div>
       `;
       cardContainer.appendChild(card);
+      // Show/hide buttons at ends
+      prevButton.style.display = index === 0 ? "none" : "block";
+      nextButton.style.display = index === servicesData.length - 1 ? "none" : "block";
+    } else {
+      // Desktop grid render (as before)
+      cardContainer.style.display = "grid";
+      cardContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
+      cardContainer.style.gap = "24px";
+      cardContainer.style.overflow = "hidden";
+      cardContainer.style.padding = "0 40px";
+      const cardsPerPage = 9;
+      cardContainer.innerHTML = "";
+      for (let i = index; i < index + cardsPerPage && i < servicesData.length; i++) {
+        const s = servicesData[i];
+        const card = document.createElement("div");
+        card.className = "service-card";
+        card.setAttribute("tabindex", "0");
+        card.innerHTML = `
+          <span class="service-icon" aria-hidden="true">${s.icon || "⚙"}</span>
+          <div class="service-content">
+            <h3 class="service-title">${s.title}</h3>
+            <p class="service-desc">${s.desc}</p>
+            <button class="service-btn" data-index="${i}" aria-label="Open details for ${s.title}">${s.btnText}</button>
+          </div>
+        `;
+        cardContainer.appendChild(card);
+      }
+      prevButton.style.display = index === 0 ? "none" : "block";
+      nextButton.style.display = index + cardsPerPage >= servicesData.length ? "none" : "block";
     }
   }
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex -= cardsPerPage;
-    if (currentIndex < 0) currentIndex = 0;
+  prevButton.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderCards(currentIndex);
+      }
+    } else {
+      if (currentIndex - cardsPerPage >= 0) {
+        currentIndex -= cardsPerPage;
+        renderCards(currentIndex);
+      }
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      if (currentIndex < servicesData.length - 1) {
+        currentIndex++;
+        renderCards(currentIndex);
+      }
+    } else {
+      if (currentIndex + cardsPerPage < servicesData.length) {
+        currentIndex += cardsPerPage;
+        renderCards(currentIndex);
+      }
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    currentIndex = 0;
     renderCards(currentIndex);
   });
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex + cardsPerPage < servicesData.length) {
-      currentIndex += cardsPerPage;
-    }
-    renderCards(currentIndex);
-  });
+  // Initial render
+  renderCards(currentIndex);
 
   cardContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("service-btn")) {
@@ -1256,15 +1740,15 @@
     // Add a default icon (you can customize)
     servicesData[i].icon = ["⚕️","🚚","🛒","👗","🎓","🍴","🏭","💼","🚗","✈️","🏠","💰","💻","🎬","🤝","📡","🏛️","⚡️"][i] || "⚙";
   }
-
-  renderCards(currentIndex);
 </script>
 
 
 
+
   <!-- Performance Stats Section -->
-<section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%);  text-align:center; padding:40px 10px 40px;">
-  <div style="max-width:1100px; margin:0 auto; display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+<section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%); text-align:center; padding:40px 10px 40px;">
+  <div class="mobile-info">Swipe to see our achievements</div>
+  <div class="stats-container" id="slider">
     <div>
       <span style="font-size:2.6rem; font-weight:bold; color:#F4C542;">200K</span><br>
       <span style="font-size:1.1rem; color:#F9F9F9;">keywords ranked on<br>first page of Google</span>
@@ -1283,6 +1767,198 @@
     </div>
   </div>
 </section>
+
+<style>
+  .stats-container {
+    max-width:1100px;
+    margin:0 auto;
+    display: flex;
+    gap:40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .stats-container > div {
+    min-width:220px;
+    flex: 1 1 220px;
+  }
+  .mobile-info {
+    display: none;
+    color: #FFF;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+      gap: 0;
+      justify-content: flex-start;
+    }
+    .stats-container > div {
+      flex: 0 0 100vw;
+      min-width: 100vw;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      padding: 40px 10px;
+    }
+    .stats-container::-webkit-scrollbar { display: none; }
+    .stats-container { -ms-overflow-style: none; scrollbar-width: none; }
+    .mobile-info { display: block; }
+  }
+</style>
+
+<script>
+  // Only run auto-slide on small screens
+  function startAutoSlide() {
+    const slider = document.getElementById('slider');
+    const slides = slider.children;
+    let current = 0;
+    function slide() {
+      current = (current + 1) % slides.length;
+      slider.scrollTo({
+        left: current * window.innerWidth,
+        behavior: 'smooth'
+      });
+    }
+    // Run only on mobile width
+    let intervalId = null;
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        if (!intervalId) {
+          intervalId = setInterval(slide, 2500); // 2.5 seconds per slide
+        }
+      } else {
+        if (intervalId) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+        slider.scrollTo({left: 0, behavior: 'auto'});
+        current = 0;
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize(); // start on load
+  }
+
+  document.addEventListener('DOMContentLoaded', startAutoSlide);
+</script>
+
+
+<style>
+  .stats-container {
+    max-width:1100px;
+    margin:0 auto;
+    display: flex;
+    gap:40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .stats-container > div {
+    min-width:220px;
+    flex: 1 1 220px; /* Cards share row equally, wrap if needed */
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+      gap: 0;
+      justify-content: flex-start; /* Cards align at start, scrollable */
+    }
+    .stats-container > div {
+      flex: 0 0 100vw;
+      min-width: 100vw;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      padding: 40px 10px;
+    }
+    .stats-container::-webkit-scrollbar {
+      display: none;
+    }
+    .stats-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+</style>
+
+<style>
+  @media (max-width: 768px) {
+    .stats-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 -10px; /* Remove horizontal margin if any */
+      padding: 0;      /* Remove padding to ensure full width */
+    }
+    .stats-container > div {
+      flex: 0 0 100vw; /* Use viewport width for each card */
+      min-width: 100vw;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      padding: 40px 10px; /* If you want some internal padding */
+    }
+    .stats-container::-webkit-scrollbar {
+      display: none;
+    }
+    .stats-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+</style>
+
+
+<style>
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory !important;
+      padding: 0 10px; /* Optional: add some side padding for better touch */
+      scroll-behavior: smooth; /* Smooth scrolling on swipe */
+    }
+    .stats-container > div {
+      flex: 0 0 100% !important; /* Full width for one item at a time */
+      scroll-snap-align: start !important;
+      min-width: 100% !important; /* Ensure it takes full viewport width */
+    }
+    /* Hide scrollbar for cleaner look */
+    .stats-container::-webkit-scrollbar {
+      display: none;
+    }
+    .stats-container {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+</style>
+
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;"] > div {
+      flex: 1 1 45%; /* Adjusts to take about half the width, allowing 2 per row */
+      max-width: 45%;
+    }
+  }
+</style>
+
 
 <!-- Core Offerings Section -->
 <section style="background:#fafafa; padding:25px 0;">
@@ -1330,76 +2006,107 @@
   <button style="margin-top:18px;padding:10px 32px;background:none;border:2px solid #fff;border-radius:4px;color:#fff;font-weight:600;font-size:1.08rem;cursor:pointer;letter-spacing:2px;">Try Now</button>
 </section>
 
-<section style="background: #F5F5F7; padding: 30px 0 30px 0; ;">
-    <!-- <h2 style="margin-left: 610px;  background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;font-size:2rem;font-weight:bold; margin-bottom:25px;">Our Work</h2> -->
-    <h2 style="margin:0 auto 10px auto; display:block; width:fit-content; text-align:center; background:linear-gradient(90deg,#F54A23,#F7B533); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-size:2rem; font-weight:bold;">
-  Our Work
-</h2>
+<!--  -->
+<section style="background: #F5F5F7; padding: 30px 0 30px 0;">
+  <h2 style="margin:0 auto 10px auto; display:block; width:fit-content; text-align:center; background:linear-gradient(90deg,#F54A23,#F7B533); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-size:2rem; font-weight:bold;">
+    Our Work
+  </h2>
 
-    <div style="text-align:center; color:#525661; font-size:1.25rem; margin-bottom:44px;">
+  <div style="text-align:center; color:#525661; font-size:1.25rem; margin-bottom:44px;">
     We didn’t just build websites, we built confidence, clarity, and conversions. Every case you <br>
     see here started with a bold idea and ended with measurable growth.
   </div>
+
   <div style="max-width:1350px; margin:0 auto; padding:0 0;">
     <div style="display:flex; flex-direction:column; gap:34px;">
       <!-- Top marquee row: cards move left -->
-      <div id="topMarqueeRow" style="overflow:hidden; width:100%; position:relative; height:370px;">
-        <div id="topMarqueeInner" style="display:flex; gap:34px; animation: marquee-left 12s linear infinite;">
-          <!-- ALL cards, UPDATED width/height and NO curve edges -->
-          <div style="width:60vw;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/worksankat1.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+      <div id="topMarqueeRow" style="overflow:hidden; width:100%; position:relative; ">
+        <div id="topMarqueeInner" style="display:flex; gap:34px; animation: marquee-left 20s linear infinite;"> <!-- Increased duration for smoother feel -->
+          <!-- Original cards (standardized width) -->
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/worksankat1.PNG" alt="Work 1">
           </div>
-          <div style="width:60vw;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/mezban.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/mezban.jpg" alt="Work 2">
           </div>
-          <div style="width:60vw;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/amm.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/amm.PNG" alt="Work 3">
           </div>
-          <div style="width:60vw;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/worksankat2.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/worksankat2.PNG" alt="Work 4">
           </div>
-          <!-- Duplicate all for seamless marquee effect -->
-          <div style="width:60%;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case1.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <!-- Duplicates (repeat 2x for better coverage on wide screens) -->
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/case1.png" alt="Work 5">
           </div>
-          <div style="width:60%;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case2.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/case2.png" alt="Work 6">
           </div>
-          <div style="width:60%;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case3.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/case3.png" alt="Work 7">
           </div>
-          <div style="width:60%;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case4.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/case4.png" alt="Work 8">
+          </div>
+          <!-- Second set of duplicates for seamless loop -->
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/worksankat1.PNG" alt="Work 1">
+          </div>
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/mezban.jpg" alt="Work 2">
+          </div>
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/amm.PNG" alt="Work 3">
+          </div>
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/worksankat2.PNG" alt="Work 4">
           </div>
         </div>
       </div>
-      <!-- Bottom marquee row: cards move right -->
-      <div id="bottomMarqueeRow" style="overflow:hidden; width:100%; position:relative; height:350px;">
-        <div id="bottomMarqueeInner" style="display:flex; gap:34px; animation: marquee-right 12s linear infinite;">
-          <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/amm.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+      <!-- Bottom marquee row: cards move right (similar structure) -->
+      <div id="bottomMarqueeRow" style="overflow:hidden; width:100%; position:relative; ">
+        <div id="bottomMarqueeInner" style="display:flex; gap:34px; animation: marquee-right 20s linear infinite;">
+          <!-- Original cards -->
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/amm.PNG" alt="Work 3">
           </div>
-          <div style="width:620px;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/worksankat2.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/worksankat2.PNG" alt="Work 4">
           </div>
-          <div style="width:620px;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/mezban.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/mezban.jpg" alt="Work 2">
           </div>
-          <div style="width:620px;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/worksankat1.PNG" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/worksankat1.PNG" alt="Work 1">
           </div>
-          <!-- Duplicate all for seamless marquee effect -->
-          <div style="width:620px;height:320px;background:#ffeedd;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case5.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <!-- Duplicates (repeat 2x) -->
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/case5.png" alt="Work 9">
           </div>
-          <div style="width:620px;height:320px;background:#efeafe;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case6.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/case6.png" alt="Work 10">
           </div>
-          <div style="width:620px;height:320px;background:#ffe7ed;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case7.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/case7.png" alt="Work 11">
           </div>
-          <div style="width:620px;height:320px;background:#eaeaff;box-shadow:0 4px 24px rgba(44,55,66,0.09);padding:16px;display:flex;align-items:center;justify-content:center;border-radius:0;">
-            <img src="./assets/images/case8.png" style="width:100%;height:100%;object-fit:cover;border-radius:0;">
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/case8.png" alt="Work 12">
+          </div>
+          <!-- Second set of duplicates -->
+          <div class="marquee-card" style="background:#ffeedd;">
+            <img src="./assets/images/amm.PNG" alt="Work 3">
+          </div>
+          <div class="marquee-card" style="background:#efeafe;">
+            <img src="./assets/images/worksankat2.PNG" alt="Work 4">
+          </div>
+          <div class="marquee-card" style="background:#ffe7ed;">
+            <img src="./assets/images/mezban.jpg" alt="Work 2">
+          </div>
+          <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/worksankat1.PNG" alt="Work 1">
+          </div>
+        <div class="marquee-card" style="background:#eaeaff;">
+            <img src="./assets/images/worksankat1.PNG" alt="Work 1">
           </div>
         </div>
       </div>
@@ -1407,28 +2114,83 @@
   </div>
   <div style="text-align:center; margin-top:42px;">
     <button style="background: #453c39; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; padding: 13px 44px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s;">
-      <a href="works.html" style="background: #453c39; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px;  cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s; text-decoration: none ;">See our Work</a>
+      <a href="works.html" style="background: #453c39; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s; text-decoration: none;">See our Work</a>
     </button>
   </div>
   <style>
     @keyframes marquee-left {
-      0% { transform: translateX(0);}
-      100% { transform: translateX(-50%);}
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-100% / 3)); } /* Adjusted for 3x content (original + 2 duplicates) */
     }
     @keyframes marquee-right {
-      0% { transform: translateX(-50%);}
-      100% { transform: translateX(0);}
+      0% { transform: translateX(calc(-100% / 3)); }
+      100% { transform: translateX(0); }
     }
-    #topMarqueeRow, #bottomMarqueeRow { height:320px;}
-    #topMarqueeInner>div, #bottomMarqueeInner>div { width:620px; height:320px; min-width:620px; }
-    #topMarqueeInner img, #bottomMarqueeInner img { height:100%; width:100%; object-fit:cover; border-radius:0; }
-    @media (max-width:1200px) {
-      #topMarqueeRow, #bottomMarqueeRow { height:200px;}
-      #topMarqueeInner>div, #bottomMarqueeInner>div { width:620px; height:320px; min-width:620px; }
-      #topMarqueeInner img, #bottomMarqueeInner img { height:100%; width:100%; }
+    .marquee-card {
+      width: 620px; /* Standardized fixed width for consistency */
+      height: 320px;
+      min-width: 620px;
+      box-shadow: 0 4px 24px rgba(44,55,66,0.09);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      flex-shrink: 0; /* Prevent shrinking in flex */
+    }
+    .marquee-card img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    #topMarqueeRow, #bottomMarqueeRow {
+      height: 320px; /* Consistent height */
+    }
+    @media (max-width: 1200px) {
+      .marquee-card {
+        width: 500px; /* Slightly smaller for medium screens */
+        min-width: 500px;
+      }
+      #topMarqueeRow, #bottomMarqueeRow {
+        height: 200px;
+      }
+    }
+    /* Mobile adjustments for visually appealing card sizes */
+    @media (max-width: 768px) {
+      @keyframes marquee-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-100% / 3)); }
+      }
+      @keyframes marquee-right {
+        0% { transform: translateX(calc(-100% / 3)); }
+        100% { transform: translateX(0); }
+      }
+
+    #topMarqueeRow {
+        margin-top: 30px;
+      }
+     #bottomMarqueeRow {
+        height: 230px;
+      }
+      #topMarqueeInner, #bottomMarqueeInner {
+        gap: 16px;
+        animation-duration: 10s; /* Slower for mobile to ensure visibility */
+      }
+      .marquee-card {
+        width: 90vw;
+        height: 200px;
+        min-width: 90vw;
+        padding: 8px;
+        box-shadow: 0 2px 12px rgba(44,55,66,0.09);
+      }
+      div[style*="display:flex; flex-direction:column; gap:34px;"] {
+        gap: 20px;
+      }
     }
   </style>
 </section>
+
 
 
 <!-- Our Testimonial-->
@@ -1444,21 +2206,39 @@
       <button id="nextTest" style="position: absolute; top: 45%; right: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #F54D23;">&#8594;</button>
     </div>
     <!-- Client Avatars Grid on Right -->
-    <div style="flex:1;text-align:center;">
+    <div id="clientSection" style="flex:1;text-align:center;">
       <h3 style="background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;margin: 0 auto; width: fit-content;font-size:1.32rem;font-weight:700;">Hear It From Our Clients</h3>
       <div style="margin-top:24px;display:grid;grid-template-columns:repeat(4,130px);grid-gap:24px; grid-auto-rows:150px;">
         <!-- Replace these with avatar images -->
         <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                                <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                                        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                                                <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                                                        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-                                                                <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+        <img src="./assets/images/logo2png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    #clientSection {
+      display: none;
+    }
+    /* Optional: Adjust left section for better mobile centering */
+    section > div {
+      justify-content: center;
+      gap: 0;
+    }
+    #testimonialContent {
+      padding: 0 20px; /* Reduce padding for mobile */
+    }
+  }
+</style>
+
 
 <script>
   const testimonials = [
@@ -1535,9 +2315,68 @@
     <img src="./assets/images/default-impact-stories.jpeg" alt="Connect Illustration" style="max-width: 100%; height: auto;">
   </div>
 </section>
+<style>
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 22px 12px !important;
+  }
+  section > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto 0 auto !important;
+  }
+  section > div:first-child {
+    margin-bottom: 0px !important;
+  }
+  section h2 {
+    text-align: center !important;
+    font-size: 1.12rem !important;
+    margin-bottom: 20px !important;
+    color: #F54D23 !important;
+  }
+  section ul {
+    padding-left: 0 !important;
+    margin: 10px 0px 30px 0px !important;
+    font-size: 0.98rem !important;
+    color: #ffffff !important;
+    text-align: left !important;
+    list-style: disc outside none !important;
+    display: block !important;
+  }
+  section ul li {
+    margin-bottom: 7px !important;
+  }
+  section div[style*="margin-top: 18px"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    margin-bottom: 0px !important;
+    margin-top: 16px !important;
+    display: flex !important;
+    width: 100% !important;
+  }
+  section div[style*="margin-top: 18px"] a {
+    justify-content: center !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+  }
+  section img[alt="Connect Illustration"] {
+    max-width: 230px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    margin-top: 18px !important;
+  }
+}
+</style>
+
 
 <div id="footer-container"></div>
 
+  <!-- Include navbar.js -->
   <!-- Include navbar.js -->
   <script src="js/navbar.js"></script>
   <script>
@@ -1546,7 +2385,7 @@
       // You can also load footer here if needed
     });
   </script>
-  
+
 <script>
 
     // fetch('navbar.html')
