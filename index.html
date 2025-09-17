@@ -8,20 +8,20 @@
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9; /* White text for dark theme */
+      background: #f0f2f5; /* Light background */
+      color: #333; /* Dark text for light theme */
     }
     header {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #ffffff; /* White background for header */
       padding: 12px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
     }
     .logo {
       font-size: 2.2rem;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
@@ -35,16 +35,16 @@
     .header-social a {
       margin-right: 10px;
       text-decoration: none;
-      color: #F9F9F9; /* White */
+      color: #333; /* Dark color */
       font-size: 1.15rem;
     }
     .header-social a:hover {
-      color: #1C3C72; /* Hover color */
+      color: #4a90e2; /* Hover color */
     }
     .header-hiring {
       font-weight: bold;
-      color: #111;
-      background: #fffbe5;
+      color: #333; /* Dark text */
+      background: #f7f7f7; /* Light background */
       border-radius: 5px;
       padding: 2px 12px;
       font-size: 1rem;
@@ -59,12 +59,29 @@
       border-radius: 50%;
       display: inline-block;
     }
-    /* Hero Styles - Updated for dark theme */
+    .hamburger {
+      margin-left: 18px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .hamburger .bar {
+      width: 28px;
+      height: 4px;
+      background: #4a90e2; /* New color */
+      border-radius: 2px;
+    }
+    /* Hero Styles */
     .hero {
       position: relative;
       width: 100%;
       min-height: 65vh;
-      background: url('bg-city.jpg') center/cover no-repeat;
+      background: url('https://placehold.co/1200x400/D0DCEB/4A90E2?text=Digital+First+Creative+Agency') center/cover no-repeat;
       padding: 60px 30px 40px 30px;
       box-sizing: border-box;
       display: flex;
@@ -77,7 +94,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
+      background: rgba(255, 255, 255, 0.75); /* Light overlay */
       pointer-events: none;
     }
     .hero-content {
@@ -89,16 +106,16 @@
       font-size: 3.8rem;
       font-weight: 900;
       margin-bottom: 8px;
-      color: #F9F9F9; /* White */
+      color: #333; /* Dark text */
     }
     .hero-title .creative {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .hero-desc {
       font-size: 1.3rem;
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
       margin-bottom: 25px;
       margin-top: 30px;
     }
@@ -112,7 +129,7 @@
       display: inline-block;
       box-shadow: 0 2px 20px rgba(0,0,0,0.13);
       position: relative;
-      background: #fa4;
+      background: #4a90e2;
     }
     .hero-media img,
     .hero-media video {
@@ -152,24 +169,24 @@
     .social-vertical span {
       font-size: 1rem;
       font-family: Arial, sans-serif;
-      color: #F9F9F9; /* White */
+      color: #333; /* Dark text */
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       margin-bottom: 10px;
       font-weight: 700;
       letter-spacing: 1px;
     }
-    /* Chat Popup - Updated for theme */
+    /* Chat Popup */
     .chat-popup {
       position: fixed;
       right: 24px;
       bottom: 18px;
-      background: #1C3C72; /* Dark blue */
+      background: #ffffff; /* Light background */
       border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
       padding: 16px 20px;
       font-size: 1rem;
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
       z-index: 99;
       min-width: 230px;
       max-width: 330px;
@@ -219,154 +236,297 @@
     white-space: nowrap;
   }
 
-    /* Performance Stats Section - Updated for theme */
+    /* Performance Stats Section */
     section[style*="background:#fff; text-align:center; padding:40px 10px 10px;"] {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #f0f2f5; /* Light background */
       padding: 40px 10px 10px;
     }
     section[style*="background:#fff; text-align:center; padding:40px 10px 10px;"] span[style*="color:#F7B533;"] {
-      color: #F4C542; /* Yellow accent */
+      color: #4a90e2; /* Blue accent */
     }
     section[style*="background:#fff; text-align:center; padding:40px 10px 10px;"] span[style*="color:#888;"] {
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
     }
 
-    /* Intro & Description Section - Updated for theme */
+    /* Intro & Description Section */
     section[style*="background:#fff; text-align:center; padding:35px 12px 25px;"] {
-      background: #1C3C72; /* Dark blue */
+      background: #ffffff; /* White background */
       padding: 35px 12px 25px;
     }
     section[style*="background:#fff; text-align:center; padding:35px 12px 25px;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="background:#fff; text-align:center; padding:35px 12px 25px;"] p {
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
     }
 
-    /* Showreel Stats Section - Updated for theme */
+    /* Showreel Stats Section */
     section[style*="background:linear-gradient(90deg,#FF512F 0%,#F7B533 100%); color:#fff; padding:35px 0 0 0;"] {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9;
+      background: #4a90e2; /* Solid blue background */
+      color: #fff;
     }
 
-    /* Core Offerings Section - Updated for theme */
+    /* Core Offerings Section */
     section[style*="background:#fafafa; padding:32px 0;"] {
-      background: #1C3C72;
+      background: #ffffff; /* White background */
     }
     section[style*="background:#fafafa; padding:32px 0;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="background:#fafafa; padding:32px 0;"] p {
-      color: #F9F9F9;
+      color: #555; /* Dark text */
     }
 
-    /* Services Icons Section - Updated for theme */
+    /* Services Icons Section */
     section[style*="background:#fff; text-align:center; padding:38px 0;"] {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #f0f2f5; /* Light background */
     }
     section[style*="background:#fff; text-align:center; padding:38px 0;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="background:#fff; text-align:center; padding:38px 0;"] div[style*="color:#444;"] {
-      color: #F9F9F9;
+      color: #555; /* Dark text */
     }
     section[style*="background:#fff; text-align:center; padding:38px 0;"] div[style*="border-top:4px solid #F54D23;"] {
-      border-top:4px solid #FF6B00; /* Orange */
+      border-top:4px solid #4a90e2; /* Blue */
     }
 
-    /* Scorecard CTA - Updated for theme */
+    /* Scorecard CTA */
     section[style*="background:linear-gradient(90deg,#FF512F 0%,#F7B533 100%);padding:34px;text-align:center;"] {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
     }
     section[style*="background:linear-gradient(90deg,#FF512F 0%,#F7B533 100%);padding:34px;text-align:center;"] button {
       background: transparent;
-      border: 2px solid #F9F9F9;
-      color: #F9F9F9;
+      border: 2px solid #fff;
+      color: #fff;
     }
     section[style*="background:linear-gradient(90deg,#FF512F 0%,#F7B533 100%);padding:34px;text-align:center;"] button:hover {
-      background: #1C3C72;
+      background: #fff;
+      color: #4a90e2;
     }
 
-    /* Brands Who Trust Us - Updated for theme */
+    /* Brands Who Trust Us */
     section[style*="background:#fff;padding:44px 0 20px 0;text-align:center;"] {
-      background: #1C3C72;
+      background: #ffffff;
     }
     section[style*="background:#fff;padding:44px 0 20px 0;text-align:center;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Testimonials - Updated for theme */
+    /* Testimonials */
     section[style*="background:#fff; padding:36px 0 32px 0;"] {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #f0f2f5;
     }
     section[style*="background:#fff; padding:36px 0 32px 0;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="background:#fff; padding:36px 0 32px 0;"] p {
-      color: #F9F9F9;
+      color: #555;
     }
 
-    /* Our Work - Updated for theme */
+    /* Our Work */
     section[style*="background:#fafafa;padding:44px 0 15px 0;text-align:center; max-width:1200px; margin:0 auto;"] {
-      background: #1C3C72;
+      background: #ffffff;
     }
     section[style*="background:#fafafa;padding:44px 0 15px 0;text-align:center; max-width:1200px; margin:0 auto;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="background:#fafafa;padding:44px 0 15px 0;text-align:center; max-width:1200px; margin:0 auto;"] div[style*="color:#444;"] {
-      color: #F9F9F9;
+      color: #555;
     }
 
-    /* Industry Wise Case Studies - Updated for theme */
+    /* Industry Wise Case Studies */
     section[style*="text-align:center; padding:40px 30px;"] {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #f0f2f5;
     }
     section[style*="text-align:center; padding:40px 30px;"] h2 {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     section[style*="text-align:center; padding:40px 30px;"] div[style*="max-width:100px;"] div {
-      color: #F9F9F9;
+      color: #555;
     }
 
-    /* Connect With Us - Updated for theme */
+    /* Connect With Us */
     section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 60px; background:#f9f9fb;"] {
-      background: #1C3C72;
+      background: #ffffff;
     }
     section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 60px; background:#f9f9fb;"] h2 {
-      color: #F4C542; /* Yellow */
+      color: #4a90e2; /* Blue */
     }
     section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 60px; background:#f9f9fb;"] ul li {
-      color: #F9F9F9;
+      color: #555;
     }
     section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 60px; background:#f9f9fb;"] a {
-      background: linear-gradient(90deg, #FF6B00, #F4C542) !important;
+      background: linear-gradient(90deg, #4a90e2, #50e3c2) !important;
+      color: #fff !important;
+    }
+    .gradient-text {
+      font-size:1.1rem;
+      font-weight: bold;
+      background:linear-gradient(90deg, #4a90e2, #50e3c2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
-    .gradient-text {
-  /* font-size: 2.6rem; */
-  font-size:1.1rem;
-  font-weight: bold;
-  /* background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%); */
-  background:linear-gradient(90deg, #FF6B00, #F4C542);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
+        /* NEW MOBILE STYLES */
+    @media (max-width: 768px) {
+      /* General mobile layout adjustments */
+      body {
+        font-size: 14px;
+      }
+      .hero {
+        min-height: 50vh;
+        padding: 40px 20px;
+      }
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-desc {
+        font-size: 1.1rem;
+      }
+      .hero-media {
+        width: 100%;
+        height: 200px;
+      }
+      .social-vertical {
+        display: none;
+      }
+      .chat-popup {
+        min-width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 10px;
+      }
+      
+      /* Marquee section for clients */
+      div[style*="background:#ffffff; padding: 29px 40px;"] {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+      div[style*="border-left: 4px solid #4a90e2;"] {
+        border-left: none;
+        border-top: 4px solid #4a90e2;
+        padding-top: 10px;
+        padding-left: 0;
+        text-align: center;
+      }
+      div[style*="flex-grow: 1; overflow: hidden;"] {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      #marquee img {
+        height: 80px;
+        width: 120px;
+      }
+      
+      /* Showreel stats section */
+      section[style*="background: #4a90e2;"] .showreel-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+      }
+      section[style*="background: #4a90e2;"] .showreel-text {
+        padding-left: 0;
+        text-align: center;
+      }
+      section[style*="background: #4a90e2;"] .showreel-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      section[style*="background: #4a90e2;"] .showreel-video-container {
+        margin-left: 0;
+        width: 100%;
+        max-width: 330px;
+      }
+      
+      /* Services section */
+      section[style*="padding: 1px 20px 40px 20px;"] #cardContainer {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+      }
+      
+      /* Core Offerings section */
+      section[style*="background:#ffffff; padding:25px 0;"] > div {
+        padding: 0 5px;
+      }
+      section[style*="background:#ffffff; padding:25px 0;"] h2 {
+        font-size: 2rem;
+      }
+      section[style*="background:#ffffff; padding:25px 0;"] .core-offerings-row {
+        flex-direction: column;
+      }
+      section[style*="background:#ffffff; padding:25px 0;"] .core-offering-card {
+        border-right: none !important;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+      }
+      section[style*="background:#ffffff; padding:25px 0;"] .core-offering-card:last-of-type {
+        border-bottom: none;
+      }
+      
+      /* Our Work marquee */
+      #topMarqueeInner > div, #bottomMarqueeInner > div {
+        width: 80vw;
+        height: 200px;
+        min-width: 80vw;
+      }
+      #topMarqueeRow, #bottomMarqueeRow {
+        height: 200px;
+      }
+
+      /* Testimonials section */
+      section[style*="background:#f0f2f5; padding:36px 0 32px 0;"] > div {
+        flex-direction: column;
+        gap: 20px;
+      }
+      section[style*="background:#f0f2f5; padding:36px 0 32px 0;"] .testimonial-content {
+        padding: 0 20px;
+      }
+      section[style*="background:#f0f2f5; padding:36px 0 32px 0;"] .client-avatars {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+      }
+
+      /* Connect with Us */
+      section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 40px;"] {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+      section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 40px;"] .connect-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 40px;"] ul {
+        text-align: left;
+        display: inline-block;
+      }
+      section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 40px;"] .connect-links {
+        justify-content: center;
+      }
+      section[style*="display:flex;justify-content:space-between;align-items:center; padding:30px 40px;"] .connect-image {
+        display: none;
+      }
+    }
 
   </style>
 
@@ -383,7 +543,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 20vh;
+    height: 25vh;
   }
   .client-text {
     border-left: 4px solid #1e90ff;
@@ -448,7 +608,7 @@
 
 <style>
   .showreel-section {
-    background: linear-gradient(90deg, #111 0%, #1C3C72 60%, #FF6B00 100%);
+    background: #4a90e2;
     color: #fff;
     padding: 40px 0 30px 0;
     width: 100%;
@@ -481,7 +641,7 @@
     /* Orange accent for "WATCH" only */
   }
   .showreel-heading strong {
-    color: #FF6B00;
+    color: #fff;
     display: block;
   }
 
@@ -496,7 +656,7 @@
     min-width: 110px;
   }
   .showreel-stats-row strong {
-    color: #FFD356;
+    color: #ffffff;
     font-size: 1.55rem;
     font-weight: 700;
   }
@@ -814,7 +974,7 @@
 /* MOBILE override — show ONLY the circular image with a dark-blue border */
 @media (max-width: 768px) {
   .chat-popup {
-    display: hidden;
+    display: none;
     background: none;          /* remove white box */
     padding: 0;
     box-shadow: none;
@@ -875,6 +1035,10 @@
           <span>Clients Served</span>
         </div>
         <div>
+          <strong>30</strong>
+          <span>Global Clients</span>
+        </div>
+        <div>
           <strong>5</strong>
           <span>Continents served</span>
         </div>
@@ -882,10 +1046,7 @@
           <strong>25</strong>
           <span>Brands Launched</span>
         </div>
-        <div>
-          <strong>30</strong>
-          <span>Global Clients</span>
-        </div>
+
       </div>
     </div>
     <div class="showreel-video">
@@ -901,7 +1062,7 @@
 <!--Our Services -->
 <!-- Our Services Section -->
 <!-- Our Services Section -->
-<section style="padding: 1px 20px 40px 20px; background: #fffbe5; color: #1C3C72; width: 100%; box-sizing: border-box;">
+<section style="padding: 1px 20px 40px 20px; background: #ffffff; color: #000000; width: 100%; box-sizing: border-box;">
   <h2 style="font-weight: 700; font-size: 2.4rem; margin-bottom: 31px; text-align: center;">Our Services</h2>
   <div style="position: relative; max-width: 1300px; margin: 0 auto;">
     <button id="prevBtn" aria-label="Previous">&#8592;</button>
@@ -939,6 +1100,7 @@
 @media (max-width: 768px) {
   #cardContainer {
     display: flex !important;
+    box-shadow: #1e90ff;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -961,8 +1123,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #fffbe5;
-    color: #1C3C72;
+    background: #ffffff;
+    color: #333;
     border: none;
     padding: 10px 15px;
     font-size: 2rem;
@@ -982,7 +1144,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: #1C3C72;
+    color: #4a90e2;
     border: none;
     font-size: 2rem;
     line-height: 1;
@@ -992,7 +1154,7 @@
   }
   #prevBtn { left: 0;}
   #nextBtn { right: 0;}
-  #prevBtn:hover, #nextBtn:hover { color: #FF6B00; z-index:11; }
+  #prevBtn:hover, #nextBtn:hover { color: #4a90e2; z-index:11; }
 
   .service-card {
     background: #fff;
@@ -1012,7 +1174,7 @@
   }
   .service-icon {
     font-size: 36px;
-    color: #1C3C72;
+    color: #4a90e2;
     flex-shrink: 0;
     margin-right: 8px;
   }
@@ -1023,6 +1185,7 @@
     font-weight: 700;
     margin-bottom: 6px;
     font-size: 1.1rem;
+    color: #0A0A0A;
   }
   .service-desc {
     font-weight: 400;
@@ -1031,7 +1194,7 @@
     margin-bottom: 12px;
   }
   .service-btn {
-    background: #1C3C72;
+    background: #4a90e2;
     color: white;
     border-radius: 6px;
     padding: 11px 23px;
@@ -1056,7 +1219,7 @@
     left: 0; top: 0;
     width: 100%; height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     padding-top: 0;
     box-sizing: border-box;
     display: none;
@@ -1074,7 +1237,7 @@
     flex-wrap: nowrap;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #FF6B00;
+    border: 1px solid #4a90e2;
     width: 80%;
     max-width: 800px;
     max-height: 80vh;
@@ -1103,7 +1266,7 @@
     color: #ffffff;
   }
   .modal-details h2 {
-    color: #FF6B00;
+    color: #4a90e2;
     margin-bottom: 15px;
   }
   .modal-details p {
@@ -1115,13 +1278,13 @@
     right: 16px;
     font-size: 28px;
     font-weight: bold;
-    color: #FF6B00;
+    color: #4a90e2;
     cursor: pointer;
     float: none;
     z-index: 10;
   }
   .close:hover {
-    color: #F4C542;
+    color: #4a90e2;
   }
 
 
@@ -1135,7 +1298,7 @@
     display: flex;
     align-items: center;
     max-width: 100%;
-    color: #FF6B00;
+    color: #4a90e2;
   }
   .ref-label {
     font-weight: 600;
@@ -1173,13 +1336,13 @@
     flex-shrink: 0;
   }
   .marquee-content img:hover {
-    border-color: #FF6B00;
+    border-color: #ffffff;
   }
   /* Benefits heading and list */
   .benefits-heading {
     margin-top: 24px;
     margin-bottom: 10px;
-    color: #FF6B00;
+    color: #4a90e2;
   }
   .benefits-list {
     list-style-type: disc;
@@ -1746,7 +1909,7 @@
 
 
   <!-- Performance Stats Section -->
-<section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%); text-align:center; padding:40px 10px 40px;">
+<!-- <section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%); text-align:center; padding:40px 10px 40px;">
   <div class="mobile-info">Swipe to see our achievements</div>
   <div class="stats-container" id="slider">
     <div>
@@ -1766,9 +1929,30 @@
       <span style="font-size:1.1rem; color:#F9F9F9;">cumulative INR revenue<br>collected for clients per month</span>
     </div>
   </div>
-</section>
+</section> -->
 
-<style>
+<!-- Performance Stats Section -->
+<section style="background:linear-gradient(90deg,#4a90e2,#50e3c2);  text-align:center; padding:40px 10px 40px;">
+  <div style="max-width:1100px; margin:0 auto; display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+    <div>
+      <span style="font-size:2.6rem; font-weight:bold; color:#ffffff;">200K</span><br>
+      <span style="font-size:1.1rem; color:#fff;">keywords ranked on<br>first page of Google</span>
+    </div>
+    <div>
+      <span style="font-size:2.6rem; font-weight:bold; color:#ffffff;">5M+</span><br>
+      <span style="font-size:1.1rem; color:#fff;">avg. organic engagements on<br>social for clients per month</span>
+    </div>
+    <div>
+      <span style="font-size:2.6rem; font-weight:bold; color:#ffffff;">10M+</span><br>
+      <span style="font-size:1.1rem; color:#fff;">cumulative website visits<br>for clients per month</span>
+    </div>
+    <div>
+      <span style="font-size:2.6rem; font-weight:bold; color:#ffffff;">100M+</span><br>
+      <span style="font-size:1.1rem; color:#fff;">cumulative INR revenue<br>collected for clients per month</span>
+    </div>
+  </div>
+</section> 
+<!-- <style>
   .stats-container {
     max-width:1100px;
     margin:0 auto;
@@ -1812,9 +1996,9 @@
     .stats-container { -ms-overflow-style: none; scrollbar-width: none; }
     .mobile-info { display: block; }
   }
-</style>
+</style> -->
 
-<script>
+<!-- <script>
   // Only run auto-slide on small screens
   function startAutoSlide() {
     const slider = document.getElementById('slider');
@@ -1848,10 +2032,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', startAutoSlide);
-</script>
+</script> -->
 
 
-<style>
+<!-- <style>
   .stats-container {
     max-width:1100px;
     margin:0 auto;
@@ -1892,8 +2076,8 @@
       scrollbar-width: none;
     }
   }
-</style>
-
+</style> -->
+<!-- 
 <style>
   @media (max-width: 768px) {
     .stats-container {
@@ -1921,10 +2105,10 @@
       scrollbar-width: none;
     }
   }
-</style>
+</style> -->
 
 
-<style>
+<!-- <style>
   @media (max-width: 768px) {
     .stats-container {
       flex-wrap: nowrap !important;
@@ -1947,52 +2131,51 @@
       scrollbar-width: none; /* Firefox */
     }
   }
-</style>
+</style> -->
 
-
-<style>
+<!-- <style>
   @media (max-width: 768px) {
     div[style*="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;"] > div {
       flex: 1 1 45%; /* Adjusts to take about half the width, allowing 2 per row */
       max-width: 45%;
     }
   }
-</style>
+</style> -->
 
 
 <!-- Core Offerings Section -->
-<section style="background:#fafafa; padding:25px 0;">
+<section style="background:#ffffff; padding:25px 0;">
   <div style="max-width:1200px; margin:0 auto;">
-    <h2 style="text-align:center; font-size:2.1rem; font-weight:700; margin-bottom:8px; background:linear-gradient(90deg,#F54D23 30%,#F7B533 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Our Core Offerings</h2>
-    <div style="text-align:center; color:#999; margin-bottom:28px;font-size:1.12rem;">Executive Menu</div>
-    <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom: 40px;">
-      <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;">
+    <h2 style="text-align:center; font-size:2.1rem; font-weight:700; margin-bottom:8px; background:linear-gradient(90deg,#4a90e2,#50e3c2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Our Core Offerings</h2>
+    <div style="text-align:center; color:#555; margin-bottom:28px;font-size:1.12rem;">Executive Menu</div>
+    <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom: 40px;" class="core-offerings-row">
+      <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;" class="core-offering-card">
         <img src="./assets/images/edit-video-clip-icon.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
-        <h3 style="color:#444; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
-        <p style="color:#666;max-width:330px;margin:0 auto;">
+        <h3 style="color:#555; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
+        <p style="color:#777;max-width:330px;margin:0 auto;">
           We deliver creative campaigns to build a stronger top of funnel for your business. Right from your brand & content strategy to influencers & video production, we take care of it all. Our campaigns have won awards too!
         </p>
       </div>
-      <div style="flex:1; min-width:290px; text-align:center;">
+      <div style="flex:1; min-width:290px; text-align:center;" class="core-offering-card">
         <img src="./assets/images/file-search-dual-tone-icon.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
-        <h3 style="color:#444; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
-        <p style="color:#666;max-width:330px;margin:0 auto;">
+        <h3 style="color:#555; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
+        <p style="color:#777;max-width:330px;margin:0 auto;">
           We’re great at SEO and rank for the most competitive terms in digital domain ourselves! To drive great SEO results, we’ve built a robust tech team. We build word class websites as well as maintain websites to ensure your business creates the right first impression.
         </p>
       </div>
     </div>
-        <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap;">
-      <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;">
+        <div style="display:flex; justify-content:center; align-items:flex-start; gap:16px; flex-wrap:wrap;" class="core-offerings-row">
+      <div style="flex:1; min-width:290px; text-align:center; border-right:1px solid #eee;" class="core-offering-card">
         <img src="./assets/images/announcement-color-icon.svg" alt="Creative Storytelling" style="height:48px; margin-bottom:18px;">
-        <h3 style="color:#444; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
-        <p style="color:#666;max-width:330px;margin:0 auto;">
+        <h3 style="color:#555; font-weight:700; margin-bottom:10px;">Creative Storytelling</h3>
+        <p style="color:#777;max-width:330px;margin:0 auto;">
           We deliver creative campaigns to build a stronger top of funnel for your business. Right from your brand & content strategy to influencers & video production, we take care of it all. Our campaigns have won awards too!
         </p>
       </div>
-      <div style="flex:1; min-width:290px; text-align:center;">
+      <div style="flex:1; min-width:290px; text-align:center;" class="core-offering-card">
         <img src="./assets/images/desktop-app-analytics-icon.svg" alt="SEO & Technology Enablement" style="height:48px; margin-bottom:18px;">
-        <h3 style="color:#444; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
-        <p style="color:#666;max-width:330px;margin:0 auto;">
+        <h3 style="color:#555; font-weight:700; margin-bottom:10px;">SEO & Technology Enablement</h3>
+        <p style="color:#777;max-width:330px;margin:0 auto;">
           We’re great at SEO and rank for the most competitive terms in digital domain ourselves! To drive great SEO results, we’ve built a robust tech team. We build word class websites as well as maintain websites to ensure your business creates the right first impression.
         </p>
       </div>
@@ -2000,15 +2183,16 @@
   </div>
 </section>
 
+
 <!-- Scorecard CTA -->
-<section style="background:linear-gradient(90deg,#0A0A0A 0%,#1C3C72 50%,#FF6B00 100%); padding:34px;text-align:center;">
+<section style="background:linear-gradient(90deg, #4a90e2, #50e3c2); padding:34px;text-align:center;">
   <h3 style="color:#fff;font-size:1.12rem;">Need help in choosing a digital agency? Here’s an unbiased scorecard you could use to narrow down on the agency that’s right for your needs.</h3>
   <button style="margin-top:18px;padding:10px 32px;background:none;border:2px solid #fff;border-radius:4px;color:#fff;font-weight:600;font-size:1.08rem;cursor:pointer;letter-spacing:2px;">Try Now</button>
 </section>
 
 <!--  -->
 <section style="background: #F5F5F7; padding: 30px 0 30px 0;">
-  <h2 style="margin:0 auto 10px auto; display:block; width:fit-content; text-align:center; background:linear-gradient(90deg,#F54A23,#F7B533); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-size:2rem; font-weight:bold;">
+  <h2 style="margin:0 auto 10px auto; display:block; width:fit-content; text-align:center; background:linear-gradient(90deg, #4a90e2, #50e3c2);-webkit-background-clip:text; -webkit-text-fill-color:transparent; font-size:2rem; font-weight:bold;">
     Our Work
   </h2>
 
@@ -2113,8 +2297,8 @@
     </div>
   </div>
   <div style="text-align:center; margin-top:42px;">
-    <button style="background: #453c39; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; padding: 13px 44px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s;">
-      <a href="works.html" style="background: #453c39; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s; text-decoration: none;">See our Work</a>
+    <button style="background: #4a90e2; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; padding: 13px 44px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s;">
+      <a href="works.html" style="background: #4a90e2; color: #fff; font-size:1.1rem; font-weight:600; border:none; border-radius:22px; cursor:pointer; box-shadow:0 4px 12px rgba(34,27,22,0.13); transition:background 0.3s; text-decoration: none;">See our Work</a>
     </button>
   </div>
   <style>
@@ -2195,19 +2379,19 @@
 
 <!-- Our Testimonial-->
 <section style="background:#fff; padding:36px 0 32px 0;">
-  <h2 style="background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent; display:block; margin: 0 auto; width: fit-content; font-size:2rem; font-weight:bold;">Testimonials</h2>
+  <h2 style="background:linear-gradient(90deg, #4a90e2, #50e3c2);-webkit-background-clip:text;-webkit-text-fill-color:transparent; display:block; margin: 0 auto; width: fit-content; font-size:2rem; font-weight:bold;">Testimonials</h2>
   <div style="display:flex;justify-content:center;align-items:flex-start;gap:60px;max-width:1200px;margin:36px auto 0;">
     <!-- Scrollable Left Testimonial Section -->
     <div style="flex:1; text-align:center; position: relative;">
-      <button id="prevTest" style="position: absolute; top: 45%; left: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #F54D23;">&#8592;</button>
+      <button id="prevTest" style="position: absolute; top: 45%; left: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #4a90e2;">&#8592;</button>
       <div id="testimonialContent" style="padding: 0 40px; min-height: 300px;">
         <!-- Testimonial info dynamically inserted here -->
       </div>
-      <button id="nextTest" style="position: absolute; top: 45%; right: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #F54D23;">&#8594;</button>
+      <button id="nextTest" style="position: absolute; top: 45%; right: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #4a90e2;">&#8594;</button>
     </div>
     <!-- Client Avatars Grid on Right -->
     <div id="clientSection" style="flex:1;text-align:center;">
-      <h3 style="background:linear-gradient(90deg,#F54D23,#F7B533);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;margin: 0 auto; width: fit-content;font-size:1.32rem;font-weight:700;">Hear It From Our Clients</h3>
+      <h3 style="background:linear-gradient(90deg, #4a90e2, #50e3c2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;margin: 0 auto; width: fit-content;font-size:1.32rem;font-weight:700;">Hear It From Our Clients</h3>
       <div style="margin-top:24px;display:grid;grid-template-columns:repeat(4,130px);grid-gap:24px; grid-auto-rows:150px;">
         <!-- Replace these with avatar images -->
         <img src="./assets/images/logo1png.png" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
@@ -2270,10 +2454,10 @@
   function renderTestimonial(index) {
     const t = testimonials[index];
     testimonialContent.innerHTML = `
-      <img src="${t.image}" alt="${t.name}" style="width:140px;height:140px;border-radius:50%;border:5px solid #F54D23;margin-bottom:12px;">
+      <img src="${t.image}" alt="${t.name}" style="width:140px;height:140px;border-radius:50%;border:5px solid #4a90e2;margin-bottom:12px;">
       <h3 style="font-weight:700; margin-bottom:4px; font-size:1.3rem;">${t.name}</h3>
-      <div style="color:#888; font-size:1rem; margin-bottom:14px;">${t.title}</div>
-      <div style="font-size:2.3rem; color:#F54D23; line-height:0.2;">&ldquo;</div>
+      <div style="color:#333; font-size:1rem; margin-bottom:14px;">${t.title}</div>
+      <div style="font-size:2.3rem; color:#4a90e2; line-height:0.2;">&ldquo;</div>
       <p style="font-size:1.06rem; color:#444; max-width:340px; margin:0 auto;">${t.quote}</p>
     `;
   }
@@ -2291,21 +2475,21 @@
 
   renderTestimonial(currentIndexs);
 </script>
-
-<section style="display:flex;justify-content:space-between;align-items:center; padding:30px 40px; background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%); color: #F9F9F9;">
+<hr style="color: #4a90e2; background-color: #50e3c2;">
+<section style="display:flex;justify-content:space-between;align-items:center; padding:30px 40px; background:#ffffff; color: #F9F9F9;">
   <div style="max-width:480px;">
-    <h2 style="color: #F4C542; font-weight: bold; margin-bottom: 14px;">Connect With Us!</h2>
-    <ul style="padding-left: 20px; font-size: 1rem; color: #DEDEDE;">
+    <h2 style="color: #4a90e2; font-weight: bold; margin-bottom: 14px;">Connect With Us!</h2>
+    <ul style="padding-left: 20px; font-size: 1rem; color: #000000;">
       <li>To keep up with the latest trends in digital</li>
       <li>To see glimpses of our work</li>
       <li>To see what’s up with our chefs</li>
     </ul>
     <div style="margin-top: 18px; display: flex; gap: 18px;">
-      <a href="#" style="background: #1C3C72; color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
+      <a href="#" style="background:linear-gradient(to right, #4a90e2, #50e3c2); color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
         <img src="./assets/images/linkedin-app-icon.svg" alt="LinkedIn" style="width: 18px; height: 18px;">
         CONNECT WITH US!
       </a>
-      <a href="#" style="background: linear-gradient(to right, #FF6B00, #F4C542); color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
+      <a href="#" style="background: linear-gradient(to right, #4a90e2, #50e3c2); color: #fff; text-decoration: none; padding: 10px 24px; border-radius: 4px; display: flex; align-items: center; gap: 8px; font-weight: bold; font-size: 0.95rem;">
         <img src="./assets/images/ig-instagram-icon.svg" alt="Instagram" style="width: 18px; height: 18px;">
         FOLLOW US NOW!
       </a>
@@ -2333,15 +2517,15 @@
   }
   section h2 {
     text-align: center !important;
-    font-size: 1.12rem !important;
+    font-size: 2rem !important;
     margin-bottom: 20px !important;
-    color: #F54D23 !important;
+    color: #4a90e2 !important;
   }
   section ul {
     padding-left: 0 !important;
     margin: 10px 0px 30px 0px !important;
     font-size: 0.98rem !important;
-    color: #ffffff !important;
+    color: #000000 !important;
     text-align: left !important;
     list-style: disc outside none !important;
     display: block !important;

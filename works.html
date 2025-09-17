@@ -5,300 +5,326 @@
   <title>17 Dot - Digital First Creative Agency</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
-      color: #F9F9F9; /* White text for dark theme */
+      background: #f0f2f5; /* Light background */
+      color: #333; /* Dark text for light theme */
     }
+    
     header {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+      background: #ffffff; /* White background for header */
       padding: 12px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
     }
+    
     .logo {
       font-size: 2.2rem;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
       letter-spacing: -2px;
     }
+    
     .hero {
       position: relative;
       width: 100%;
       min-height: 30vh;
-      background: url('bg-city.jpg') center/cover no-repeat;
+      background: url('https://placehold.co/1200x400/D0DCEB/4A90E2?text=Our+Work') center/cover no-repeat; /* New placeholder image */
       padding: 50px 30px 50px 30px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
+    
     .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.65); /* Dark overlay for better text visibility */
+      background: rgba(255, 255, 255, 0.75); /* Light overlay for better text visibility */
       pointer-events: none;
     }
+    
     .hero-content {
       position: relative;
       z-index: 2;
-        display: flex;
-  flex-direction: column;   /* stack title & desc */
-  justify-content: center;  /* center vertically (if height set) */
-  align-items: center;      /* center horizontally */
-  text-align: center;       /* center text inside */
-  min-height: 30vh;  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 30vh;
     }
+    
     .hero-title {
       font-size: 3.8rem;
       font-weight: 900;
       margin-bottom: 4px;
-      color: #F9F9F9; /* White */
+      color: #333; /* Dark text */
     }
+    
     .hero-title .creative {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    
     .hero-desc {
       font-size: 1.3rem;
-      color: #F9F9F9; /* White */
+      color: #555; /* Dark text */
       margin-bottom: 25px;
       margin-top: 10px;
     }
 
- /* Section styles */
-  .our-work-section {
-    background: #F5F5F7;
-    padding: 20px 0 30px 0;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-  }
+    /* Section styles */
+    .our-work-section {
+      background: #f0f2f5; /* Light background */
+      padding: 20px 0 30px 0;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-  /* Row container for each work item */
-  .our-work-row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Left card container */
-  .work-left-card {
-    flex: 1;
-    min-width: 620px;
-    max-width: 400px;
-  }
-
-  /* Full width left card */
-  .work-left-fullwidth {
-    flex: 1;
-    min-width: 620px;
-    max-width: 400px;
-  }
-
-  /* Card content styles */
-  .work-left-card > div,
-  .work-left-fullwidth > div {
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 0;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-
-  /* Hover effect on cards */
-  .work-left-card > div:hover,
-  .work-left-fullwidth > div:hover {
-    transform: scale(1.03);
-  }
-
-  /* Image inside card */
-  .work-left-card img,
-  .work-left-fullwidth img {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-    object-fit: cover;
-    margin-bottom: 14px;
-  }
-
-  /* Full width button */
-  .work-left-card a,
-  .work-left-fullwidth a {
-    display: block;
-    width: 96%;
-    padding: 12px;
-    border: 2px solid #9B51E0;
-    color: #9B51E0;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    margin: 0 auto;
-  }
-
-  /* Button hover effects */
-  .work-left-card a:hover,
-  .work-left-fullwidth a:hover {
-    background-color: #9B51E0;
-    color: #fff;
-  }
-
-  /* Right content area */
-  .work-right-content {
-    flex: 2;
-    margin-top: 30px;
-    min-width: 320px;
-    max-width: 600px;
-    color: #444;
-    font-family: Arial, sans-serif;
-    text-align: left;
-  }
-
-  /* Tag styling */
-  .work-right-content .tag {
-    display: inline-block;
-    background: rgba(155, 81, 224, 0.1);
-    color: #9B51E0;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-  }
-
-  /* Company name header */
-  .work-right-content h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 10px 0;
-    color: #222;
-  }
-
-  /* Content paragraph */
-  .work-right-content p.content {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 16px;
-  }
-
-  /* Review card container */
-  .work-right-content .review-card {
-    margin-top: 20px;
-    padding: 16px;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    background: #fafafa;
-  }
-
-  /* Review card header with image/name and rating */
-  .review-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  /* Reviewer info group */
-  .reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* Reviewer image */
-  .reviewer-info img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  /* Reviewer name and title */
-  .reviewer-details {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .reviewer-details .name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #222;
-  }
-
-  .reviewer-details .title {
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  /* Rating stars style */
-  .rating-stars {
-    color: #f5b50a;
-    font-size: 1rem;
-  }
-
-  /* Review text */
-  .review-text {
-    font-size: 0.95rem;
-    color: #444;
-    margin: 0;
-  }
-
-  /* Responsive styles for mobile */
-  @media (max-width: 768px) {
+    /* Row container for each work item */
     .our-work-row {
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 0 !important;
-      width: 100% !important;
-      margin: 0 !important;
-      padding: 12px 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      width: 100%;
       box-sizing: border-box;
     }
 
-    .work-left-card,
-    .work-left-fullwidth,
-    .work-right-content {
-      width: 100% !important;
-      min-width: 0 !important;
-      max-width: 100% !important;
-      margin-bottom: 15px;
-      padding: 0 8px !important;
-      box-sizing: border-box;
+    /* Left card container */
+    .work-left-card {
+      flex: 1;
+      min-width: 620px;
+      max-width: 400px;
     }
-.work-left-fullwidth a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 6vh; /* keep your height */
-  text-align: center; /* fallback for older browsers */
-}
 
-
-    .work-right-content {
-      margin-top: 6px !important;
-      text-align: left !important;
+    /* Full width left card */
+    .work-left-fullwidth {
+      flex: 1;
+      min-width: 620px;
+      max-width: 400px;
     }
-  }
+
+    /* Card content styles */
+    .work-left-card > div,
+    .work-left-fullwidth > div {
+      background: #ffffff; /* White card background */
+      padding: 16px;
+      border-radius: 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* Lighter shadow */
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect on cards */
+    .work-left-card > div:hover,
+    .work-left-fullwidth > div:hover {
+      transform: scale(1.03);
+    }
+
+    /* Image inside card */
+    .work-left-card img,
+    .work-left-fullwidth img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      object-fit: cover;
+      margin-bottom: 14px;
+    }
+
+    /* Full width button */
+    .work-left-card a,
+    .work-left-fullwidth a {
+      display: block;
+      width: 96%;
+      padding: 12px;
+      border: 2px solid #4a90e2; /* New border color */
+      color: #4a90e2; /* New text color */
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 0 auto;
+    }
+
+    /* Button hover effects */
+    .work-left-card a:hover,
+    .work-left-fullwidth a:hover {
+      background-color: #4a90e2; /* New background hover color */
+      color: #fff;
+    }
+
+    /* Right content area */
+    .work-right-content {
+      flex: 2;
+      margin-top: 30px;
+      min-width: 320px;
+      max-width: 600px;
+      color: #444; /* Darker text */
+      font-family: Arial, sans-serif;
+      text-align: left;
+    }
+
+    /* Tag styling */
+    .work-right-content .tag {
+      display: inline-block;
+      background: rgba(74, 144, 226, 0.1); /* New tag background */
+      color: #4a90e2; /* New tag text color */
+      font-weight: 600;
+      font-size: 14px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Company name header */
+    .work-right-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 10px 0;
+      color: #222; /* Darker text */
+    }
+
+    /* Content paragraph */
+    .work-right-content p.content {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #444; /* Darker text */
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* Review card container */
+    .work-right-content .review-card {
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #eee; /* Lighter border */
+      border-radius: 12px;
+      background: #fafafa; /* Light review card background */
+    }
+
+    /* Review card header with image/name and rating */
+    .review-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    /* Reviewer info group */
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Reviewer image */
+    .reviewer-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Reviewer name and title */
+    .reviewer-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reviewer-details .name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #222; /* Darker text */
+    }
+
+    .reviewer-details .title {
+      font-size: 0.9rem;
+      color: #666; /* Darker text */
+    }
+
+    /* Rating stars style */
+    .rating-stars {
+      color: #f5b50a;
+      font-size: 1rem;
+    }
+
+    /* Review text */
+    .review-text {
+      font-size: 0.95rem;
+      color: #444; /* Darker text */
+      margin: 0;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      .our-work-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 12px 0 !important;
+        box-sizing: border-box;
+      }
+
+      .work-left-card,
+      .work-left-fullwidth,
+      .work-right-content {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 15px;
+        padding: 0 8px !important;
+        box-sizing: border-box;
+      }
+      .work-left-fullwidth a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+        text-align: center;
+      }
+
+      .work-right-content {
+        margin-top: 6px !important;
+        text-align: left !important;
+      }
+    }
+    
+    /* Media queries for landscape orientation */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .our-work-row {
+            flex-direction: row !important;
+        }
+        .work-left-fullwidth {
+            min-width: 50% !important;
+        }
+        .work-right-content {
+            min-width: 50% !important;
+        }
+    }
   </style>
 </head>
 <body>
@@ -313,7 +339,7 @@
     <div class="hero-content">
     <div class="col-lg-8 mt-2">
       <div class="hero-title">
-        <span class="creative">Our Works</span>
+        <span style="color:#333; font-weight:900;">Our </span><span class="creative">Work</span>
       </div>
       <div class="hero-desc">
         A full suite digital marketing agency <br>that help you to reach to your target audiance and enhance you bussiness
@@ -325,26 +351,24 @@
   max-width:100%; 
   margin:0px auto; 
   padding:30px; 
-   
-  background:#F5F5F7;
-  color:#000000; 
+  background:#ffffff; /* Light background */
+  color:#333; /* Dark text */
   border-radius:0px; 
-  box-shadow:0 4px 14px rgba(0,0,0,0.3); 
+  box-shadow:0 4px 14px rgba(0,0,0,0.1); /* Lighter shadow */
   font-family:Arial, sans-serif; 
   text-align:center;
 ">
-  <h2 style="font-size:2rem; font-weight:700; margin-bottom:16px; color:#FF6B00;">
+  <h2 style="font-size:2rem; font-weight:700; margin-bottom:16px; color:#4a90e2;">
     Trusted by Businesses Across Industries
   </h2>
-  <p style="font-size:1.1rem; line-height:1.7; margin-bottom:0; color:#000000;">
-    At <span style="color:#FF6B00; font-weight:600;">17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
-    We focus on creating innovative solutions that help our clients grow <span style="color:#FF6B00; font-weight:600;">faster</span> and <span style="color:#FF6B00; font-weight:600;">smarter</span>.
+  <p style="font-size:1.1rem; line-height:1.7; margin-bottom:0; color:#555;">
+    At <span style="color:#4a90e2; font-weight:600;">17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
+    We focus on creating innovative solutions that help our clients grow <span style="color:#4a90e2; font-weight:600;">faster</span> and <span style="color:#4a90e2; font-weight:600;">smarter</span>.
   </p>
 </div>
 
 
   <!--Our Works!-->
-  <!--background:linear-gradient(135deg, #0A0A0A, #1C3C72);-->
 <section class="our-work-section">
 
   <!-- First work item row -->
@@ -464,41 +488,38 @@
   <!-- End of second work item row -->
 
   <!-- Third work item row -->
-  <div class="our-work-row">
+  <!-- <div class="our-work-row">
 
-    <!-- Left side card -->
     <div class="work-left-fullwidth">
       <div>
-        <!-- Image -->
+
         <img src="assets/images/amm.PNG" alt="Company Image" />
 
-        <!-- Full-width Button -->
+
         <a href="#">
           Visit Website
         </a>
       </div>
     </div>
 
-    <!-- Right side content -->
+
     <div class="work-right-content">
 
-      <!-- Logistics tag -->
       <span class="tag">
         Fashion
       </span>
 
-      <!-- Company name header -->
+
       <h2>Ammo'z Fashion</h2>
 
-      <!-- Content -->
       <p class="content">
         Generated 21,000+ Leads for a Leading Venture Capital Company by Reducing the CPL by 40%.
       </p>
 
-      <!-- Review Card -->
+
       <div class="review-card">
         <div class="review-card-header">
-          <!-- Image + Name -->
+
           <div class="reviewer-info">
             <img src="assets/images/logo1png.png" alt="Company Logo" />
             <div class="reviewer-details">
@@ -507,23 +528,21 @@
             </div>
           </div>
 
-          <!-- Rating Stars -->
+
           <div class="rating-stars">★★★★☆</div>
         </div>
 
-        <!-- Review -->
+
         <p class="review-text">
           "Great experience working with 17DOT, helped us scale with quality leads."
         </p>
       </div>
     </div>
 
-  </div>
+  </div> -->
   <!-- End of third work item row -->
 
 </section>
-
-
 
   <!--Footer!-->
 <div id="footer-container"></div>
@@ -533,7 +552,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       loadNavbar();
-      // You can also load footer here if needed
     });
   </script>
 

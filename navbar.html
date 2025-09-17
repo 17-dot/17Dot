@@ -1,34 +1,4 @@
-<!-- navbar.html -->
-<header class="navbar dark-navbar">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <a href="/index.html" class="logo-link">
-        <div class="logo">17 DOT</div>
-    </a>
-
-    <nav class="nav-links" id="nav-links">
-        <a href="/about.html">About</a>
-        <a href="/services.html">Services</a>
-        <a href="/works.html">Our Work</a>
-        <a href="/contact.html">Contact Us</a>
-    </nav>
-
-    <div class="header-right">
-        <div class="header-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </div>
-</header>
-
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
     /* Import Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
@@ -36,15 +6,19 @@
     * {
         box-sizing: border-box;
     }
+
+    body {
+        font-family: 'Montserrat', Arial, sans-serif;
+    }
     
-    /* 🌙 Dark Navbar */
-    .dark-navbar {
-        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+    /* ☀️ Light Navbar */
+    .light-navbar {
+        background: #FFFFFF;
         padding: 12px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
         position: relative;
         z-index: 1000;
         min-height: 70px;
@@ -56,10 +30,10 @@
         z-index: 1001;
     }
     
-    .dark-navbar .logo {
+    .light-navbar .logo {
         font-size: 1.8rem;
         font-weight: bold;
-        background: linear-gradient(90deg, #FF6B00, #F4C542);
+        background: linear-gradient(90deg, #4a90e2, #50e3c2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -1px;
@@ -79,7 +53,7 @@
     }
     
     .nav-links a {
-        color: #F9F9F9;
+        color: #555;
         font-weight: 600;
         font-size: 1rem;
         text-decoration: none;
@@ -90,9 +64,7 @@
     }
     
     .nav-links a:hover {
-        background: linear-gradient(90deg, #FF6B00, #F4C542);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #4a90e2;
         transform: translateY(-2px);
     }
     
@@ -110,7 +82,7 @@
     }
     
     .header-social a {
-        color: #F9F9F9;
+        color: #555;
         font-size: 18px;
         transition: all 0.3s ease;
         padding: 8px;
@@ -121,8 +93,8 @@
     }
     
     .header-social a:hover {
-        color: #FF6B00;
-        background: rgba(255, 107, 0, 0.1);
+        color: #4a90e2;
+        background: rgba(74, 144, 226, 0.1);
         transform: translateY(-2px);
     }
     
@@ -138,13 +110,13 @@
     }
     
     .hamburger:hover {
-        background: rgba(255, 107, 0, 0.1);
+        background: rgba(74, 144, 226, 0.1);
     }
     
     .hamburger .bar {
         width: 24px;
         height: 3px;
-        background: #FF6B00;
+        background: #4a90e2;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
@@ -169,7 +141,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background: linear-gradient(135deg, #0A0A0A 0%, #1C3C72 50%, #FF6B00 100%);
+        background: rgba(255, 255, 255, 0.95);
         z-index: 999;
         display: none;
         flex-direction: column;
@@ -186,7 +158,7 @@
     }
     
     .mobile-menu a {
-        color: #F9F9F9;
+        color: #333;
         font-size: 1.5rem;
         font-weight: 600;
         text-decoration: none;
@@ -198,9 +170,7 @@
     }
     
     .mobile-menu a:hover {
-        background: linear-gradient(90deg, #FF6B00, #F4C542);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #4a90e2;
         transform: scale(1.05);
     }
     
@@ -211,7 +181,7 @@
     }
     
     .mobile-social a {
-        color: #F9F9F9;
+        color: #333;
         font-size: 24px;
         padding: 15px;
         border-radius: 50%;
@@ -219,8 +189,8 @@
     }
     
     .mobile-social a:hover {
-        color: #FF6B00;
-        background: rgba(255, 107, 0, 0.1);
+        color: #4a90e2;
+        background: rgba(74, 144, 226, 0.1);
         transform: translateY(-3px);
     }
     
@@ -246,12 +216,12 @@
     }
     
     @media (max-width: 768px) {
-        .dark-navbar {
+        .light-navbar {
             padding: 10px 15px;
             min-height: 60px;
         }
         
-        .dark-navbar .logo {
+        .light-navbar .logo {
             font-size: 1.6rem;
         }
         
@@ -273,12 +243,12 @@
     }
     
     @media (max-width: 480px) {
-        .dark-navbar {
+        .light-navbar {
             padding: 8px 12px;
             min-height: 55px;
         }
         
-        .dark-navbar .logo {
+        .light-navbar .logo {
             font-size: 1.4rem;
         }
         
@@ -326,15 +296,54 @@
     .nav-links a:focus,
     .header-social a:focus,
     .hamburger:focus {
-        outline: 2px solid #FF6B00;
+        outline: 2px solid #4a90e2;
         outline-offset: 2px;
     }
     
     .mobile-menu a:focus {
-        outline: 2px solid #FF6B00;
+        outline: 2px solid #4a90e2;
         outline-offset: 2px;
     }
 </style>
+
+<header class="light-navbar">
+    <a href="/index.html" class="logo-link">
+        <div class="logo">17 DOT</div>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/works.html">Our Work</a>
+        <a href="/contact.html">Contact Us</a>
+    </nav>
+
+    <div class="header-right">
+        <div class="header-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="/about.html">About</a>
+    <a href="/services.html">Services</a>
+    <a href="/works.html">Our Work</a>
+    <a href="/contact.html">Contact Us</a>
+    <div class="mobile-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+</div>
 
 <script>
     // Mobile Menu Functionality
@@ -394,23 +403,5 @@
                 }
             });
         }
-
-        // Smooth scroll for anchor links
-        const allLinks = document.querySelectorAll('a[href^="#"]');
-        allLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
     });
 </script>
