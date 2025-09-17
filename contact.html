@@ -6,7 +6,7 @@
   <title>17dot.in - About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <meta name="format-detection" content="telephone=no">
-  <meta name="theme-color" content="#FF6B00">
+  <meta name="theme-color" content="#4a90e2">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
     /* Import Google Fonts */
@@ -19,26 +19,26 @@
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
-      color: #F9F9F9;
+      background: #f0f2f5;
+      color: #333;
       overflow-x: hidden;
     }
     
     /* Header Styles */
     header {
-      background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
+      background: #ffffff;
       padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
       position: relative;
       z-index: 1000;
     }
     
     .logo {
       font-size: 1.8rem;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: bold;
@@ -62,7 +62,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 107, 0, 0.1);
+      background: rgba(74, 144, 226, 0.1);
       z-index: -1;
       border-radius: 12px;
     }
@@ -70,20 +70,20 @@
     .about-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 20px;
       position: relative;
     }
     
     .about-title .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .about-desc {
       font-size: 1.2rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -98,10 +98,10 @@
     }
     
     .value-card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -114,7 +114,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 107, 0, 0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
       transition: transform 0.5s ease;
     }
     
@@ -124,13 +124,13 @@
     
     .value-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .value-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -148,21 +148,21 @@
     .value-title {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #F9F9F9;
+      color: #4a90e2;
       margin-bottom: 10px;
     }
     
     .value-desc {
       font-size: 1rem;
-      color: #D1D1D1;
+      color: #777;
       line-height: 1.5;
     }
     
     .cta-button {
       display: inline-block;
       padding: 12px 30px;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
-      color: #0A0A0A;
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
+      color: #ffffff;
       font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
@@ -172,7 +172,7 @@
     
     .cta-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
     /* Testimonials Section */
@@ -181,26 +181,26 @@
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
-      background: rgba(28, 60, 114, 0.2);
+      background: rgba(220, 230, 245, 0.5);
       border-radius: 12px;
     }
     
     .testimonials-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 20px;
     }
     
     .testimonials-title .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .testimonials-desc {
       font-size: 1.2rem;
-      color:medi #D1D1D1;
+      color: #555;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -213,22 +213,22 @@
     }
     
     .testimonial-card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-left: 4px solid #FF6B00;
+      border-left: 4px solid #4a90e2;
     }
     
     .testimonial-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .testimonial-quote {
       font-size: 1rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.5;
       margin-bottom: 15px;
       font-style: italic;
@@ -237,12 +237,12 @@
     .testimonial-author {
       font-size: 1.2rem;
       font-weight: 700;
-      color: #F9F9F9;
+      color: #333;
     }
     
     .testimonial-role {
       font-size: 0.9rem;
-      color: #D1D1D1;
+      color: #777;
     }
     
     /* Stats Section */
@@ -257,19 +257,19 @@
     .stats-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 20px;
     }
     
     .stats-title .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .stats-desc {
       font-size: 1.2rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -282,10 +282,10 @@
     }
     
     .stat-card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -293,13 +293,13 @@
     
     .stat-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .stat-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -316,13 +316,13 @@
     .stat-number {
       font-size: 2rem;
       font-weight: 700;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 10px;
     }
     
     .stat-label {
       font-size: 1rem;
-      color: #D1D1D1;
+      color: #777;
       line-height: 1.5;
     }
     
@@ -332,26 +332,26 @@
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
-      background: rgba(28, 60, 114, 0.2);
+      background: rgba(220, 230, 245, 0.5);
       border-radius: 12px;
     }
     
     .process-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 20px;
     }
     
     .process-title .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .process-desc {
       font-size: 1.2rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -365,23 +365,23 @@
     }
     
     .process-card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
     }
     
     .process-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .process-number {
       font-size: 2rem;
       font-weight: 900;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
@@ -390,13 +390,13 @@
     .process-title-card {
       font-size: 1.4rem;
       font-weight: 700;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 10px;
     }
     
     .process-desc-card {
       font-size: 1rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.5;
     }
     
@@ -410,33 +410,32 @@
       overflow: hidden;
     }
     
-.contact-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
     
     .contact-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 20px;
     }
     
     .contact-title .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .contact-desc {
       font-size: 1.2rem;
-      color: #D1D1D1;
+      color: #555;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 40px;
@@ -453,10 +452,10 @@
     
     .contact-item {
       cursor: pointer;
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       min-width: 200px;
       text-align: center;
@@ -464,32 +463,32 @@
     
     .contact-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .contact-item p {
       margin: 0;
       font-size: 1rem;
-      color: #D1D1D1;
+      color: #777;
     }
     
     .contact-item a {
-      color: #F9F9F9;
+      color: #4a90e2;
       text-decoration: none;
       font-weight: 600;
     }
     
     .contact-item a:hover {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
     .contact-form {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       max-width: 600px;
       margin: 0 auto;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -497,7 +496,7 @@
     
     .contact-form:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
     
     .form-group {
@@ -508,13 +507,13 @@
     .form-group label {
       font-size: 1rem;
       font-weight: 600;
-      color: #F9F9F9;
+      color: #333;
       margin-bottom: 8px;
       display: block;
     }
     
     .form-group label .highlight {
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -524,10 +523,10 @@
     .form-group textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #D1D1D1;
+      border: 1px solid #ccc;
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      color: #F9F9F9;
+      background: #f9f9f9;
+      color: #333;
       font-size: 1rem;
       font-family: 'Montserrat', Arial, sans-serif;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -537,8 +536,8 @@
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #FF6B00;
-      box-shadow: 0 0 8px rgba(255, 107, 0, 0.3);
+      border-color: #4a90e2;
+      box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
     }
     
     .form-group textarea {
@@ -548,7 +547,7 @@
     
     .form-group select {
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F9F9F9'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23555'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 12px center;
       background-size: 16px;
@@ -557,8 +556,8 @@
     .submit-button {
       display: inline-block;
       padding: 12px 30px;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
-      color: #0A0A0A;
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
+      color: #ffffff;
       font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
@@ -571,26 +570,26 @@
     
     .submit-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
     /* CTA Banner Section */
     .cta-banner {
       padding: 60px 20px;
-      background: linear-gradient(90deg, #FF6B00, #F4C542);
+      background: linear-gradient(90deg, #4a90e2, #50e3c2);
       text-align: center;
     }
     
     .cta-banner-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #0A0A0A;
+      color: #ffffff;
       margin-bottom: 20px;
     }
     
     .cta-banner-desc {
       font-size: 1.2rem;
-      color: #0A0A0A;
+      color: #ffffff;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 20px;
@@ -599,8 +598,8 @@
     .cta-banner-button {
       display: inline-block;
       padding: 12px 30px;
-      background: #0A0A0A;
-      color: #F9F9F9;
+      background: #ffffff;
+      color: #333;
       font-size: 1.1rem;
       font-weight: 600;
       text-decoration: none;
@@ -610,7 +609,7 @@
     
     .cta-banner-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
     /* Animations */
@@ -747,19 +746,11 @@
         transition-duration: 0.01ms !important;
       }
     }
-    
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(90deg, #0A0A0A 0%, #1C3C72 50%, #0A0A0A 100%);
-      }
-    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <div id="navbar-container"></div>
-
-
 
   <!-- Contact Us Section -->
   <section id="contact" class="contact-section">
@@ -830,29 +821,21 @@
     </form>
   </section>
 
-
+  <!-- CTA Banner Section -->
+ 
 
   <!-- Footer -->
   <div id="footer-container"></div>
 
-    <!-- Include navbar.js -->
+  <!-- Include navbar.js -->
   <script src="js/navbar.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       loadNavbar();
-      // You can also load footer here if needed
     });
   </script>
 
   <script>
-    // Load navbar and footer
-    // fetch('navbar.html')
-    //   .then(response => response.text())
-    //   .then(data => {
-    //     document.getElementById('navbar-container').innerHTML = data;
-    //   })
-    //   .catch(error => console.error('Error loading navbar:', error));
-
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {

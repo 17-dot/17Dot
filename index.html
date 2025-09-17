@@ -995,7 +995,7 @@
 
 
 
-<div class="client-section">
+<!-- <div class="client-section">
   <div class="client-text">
     Our Clients From Different Sector :
   </div>
@@ -1013,7 +1013,7 @@
       <img src="./assets/images/sankatlogo.PNG" alt="logo2" />
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Showreel Stats Section -->
 <section class="showreel-section">
@@ -1025,7 +1025,7 @@
       </div>
       <div class="showreel-stats-row">
         <div>
-          <strong>3+</strong>
+          <strong>1+</strong>
           <span>Years</span>
         </div>
         <div>
@@ -1033,7 +1033,7 @@
           <span>Team Strength</span>
         </div>
         <div>
-          <strong>23+</strong>
+          <strong>5+</strong>
           <span>Clients Served</span>
         </div>
         <div>
@@ -2188,7 +2188,20 @@
 <!-- Scorecard CTA -->
 <section style="background:linear-gradient(90deg, #4a90e2, #50e3c2); padding:34px;text-align:center;">
   <h3 style="color:#fff;font-size:1.12rem;">Need help in choosing a digital agency? Here’s an unbiased scorecard you could use to narrow down on the agency that’s right for your needs.</h3>
-  <button style="margin-top:18px;padding:10px 32px;background:none;border:2px solid #fff;border-radius:4px;color:#fff;font-weight:600;font-size:1.08rem;cursor:pointer;letter-spacing:2px;">Try Now</button>
+  <button id="tryNowBtn" style="margin-top:18px;padding:10px 32px;background:none;border:2px solid #fff;border-radius:4px;color:#fff;font-weight:600;font-size:1.08rem;cursor:pointer;letter-spacing:2px;transition:background 0.3s, color 0.3s, border 0.3s;">Try Now</button>
+</section>
+<style>
+#tryNowBtn:hover {
+  background: #fff;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+}
+</style>
+<script>
+document.getElementById('tryNowBtn').onclick = function() {
+  window.location.href = 'contact.html';
+};
+</script>
 </section>
 
 <!--  -->
@@ -2391,20 +2404,7 @@
       <button id="nextTest" style="position: absolute; top: 45%; right: 0; background: transparent; border: none; font-size: 2rem; cursor: pointer; color: #4a90e2;">&#8594;</button>
     </div>
     <!-- Client Avatars Grid on Right -->
-    <div id="clientSection" style="flex:1;text-align:center;">
-      <h3 style="background:linear-gradient(90deg, #4a90e2, #50e3c2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline;margin: 0 auto; width: fit-content;font-size:1.32rem;font-weight:700;">Hear It From Our Clients</h3>
-      <div style="margin-top:24px;display:grid;grid-template-columns:repeat(4,130px);grid-gap:24px; grid-auto-rows:150px;">
-        <!-- Replace these with avatar images -->
-        <img src="./assets/images/sankatlogo.PNG" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/mezbanlogo.jpg" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/sankatlogo.PNG" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/mezbanlogo.jpg" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/sankatlogo.PNG" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/mezbanlogo.jpg" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/sankatlogo.PNG" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-        <img src="./assets/images/mezbanlogo.jpg" alt="Client 1" style="width: 100%; max-width: 150px; height: auto; object-fit: contain; border-radius: 50%;">
-      </div>
-    </div>
+
   </div>
 </section>
 
