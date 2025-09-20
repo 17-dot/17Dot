@@ -115,22 +115,20 @@
     @media (max-width: 768px) {
       .service-item {
         text-align: center;
+        width: 80%;
+        left: 10% !important;
+        padding: 0px 0px 0px 0px;
+        position: relative;
+        margin-bottom: 2px !important; /* Further reduced gap between services on mobile */
+        opacity: 1; /* Make visible on mobile */
+        transform: translateY(0);
+        animation: none;
       }
       .service-title, .service-desc, .service-number {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         display: block;
-      }
-      .service-item {
-        width: 80%;
-        left: 10% !important;
-        padding: 2px 0px 0px 0px;
-        position: relative;
-        margin-bottom: 0px !important; /* No gap between services on mobile */
-        opacity: 1; /* Make visible on mobile */
-        transform: translateY(0);
-        animation: none;
       }
       .service-number {
         width: 25px;
@@ -192,9 +190,6 @@
         border-radius: 2px;
         opacity: 0.25;
         pointer-events: none;
-      }
-      .service-item {
-          margin-bottom: 10px; /* Reduced gap between services on mobile */
       }
       .service-item.mobile-left, .service-item.mobile-right {
           left: 10% !important;
@@ -642,9 +637,18 @@
       const svgPathMobile = document.getElementById('snake-mobile');
       const containerWidth = container.offsetWidth;
       
-      const itemHeight = 140;
-      const spacing = 100;
-      const totalHeight = (itemHeight + spacing) * services.length + 200;
+      // Responsive itemHeight and spacing for mobile
+      let itemHeight = 140;
+      let spacing = 100;
+      let extraPadding = 200;
+      if (window.innerWidth <= 768) {
+        itemHeight = 80; // Reduce height for mobile
+        spacing = 10;    // Reduce spacing for mobile
+        extraPadding = 0; // Remove extra space for mobile
+      }
+      // Calculate the last service's bottom position
+      const lastTop = (services.length - 1) * (itemHeight + spacing) + 100;
+      const totalHeight = lastTop + itemHeight + extraPadding;
       container.parentElement.style.minHeight = totalHeight + 'px';
       
       let pathData = '';
@@ -658,10 +662,8 @@
         const top = index * (itemHeight + spacing) + 100;
         const isLeft = index % 2 === 0;
         const left = isLeft ? '3%' : '57%';
-        
         const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
         const y = top + (itemHeight / 2);
-        
         if (firstPoint) {
           pathData += `M ${x},${y}`;
           // For mobile, always use 50% width for x (center)
@@ -674,9 +676,10 @@
           const cp2y = y;
           pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
           // For mobile, vertical line at center
-          mobilePathData += ` L ${containerWidth/2},${y}`;
+          if (index < services.length) {
+            mobilePathData += ` L ${containerWidth/2},${y}`;
+          }
         }
-        
         previousX = x;
         previousY = y;
         
@@ -685,7 +688,7 @@
         serviceElement.style.top = `${top}px`;
         serviceElement.style.left = left;
         serviceElement.style.animationDelay = `${index * 0.1}s`;
-        serviceElement.style.minHeight = `${itemHeight}px`;
+  serviceElement.style.minHeight = `${itemHeight}px`;
         
         // For mobile, dot will be centered at the top; for desktop, keep zig-zag
         let dotStyle = '';
