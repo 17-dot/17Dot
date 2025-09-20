@@ -1,810 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" href="favicon.ico" />
 
-  <meta charset="UTF-8">
-  <title>17 Dot - Digital First Creative Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-    
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(135deg, #f0f2f5 0%, #d8e4f5 100%); /* Light gradient background */
-      color: #333; /* Dark text for light theme */
-    }
-    
-    header {
-      background: #ffffff; /* White background for header */
-      padding: 12px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-    }
-    
-    .logo {
-      font-size: 2.2rem;
-      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bold;
-      letter-spacing: -2px;
-    }
-    
-    .hero {
-      position: relative;
-      width: 100%;
-      min-height: 30vh;
-      background: url('https://placehold.co/1200x400/D0DCEB/4A90E2?text=Our+Services') center/cover no-repeat; /* New placeholder image */
-      padding: 50px 30px 50px 30px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.75); /* Light overlay */
-      pointer-events: none;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 30vh;
-    }
-    
-    .hero-title {
-      font-size: 3.8rem;
-      font-weight: 900;
-      margin-bottom: 4px;
-      color: #333; /* Dark text */
-    }
-    
-    .hero-title .creative {
-      background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .hero-desc {
-      font-size: 1.3rem;
-      color: #555; /* Dark text */
-      margin-bottom: 25px;
-      margin-top: 10px;
-    }
+    <meta charset="UTF-8" />
+    <title>17 Dot - Digital First Creative Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
-    /* Roadmap Styles */
-    .service-item {
-      position: absolute;
-      width: 38%;
-      padding: 25px;
-      background: #ffffff;
-      border-radius: 16px;
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.6s forwards;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    @media (max-width: 768px) {
-      .service-item {
-        text-align: center;
-        width: 80%;
-        left: 10% !important;
-        padding: 0px 0px 0px 0px;
-        position: relative;
-        margin-bottom: 2px !important; /* Further reduced gap between services on mobile */
-        opacity: 1; /* Make visible on mobile */
-        transform: translateY(0);
-        animation: none;
+      body {
+        margin: 0;
+        font-family: "Montserrat", Arial, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #f0f2f5 0%,
+          #d8e4f5 100%
+        ); /* Light gradient background */
+        color: #333; /* Dark text for light theme */
       }
-      .service-title, .service-desc, .service-number {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+
+      header {
+        background: #ffffff; /* White background for header */
+        padding: 12px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
       }
-      .service-number {
-        width: 25px;
-        height: 25px;
-        font-size: 12px;
+
+      .logo {
+        font-size: 2.2rem;
+        background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        letter-spacing: -2px;
       }
-      .service-title {
-        font-size: 1rem;
-      }
-      .service-desc {
-        font-size: 0.8rem;
-      }
-      .service-dot {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: -18px;
-        transform: translateX(-50%);
-        width: 22px;
-        height: 22px;
-        z-index: 2;
-        background: linear-gradient(135deg, #4a90e2, #50e3c2);
-        border-radius: 50%;
-        box-shadow: 0 0 0 3px rgba(255,255,255,0.3), 0 0 12px rgba(74,144,226,0.5);
-      }
-      .roadmap-section {
-        padding: 40px 10px;
-      }
+
       .hero {
-        padding: 30px 20px;
-        min-height: 25vh;
+        position: relative;
+        width: 100%;
+        min-height: 30vh;
+        background: url("https://placehold.co/1200x400/D0DCEB/4A90E2?text=Our+Services")
+          center/cover no-repeat; /* New placeholder image */
+        padding: 50px 30px 50px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
       }
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      .hero-desc {
-        font-size: 1rem;
-      }
-      .services-container {
-        min-height: 6800px; /* Adjust height on mobile */
-      }
-      .snake-path {
-        display: none; /* Hide snake path on mobile */
-      }
-      .snake-path-mobile {
-        display: block; /* Show new vertical path */
-      }
-      /* Fallback vertical line for mobile */
-      .services-container::before {
-        content: '';
+
+      .hero-overlay {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 4px;
-        height: 100%;
-        background: linear-gradient(180deg, #4a90e2, #50e3c2);
-        z-index: 0;
-        border-radius: 2px;
-        opacity: 0.25;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.75); /* Light overlay */
         pointer-events: none;
       }
-      .service-item.mobile-left, .service-item.mobile-right {
-          left: 10% !important;
-      }
-    }
 
-    @media (max-width: 480px) {
-      .service-item {
-        width: 90%;
-        left: 5% !important;
-        padding: 1px 0px 0px 0px;
-      }
-      .service-title {
-        font-size: 0.9rem;
-      }
-      .service-desc {
-        font-size: 0.75rem;
-      }
-      .hero-title {
-        font-size: 2rem;
-      }
-      .hero-desc {
-        font-size: 0.9rem;
-      }
-      .roadmap-section {
-        padding: 30px 5px;
-      }
-      .service-item.mobile-left, .service-item.mobile-right {
-          left: 5% !important;
-      }
-    }
-
-    .service-item:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(74, 144, 226, 0.2);
-      border-color: rgba(74, 144, 226, 0.3);
-    }
-
-    .service-dot {
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      background: linear-gradient(135deg, #4a90e2, #50e3c2);
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 25px rgba(74, 144, 226, 0.8);
-      z-index: 2;
-      transition: all 0.3s ease;
-    }
-    
-    .service-item:hover .service-dot {
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4), 0 0 30px rgba(74, 144, 226, 1);
-    }
-
-    .service-number {
-      position: absolute;
-      top: -15px;
-      left: 15px;
-      background: #4a90e2; /* New color */
-      color: white;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 14px;
-      z-index: 3;
-    }
-
-    .service-title {
-      color: #4a90e2;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .service-desc {
-      color: #555; /* Dark text */
-      font-size: 0.9rem;
-      line-height: 1.5;
-      margin: 5px 0 0 0;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-    
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3)); }
-      50% { filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.5)); }
-      100% { filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3)); }
-    }
-    
-    .snake-path {
-      animation: pulse 4s infinite ease-in-out;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-      padding-top: 0px;
-      box-sizing: border-box;
-    }
-    
-    .modal-content {
-      overflow-y: auto;
-      overflow-x: hidden;
-      flex-wrap: nowrap;
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 16px;
-      border: 1px solid rgba(74, 144, 226, 0.28);
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
-      margin: 5% auto;
-      padding: 20px;
-      width: 80%;
-      max-width: 800px;
-      max-height: 80vh;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: row;
-      box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
-      position: relative;
-    }
-    
-    .modal-image {
-      flex: 1;
-      max-width: 50%;
-      margin-right: 20px;
-      min-width: 0;
-      overflow: hidden;
-    }
-    
-    .modal-details {
-      flex: 1;
-      min-width: 0;
-      color: #ffffff;
-    }
-    
-    .modal-image img {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-    
-    .modal-details h2 {
-      color: #4a90e2;
-      margin-bottom: 15px;
-    }
-    .modal-details p {
-      line-height: 1.6;
-    }
-    .close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      font-size: 28px;
-      font-weight: bold;
-      color: #4a90e2;
-      cursor: pointer;
-      float: none;
-      z-index: 10;
-    }
-    .close:hover {
-      color: #50e3c2;
-    }
-    
-    @media (max-width: 768px) {
-      .modal-content {
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 30vh;
+      }
+
+      .hero-title {
+        font-size: 3.8rem;
+        font-weight: 900;
+        margin-bottom: 4px;
+        color: #333; /* Dark text */
+      }
+
+      .hero-title .creative {
+        background: linear-gradient(90deg, #4a90e2, #50e3c2); /* New gradient */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-desc {
+        font-size: 1.3rem;
+        color: #555; /* Dark text */
+        margin-bottom: 25px;
+        margin-top: 10px;
+      }
+
+      /* Roadmap Styles */
+      .service-item {
+        position: absolute;
+        width: 38%;
+        padding: 25px;
+        background: #ffffff;
+        border-radius: 16px;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s forwards;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .service-item {
+          text-align: center;
+          width: 80%;
+          left: 10% !important;
+          padding: 0px 0px 0px 0px;
+          position: relative;
+          margin-bottom: 2px !important; /* Further reduced gap between services on mobile */
+          opacity: 1; /* Make visible on mobile */
+          transform: translateY(0);
+          animation: none;
+        }
+        .service-title,
+        .service-desc,
+        .service-number {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+        .service-number {
+          width: 25px;
+          height: 25px;
+          font-size: 12px;
+        }
+        .service-title {
+          font-size: 1rem;
+        }
+        .service-desc {
+          font-size: 0.8rem;
+        }
+        .service-dot {
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: -18px;
+          transform: translateX(-50%);
+          width: 22px;
+          height: 22px;
+          z-index: 2;
+          background: linear-gradient(135deg, #4a90e2, #50e3c2);
+          border-radius: 50%;
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3),
+            0 0 12px rgba(74, 144, 226, 0.5);
+        }
+        .roadmap-section {
+          padding: 40px 10px;
+        }
+        .hero {
+          padding: 30px 20px;
+          min-height: 25vh;
+        }
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .hero-desc {
+          font-size: 1rem;
+        }
+        .services-container {
+          min-height: 6800px; /* Adjust height on mobile */
+        }
+        .snake-path {
+          display: none; /* Hide snake path on mobile */
+        }
+        .snake-path-mobile {
+          display: block; /* Show new vertical path */
+        }
+        /* Fallback vertical line for mobile */
+        .services-container::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 100%;
+          background: linear-gradient(180deg, #4a90e2, #50e3c2);
+          z-index: 0;
+          border-radius: 2px;
+          opacity: 0.25;
+          pointer-events: none;
+        }
+        .service-item.mobile-left,
+        .service-item.mobile-right {
+          left: 10% !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .service-item {
+          width: 90%;
+          left: 5% !important;
+          padding: 1px 0px 0px 0px;
+        }
+        .service-title {
+          font-size: 0.9rem;
+        }
+        .service-desc {
+          font-size: 0.75rem;
+        }
+        .hero-title {
+          font-size: 2rem;
+        }
+        .hero-desc {
+          font-size: 0.9rem;
+        }
+        .roadmap-section {
+          padding: 30px 5px;
+        }
+        .service-item.mobile-left,
+        .service-item.mobile-right {
+          left: 5% !important;
+        }
+      }
+
+      .service-item:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(74, 144, 226, 0.2);
+        border-color: rgba(74, 144, 226, 0.3);
+      }
+
+      .service-dot {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: linear-gradient(135deg, #4a90e2, #50e3c2);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3),
+          0 0 25px rgba(74, 144, 226, 0.8);
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+
+      .service-item:hover .service-dot {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4),
+          0 0 30px rgba(74, 144, 226, 1);
+      }
+
+      .service-number {
+        position: absolute;
+        top: -15px;
+        left: 15px;
+        background: #4a90e2; /* New color */
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        z-index: 3;
+      }
+
+      .service-title {
+        color: #4a90e2;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .service-desc {
+        color: #555; /* Dark text */
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 5px 0 0 0;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+        }
+        50% {
+          filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.5));
+        }
+        100% {
+          filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+        }
+      }
+
+      .snake-path {
+        animation: pulse 4s infinite ease-in-out;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding-top: 0px;
+        box-sizing: border-box;
+      }
+
+      .modal-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 16px;
+        border: 1px solid rgba(74, 144, 226, 0.28);
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+        margin: 5% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        max-height: 80vh;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
         position: relative;
       }
-      .modal .close {
-        top: 10px;
-        right: 10px;
+
+      .modal-image {
+        flex: 1;
+        max-width: 50%;
+        margin-right: 20px;
+        min-width: 0;
+        overflow: hidden;
       }
+
+      .modal-details {
+        flex: 1;
+        min-width: 0;
+        color: #ffffff;
+      }
+
+      .modal-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .modal-details h2 {
+        color: #4a90e2;
+        margin-bottom: 15px;
+      }
+      .modal-details p {
+        line-height: 1.6;
+      }
+      .close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #4a90e2;
+        cursor: pointer;
+        float: none;
+        z-index: 10;
+      }
+      .close:hover {
+        color: #50e3c2;
+      }
+
+      @media (max-width: 768px) {
+        .modal-content {
+          flex-direction: column;
+          position: relative;
+        }
+        .modal .close {
+          top: 10px;
+          right: 10px;
+        }
+        .marquee-content img {
+          height: 30px;
+          width: 45px;
+        }
+      }
+
+      /* Ref card styling */
+      .ref-card {
+        margin-top: 15px;
+        background: transparent;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border-color: #f0f2f5;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        color: #4a90e2;
+      }
+
+      .ref-label {
+        font-weight: 600;
+        margin-right: 8px;
+        white-space: nowrap;
+      }
+
+      /* Marquee container */
+      .marquee-container {
+        overflow: hidden;
+        flex: 1;
+      }
+
+      .marquee-content {
+        display: flex;
+        animation: marquee 10s linear infinite;
+      }
+
+      .marquee-content:hover {
+        animation-play-state: paused;
+      }
+
+      .marquee-content a {
+        display: inline-block;
+        margin-right: 120px;
+      }
+
       .marquee-content img {
-        height: 30px;
-        width: 45px;
-      }
-    }
-
-    /* Ref card styling */
-    .ref-card {
-      margin-top: 15px;
-      background: transparent;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border-color: #f0f2f5;
-      display: flex;
-      align-items: center;
-      max-width: 100%;
-      color: #4a90e2;
-    }
-    
-    .ref-label {
-      font-weight: 600;
-      margin-right: 8px;
-      white-space: nowrap;
-    }
-    
-    /* Marquee container */
-    .marquee-container {
-      overflow: hidden;
-      flex: 1;
-    }
-    
-    .marquee-content {
-      display: flex;
-      animation: marquee 10s linear infinite;
-    }
-    
-    .marquee-content:hover {
-      animation-play-state: paused;
-    }
-    
-    .marquee-content a {
-      display: inline-block;
-      margin-right: 120px;
-    }
-    
-    .marquee-content img {
-      height: 90px;
-      width: 200px;
-      margin-left: 50px;
-      object-fit: cover;
-      border-radius: 4px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: border-color 0.3s ease;
-      max-width: 300%;
-      display: block;
-      flex-shrink: 0;
-    }
-    
-    .marquee-content img:hover {
-      border-color: #4a90e2;
-    }
-    
-    /* Benefits heading */
-    .benefits-heading {
-      margin-top: 24px;
-      margin-bottom: 10px;
-      color: #4a90e2;
-    }
-    
-    /* Benefits list */
-    .benefits-list {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #ffffff;
-      font-size: 1rem;
-    }
-    
-    @keyframes marquee {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-120%);
-      }
-    }
-    .main-section-intro {
-      max-width:100%; 
-      margin:-30px auto; 
-      padding:30px; 
-      color:#ffffff; 
-      border-radius:5px;  
-      font-family:Arial, sans-serif; 
-      text-align:center;
-      background: transparent;
-    }
-    .main-section-intro h2 {
-      font-size:2rem; 
-      font-weight:700; 
-      margin-bottom:0px; 
-      background: linear-gradient(90deg, #4a90e2, #50e3c2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-    .main-section-intro p {
-      font-size:1.1rem; 
-      line-height:1.7; 
-      margin-bottom:0; 
-      color:#555;
-    }
-    .main-section-intro span {
-      color: #4a90e2;
-      font-weight:600;
-    }
-    /* Mobile-specific snake path */
-    .snake-path-mobile {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
-    }
-    @media (max-width: 768px) {
-      .snake-path-mobile {
+        height: 90px;
+        width: 200px;
+        margin-left: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border-color 0.3s ease;
+        max-width: 300%;
         display: block;
+        flex-shrink: 0;
       }
-    }
-  </style>
-  <title>Contact Us - Servora</title>
-</head>
-<body>
-  
-  <!--Navbar!-->
-  <div id="navbar-container"></div>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="col-lg-8 mt-2">
-        <div class="hero-title">
-          <span style="color:#333; font-weight:900;">Our </span><span class="creative">Services</span>
-        </div>
-        <div class="hero-desc">
-          A full suite digital marketing agency <br>We offer 17 comprehensive digital solutions to transform your business
-        </div>
-      </div>
-    </div>
-  </section>
-  <main>
-    <!-- 17 Dots Roadmap Section -->
-    <section class="roadmap-section" style="padding: 20px 20px; background: linear-gradient(135deg, #f0f2f5 0%, #d8e4f5 100%); overflow: hidden;">
-      <div class="main-section-intro">
-        <h2 >Trusted by Businesses Across Industries</h2>
-        <p>
-          At <span>17 Dot</span>, we believe every business deserves a digital presence that inspires trust and delivers results. 
-          We focus on creating innovative solutions that help our clients grow <span>faster</span> and <span>smarter</span>.
-        </p>
-      </div>
-      <div class="container" style="max-width: 1140px; margin: 0 auto; position: relative; min: height 6800px;;">
-        <!-- The snake path with gradient and glow effect -->
-        <svg class="snake-path" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));">
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#4a90e2" />
-              <stop offset="100%" stop-color="#50e3c2" />
-            </linearGradient>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
-          </defs>
-          <path id="snake" d="" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
-        </svg>
+      .marquee-content img:hover {
+        border-color: #4a90e2;
+      }
 
-        <svg class="snake-path-mobile" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));">
-          <defs>
-            <linearGradient id="gradient-mobile" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#4a90e2" />
-              <stop offset="100%" stop-color="#50e3c2" />
-            </linearGradient>
-          </defs>
-          <path id="snake-mobile" d="" fill="none" stroke="url(#gradient-mobile)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        
-        <!-- Service items -->
-        <div class="services-container" style="position: relative; height: 100%;">
-          <!-- Service items will be added here -->
+      /* Benefits heading */
+      .benefits-heading {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        color: #4a90e2;
+      }
+
+      /* Benefits list */
+      .benefits-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        color: #ffffff;
+        font-size: 1rem;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-120%);
+        }
+      }
+      .main-section-intro {
+        max-width: 100%;
+        margin: -30px auto;
+        padding: 30px;
+        color: #ffffff;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: transparent;
+      }
+      .main-section-intro h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0px;
+        background: linear-gradient(90deg, #4a90e2, #50e3c2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+      .main-section-intro p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 0;
+        color: #555;
+      }
+      .main-section-intro span {
+        color: #4a90e2;
+        font-weight: 600;
+      }
+      /* Mobile-specific snake path */
+      .snake-path-mobile {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+      }
+      @media (max-width: 768px) {
+        .snake-path-mobile {
+          display: block;
+        }
+      }
+    </style>
+    <title>Contact Us - Servora</title>
+  </head>
+  <body>
+    <!--Navbar!-->
+    <div id="navbar-container"></div>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="col-lg-8 mt-2">
+          <div class="hero-title">
+            <span style="color: #333; font-weight: 900">Our </span
+            ><span class="creative">Services</span>
+          </div>
+          <div class="hero-desc">
+            A full suite digital marketing agency <br />We offer 17
+            comprehensive digital solutions to transform your business
+          </div>
         </div>
       </div>
     </section>
+    <main>
+      <!-- 17 Dots Roadmap Section -->
+      <section
+        class="roadmap-section"
+        style="
+          padding: 20px 20px;
+          background: linear-gradient(135deg, #f0f2f5 0%, #d8e4f5 100%);
+          overflow: hidden;
+        "
+      >
+        <div class="main-section-intro">
+          <h2>Trusted by Businesses Across Industries</h2>
+          <p>
+            At <span>17 Dot</span>, we believe every business deserves a digital
+            presence that inspires trust and delivers results. We focus on
+            creating innovative solutions that help our clients grow
+            <span>faster</span> and <span>smarter</span>.
+          </p>
+        </div>
+        <div
+          class="container"
+          style="
+            max-width: 1140px;
+            margin: 0 auto;
+            position: relative;
+            min: height 6800px;
+          "
+        >
+          <!-- The snake path with gradient and glow effect -->
+          <svg
+            class="snake-path"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+            "
+          >
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4a90e2" />
+                <stop offset="100%" stop-color="#50e3c2" />
+              </linearGradient>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+            <path
+              id="snake"
+              d=""
+              fill="none"
+              stroke="url(#gradient)"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              filter="url(#glow)"
+            />
+          </svg>
 
-    <!-- Modal Structure -->
-    <div id="serviceModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="modalClose">&times;</span>
-        <div class="modal-image">
-          <img id="modalImage" src="" alt="Service Image">
-          <div class="ref-card">
-            <span class="ref-label">Ref</span>
-            <div class="marquee-container">
-              <div class="marquee-content" id="marqueeContent"></div>
-            </div>
+          <svg
+            class="snake-path-mobile"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              filter: drop-shadow(0 0 12px rgba(74, 144, 226, 0.3));
+            "
+          >
+            <defs>
+              <linearGradient
+                id="gradient-mobile"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4a90e2" />
+                <stop offset="100%" stop-color="#50e3c2" />
+              </linearGradient>
+            </defs>
+            <path
+              id="snake-mobile"
+              d=""
+              fill="none"
+              stroke="url(#gradient-mobile)"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <!-- Service items -->
+          <div
+            class="services-container"
+            style="position: relative; height: 100%"
+          >
+            <!-- Service items will be added here -->
           </div>
         </div>
-        <div class="modal-details">
-          <h2 id="modalTitle"></h2>
-          <p id="modalDetails"></p>
-          <h3 class="benefits-heading">Benefit</h3>
-          <ul id="benefitPoints" class="benefits-list"></ul>
+      </section>
+
+      <!-- Modal Structure -->
+      <div id="serviceModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="modalClose">&times;</span>
+          <div class="modal-image">
+            <img id="modalImage" src="" alt="Service Image" />
+            <div class="ref-card">
+              <span class="ref-label">Ref</span>
+              <div class="marquee-container">
+                <div class="marquee-content" id="marqueeContent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-details">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDetails"></p>
+            <h3 class="benefits-heading">Benefit</h3>
+            <ul id="benefitPoints" class="benefits-list"></ul>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!--Footer!-->
-  <div id="footer-container"></div>
+    <!--Footer!-->
+    <div id="footer-container"></div>
 
-  <script src="js/navbar.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      loadNavbar();
-    });
-  </script>
-  
-  <script>
-    const services = [
-      { title: 'Web Design', desc: 'Custom, responsive websites that convert visitors into customers with stunning UI/UX.', image: './assets/images/webdesign.jpg', details: 'Our web design service focuses on creating visually appealing and user-friendly websites tailored to your brand. We use the latest technologies to ensure responsiveness across all devices, incorporating SEO best practices from the start. This includes custom layouts, interactive elements, and performance optimization for faster load times.' },
-      { title: 'SEO Optimization', desc: 'Improve your search rankings and drive organic traffic with our proven SEO strategies.', image: './assets/images/seo.jpg', details: 'SEO optimization involves in-depth keyword research, on-page and off-page strategies, technical audits, and content optimization. We help your site rank higher on search engines like Google, increasing visibility and attracting qualified traffic that converts into leads.' },
-      { title: 'Social Media Marketing', desc: 'Engage your audience and build brand loyalty through strategic social media campaigns.', image: './assets/images/socialmedia.jpg', details: 'We craft targeted campaigns on platforms like Facebook, Instagram, and LinkedIn. This includes content creation, audience targeting, analytics tracking, and community management to foster engagement and grow your follower base organically.' },
-      { title: 'PPC Advertising', desc: 'Maximize ROI with targeted pay-per-click advertising campaigns.', image: './assets/images/ppc.jpg', details: 'Our PPC services include ad creation, keyword bidding, A/B testing, and performance monitoring on Google Ads and social platforms. We focus on high-ROI keywords to drive immediate traffic and conversions while optimizing budgets.' },
-      { title: 'Content Marketing', desc: 'Compelling content that tells your brand story and drives engagement.', image: './assets/images/content.jpg', details: 'We develop content strategies including blogs, infographics, videos, and ebooks. Our approach emphasizes storytelling, SEO integration, and distribution across channels to build authority and nurture leads through the sales funnel.' },
-      { title: 'E-commerce Solutions', desc: 'Complete online store setup with seamless shopping experience.', image: './assets/images/ecommerce.jpg', details: 'From platform selection (e.g., Shopify, WooCommerce) to custom integrations, we build secure e-commerce sites with features like payment gateways, inventory management, and user-friendly checkouts to boost online sales.' },
-      { title: 'Brand Identity', desc: 'Create a memorable brand that stands out in the digital landscape.', image: './assets/images/brandidentity.jpg', details: 'We design logos, color schemes, typography, and brand guidelines. This service ensures consistent messaging across all touchpoints, helping your brand resonate with your target audience and build long-term recognition.' },
-      { title: 'Video Production', desc: 'High-quality video content that captivates and converts.', image: './assets/images/video.jpg', details: 'Professional video production includes scripting, filming, editing, and animation. We create promotional videos, tutorials, and ads optimized for social media and websites to engage viewers and drive action.' },
-      { title: 'Email Marketing', desc: 'Automated email campaigns that nurture leads and drive sales.', image: './assets/images/email.jpg', details: 'We set up automated workflows using tools like Mailchimp, including segmentation, personalized content, and analytics. This helps in lead nurturing, cart abandonment recovery, and customer retention through targeted emails.' },
-      { title: 'Mobile App Development', desc: 'Native and cross-platform mobile applications for your business.', image: './assets/images/mobile.jpg', details: 'We develop apps for iOS and Android using React Native or native languages. Features include push notifications, offline capabilities, and API integrations to extend your business reach via mobile devices.' },
-      { title: 'UI/UX Design', desc: 'Intuitive user experiences that keep visitors engaged.', image: './assets/images/uiux.jpg', details: 'Focusing on user research, wireframing, prototyping, and testing, we create intuitive interfaces that enhance usability and satisfaction, reducing bounce rates and increasing conversions.' },
-      { title: 'Conversion Rate Optimization', desc: 'Turn more visitors into customers with data-driven optimizations.', image: './assets/images/conversion.jpg', details: 'Using analytics and A/B testing, we identify bottlenecks in your funnel and implement changes like improved CTAs, page speed enhancements, and personalized experiences to boost conversion rates.' },
-      { title: 'Influencer Marketing', desc: 'Leverage influencer partnerships to expand your reach.', image: './assets/images/influencer.jpg', details: 'We identify and collaborate with influencers in your niche for authentic promotions. This includes campaign planning, content guidelines, and performance tracking to amplify brand awareness.' },
-      { title: 'Web Analytics', desc: 'Data-driven insights to optimize your digital strategy.', image: './assets/images/webanalytics.jpg', details: 'Setup and analysis using Google Analytics and other tools to track user behavior, measure campaign effectiveness, and provide actionable insights for continuous improvement.' },
-      { title: 'Local SEO', desc: 'Dominate local search results and attract nearby customers.', image: './assets/images/localseo.jpg', details: 'Optimizing for local searches with Google My Business management, local citations, reviews, and geo-targeted content to drive foot traffic and local leads.' },
-      { title: 'Graphic Design', desc: 'Visually stunning graphics for all your marketing needs.', image: './assets/images/graphics.jpg', details: 'Custom graphics for social media, ads, brochures, and more. We ensure designs align with your brand and communicate messages effectively through visual storytelling.' },
-      { title: 'Digital Strategy', desc: 'Comprehensive digital roadmap tailored to your business goals.', image: './assets/images/digitalstrategy.jpg', details: 'We create holistic strategies encompassing all digital channels, goal setting, timeline planning, and KPI tracking to achieve measurable growth and ROI.' }
-    ];
+    <script src="js/navbar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        loadNavbar();
+      });
+    </script>
 
-    document.addEventListener('DOMContentLoaded', function() {
-      const container = document.querySelector('.services-container');
-      const svgPath = document.getElementById('snake');
-      const svgPathMobile = document.getElementById('snake-mobile');
-      const containerWidth = container.offsetWidth;
-      
-      // Responsive itemHeight and spacing for mobile
-      let itemHeight = 140;
-      let spacing = 100;
-      let extraPadding = 200;
-      if (window.innerWidth <= 768) {
-        itemHeight = 80; // Reduce height for mobile
-        spacing = 10;    // Reduce spacing for mobile
-        extraPadding = 0; // Remove extra space for mobile
-      }
-      // Calculate the last service's bottom position
-      const lastTop = (services.length - 1) * (itemHeight + spacing) + 100;
-      const totalHeight = lastTop + itemHeight + extraPadding;
-      container.parentElement.style.minHeight = totalHeight + 'px';
-      
-      let pathData = '';
-      let firstPoint = true;
-      let previousX = 0;
-      let previousY = 0;
+    <script>
+      const services = [
+        {
+          title: "Web Design",
+          desc: "Custom, responsive websites that convert visitors into customers with stunning UI/UX.",
+          image: "./assets/images/webdesign.jpg",
+          details:
+            "Our web design service focuses on creating visually appealing and user-friendly websites tailored to your brand. We use the latest technologies to ensure responsiveness across all devices, incorporating SEO best practices from the start. This includes custom layouts, interactive elements, and performance optimization for faster load times.",
+        },
+        {
+          title: "SEO Optimization",
+          desc: "Improve your search rankings and drive organic traffic with our proven SEO strategies.",
+          image: "./assets/images/seo.jpg",
+          details:
+            "SEO optimization involves in-depth keyword research, on-page and off-page strategies, technical audits, and content optimization. We help your site rank higher on search engines like Google, increasing visibility and attracting qualified traffic that converts into leads.",
+        },
+                {
+          title: "E-commerce Solutions",
+          desc: "Complete online store setup with seamless shopping experience.",
+          image: "./assets/images/ecommerce.jpg",
+          details:
+            "From platform selection (e.g., Shopify, WooCommerce) to custom integrations, we build secure e-commerce sites with features like payment gateways, inventory management, and user-friendly checkouts to boost online sales.",
+        },
+        {
+          title: "Social Media Marketing",
+          desc: "Engage your audience and build brand loyalty through strategic social media campaigns.",
+          image: "./assets/images/socialmedia.jpg",
+          details:
+            "We craft targeted campaigns on platforms like Facebook, Instagram, and LinkedIn. This includes content creation, audience targeting, analytics tracking, and community management to foster engagement and grow your follower base organically.",
+        },
 
-      let mobilePathData = '';
-      
-      services.forEach((service, index) => {
-        const top = index * (itemHeight + spacing) + 100;
-        const isLeft = index % 2 === 0;
-        const left = isLeft ? '3%' : '57%';
-        const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
-        const y = top + (itemHeight / 2);
-        if (firstPoint) {
-          pathData += `M ${x},${y}`;
-          // For mobile, always use 50% width for x (center)
-          mobilePathData += `M ${containerWidth/2},${y}`;
-          firstPoint = false;
-        } else {
-          const cp1x = previousX + (x - previousX) / 3;
-          const cp1y = previousY;
-          const cp2x = x - (x - previousX) / 3;
-          const cp2y = y;
-          pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
-          // For mobile, vertical line at center
-          if (index < services.length) {
-            mobilePathData += ` L ${containerWidth/2},${y}`;
-          }
-        }
-        previousX = x;
-        previousY = y;
-        
-        const serviceElement = document.createElement('div');
-        serviceElement.className = 'service-item';
-        serviceElement.style.top = `${top}px`;
-        serviceElement.style.left = left;
-        serviceElement.style.animationDelay = `${index * 0.1}s`;
-  serviceElement.style.minHeight = `${itemHeight}px`;
-        
-        // For mobile, dot will be centered at the top; for desktop, keep zig-zag
-        let dotStyle = '';
+        {
+          title: "Website Maintenance & Support",
+          desc: "Keep your website secure, updated, and running smoothly with our maintenance services.",
+          image: "./assets/images/webdesign.jpg",
+          details:
+            "Our website maintenance and support service ensures your site stays secure, fast, and up-to-date. We handle regular software and plugin updates, security monitoring, bug fixes, and data backups. We also provide content updates, performance optimization, and troubleshooting to minimize downtime. With 24/7 support options, we make sure your website delivers a seamless experience for visitors while you focus on growing your business.",
+        },
+
+        {
+          title: "Corporate & Portfolio Design",
+          desc: "Sleek, professional websites for brands and individuals.",
+          image: "./assets/images/ppc.jpg",
+          details:
+            "Our corporate and portfolio website service focuses on creating professional, high-impact sites that represent your brand with authority. We design sleek layouts, highlight achievements, integrate service pages, and ensure responsive design across all devices. Features include team sections, case studies, testimonials, and inquiry forms to build trust and attract clients. Whether for a business or personal portfolio, we make sure your online presence reflects your expertise and credibility.",
+        },
+        {
+          title: "LMS Development",
+          desc: "E-learning platforms designed for schools, institutes, and businesses to deliver courses online.",
+          image: "./assets/images/webanalytics.jpg",
+          details:
+            "Our LMS development service provides feature-rich learning management systems for education and corporate training. We design platforms with course management, user enrollment, assessments, certifications, and progress tracking. The LMS can be customized with interactive modules, multimedia support, and integration with payment gateways or HR systems. This makes it easy to deliver engaging learning experiences and manage training programs at scale.",
+        },
+        {
+          title: "Content Marketing",
+          desc: "Compelling content that tells your brand story and drives engagement.",
+          image: "./assets/images/content.jpg",
+          details:
+            "We develop content strategies including blogs, infographics, videos, and ebooks. Our approach emphasizes storytelling, SEO integration, and distribution across channels to build authority and nurture leads through the sales funnel.",
+        },
+
+        {
+          title: "Brand Identity",
+          desc: "Create a memorable brand that stands out in the digital landscape.",
+          image: "./assets/images/brandidentity.jpg",
+          details:
+            "We design logos, color schemes, typography, and brand guidelines. This service ensures consistent messaging across all touchpoints, helping your brand resonate with your target audience and build long-term recognition.",
+        },
+        {
+          title: "CRM Development & Integration",
+          desc: "Custom CRM solutions to streamline client management, sales, and business operations.",
+          image: "./assets/images/webanalytics.jpg",
+          details:
+            "Our CRM development and integration service helps businesses organize customer data, manage leads, and track sales effectively. We build custom CRM systems or integrate existing ones like Salesforce, Zoho, or HubSpot tailored to your workflow. Features include contact management, sales pipeline tracking, automation, reporting, and third-party tool integrations. This ensures better client relationships, improved efficiency, and data-driven decision making.",
+        },
+
+        {
+          title: "Email Marketing",
+          desc: "Automated email campaigns that nurture leads and drive sales.",
+          image: "./assets/images/email.jpg",
+          details:
+            "We set up automated workflows using tools like Mailchimp, including segmentation, personalized content, and analytics. This helps in lead nurturing, cart abandonment recovery, and customer retention through targeted emails.",
+        },
+        {
+          title: "Mobile App Development",
+          desc: "Native and cross-platform mobile applications for your business.",
+          image: "./assets/images/mobile.jpg",
+          details:
+            "We develop apps for iOS and Android using React Native or native languages. Features include push notifications, offline capabilities, and API integrations to extend your business reach via mobile devices.",
+        },
+        {
+          title: "UI/UX Design",
+          desc: "Intuitive user experiences that keep visitors engaged.",
+          image: "./assets/images/uiux.jpg",
+          details:
+            "Focusing on user research, wireframing, prototyping, and testing, we create intuitive interfaces that enhance usability and satisfaction, reducing bounce rates and increasing conversions.",
+        },
+
+
+        {
+          title: "Influencer Marketing",
+          desc: "Leverage influencer partnerships to expand your reach.",
+          image: "./assets/images/influencer.jpg",
+          details:
+            "We identify and collaborate with influencers in your niche for authentic promotions. This includes campaign planning, content guidelines, and performance tracking to amplify brand awareness.",
+        },
+        {
+          title: "Web Analytics",
+          desc: "Data-driven insights to optimize your digital strategy.",
+          image: "./assets/images/webanalytics.jpg",
+          details:
+            "Setup and analysis using Google Analytics and other tools to track user behavior, measure campaign effectiveness, and provide actionable insights for continuous improvement.",
+        },
+        {
+          title: "Local SEO",
+          desc: "Dominate local search results and attract nearby customers.",
+          image: "./assets/images/localseo.jpg",
+          details:
+            "Optimizing for local searches with Google My Business management, local citations, reviews, and geo-targeted content to drive foot traffic and local leads.",
+        },
+        {
+          title: "Graphic Design",
+          desc: "Visually stunning graphics for all your marketing needs.",
+          image: "./assets/images/graphics.jpg",
+          details:
+            "Custom graphics for social media, ads, brochures, and more. We ensure designs align with your brand and communicate messages effectively through visual storytelling.",
+        },
+        {
+          title: "Digital Strategy",
+          desc: "Comprehensive digital roadmap tailored to your business goals.",
+          image: "./assets/images/digitalstrategy.jpg",
+          details:
+            "We create holistic strategies encompassing all digital channels, goal setting, timeline planning, and KPI tracking to achieve measurable growth and ROI.",
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".services-container");
+        const svgPath = document.getElementById("snake");
+        const svgPathMobile = document.getElementById("snake-mobile");
+        const containerWidth = container.offsetWidth;
+
+        // Responsive itemHeight and spacing for mobile
+        let itemHeight = 140;
+        let spacing = 100;
+        let extraPadding = 200;
         if (window.innerWidth <= 768) {
-          dotStyle = 'left: 50%; top: -18px; transform: translateX(-50%); width: 22px; height: 22px;';
-        } else {
-          const dotPosition = isLeft ? 'left' : 'right';
-          const dotOffset = isLeft ? '-12px' : 'calc(100% - 12px)';
-          dotStyle = `${dotPosition}: ${dotOffset};`;
+          itemHeight = 80; // Reduce height for mobile
+          spacing = 10; // Reduce spacing for mobile
+          extraPadding = 0; // Remove extra space for mobile
         }
-        serviceElement.innerHTML = `
+        // Calculate the last service's bottom position
+        const lastTop = (services.length - 1) * (itemHeight + spacing) + 100;
+        const totalHeight = lastTop + itemHeight + extraPadding;
+        container.parentElement.style.minHeight = totalHeight + "px";
+
+        let pathData = "";
+        let firstPoint = true;
+        let previousX = 0;
+        let previousY = 0;
+
+        let mobilePathData = "";
+
+        services.forEach((service, index) => {
+          const top = index * (itemHeight + spacing) + 100;
+          const isLeft = index % 2 === 0;
+          const left = isLeft ? "3%" : "57%";
+          const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
+          const y = top + itemHeight / 2;
+          if (firstPoint) {
+            pathData += `M ${x},${y}`;
+            // For mobile, always use 50% width for x (center)
+            mobilePathData += `M ${containerWidth / 2},${y}`;
+            firstPoint = false;
+          } else {
+            const cp1x = previousX + (x - previousX) / 3;
+            const cp1y = previousY;
+            const cp2x = x - (x - previousX) / 3;
+            const cp2y = y;
+            pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
+            // For mobile, vertical line at center
+            if (index < services.length) {
+              mobilePathData += ` L ${containerWidth / 2},${y}`;
+            }
+          }
+          previousX = x;
+          previousY = y;
+
+          const serviceElement = document.createElement("div");
+          serviceElement.className = "service-item";
+          serviceElement.style.top = `${top}px`;
+          serviceElement.style.left = left;
+          serviceElement.style.animationDelay = `${index * 0.1}s`;
+          serviceElement.style.minHeight = `${itemHeight}px`;
+
+          // For mobile, dot will be centered at the top; for desktop, keep zig-zag
+          let dotStyle = "";
+          if (window.innerWidth <= 768) {
+            dotStyle =
+              "left: 50%; top: -18px; transform: translateX(-50%); width: 22px; height: 22px;";
+          } else {
+            const dotPosition = isLeft ? "left" : "right";
+            const dotOffset = isLeft ? "-12px" : "calc(100% - 12px)";
+            dotStyle = `${dotPosition}: ${dotOffset};`;
+          }
+          serviceElement.innerHTML = `
           <div class="service-number">${index + 1}</div>
           <div class="service-dot" style="${dotStyle}"></div>
           <h3 class="service-title">${service.title}</h3>
           <p class="service-desc">${service.desc}</p>
         `;
-        
-        serviceElement.addEventListener('click', () => openModal(service));
-        
-        container.appendChild(serviceElement);
+
+          serviceElement.addEventListener("click", () => openModal(service));
+
+          container.appendChild(serviceElement);
+        });
+
+        svgPath.setAttribute("d", pathData);
+        svgPathMobile.setAttribute("d", mobilePathData);
+
+        const pathLength = svgPath.getTotalLength();
+        svgPath.style.strokeDasharray = pathLength;
+        svgPath.style.strokeDashoffset = pathLength;
+
+        const pathLengthMobile = svgPathMobile.getTotalLength();
+        svgPathMobile.style.strokeDasharray = pathLengthMobile;
+        svgPathMobile.style.strokeDashoffset = pathLengthMobile;
+
+        setTimeout(() => {
+          svgPath.style.transition = "stroke-dashoffset 2s ease-in-out";
+          svgPath.style.strokeDashoffset = "0";
+          svgPathMobile.style.transition = "stroke-dashoffset 2s ease-in-out";
+          svgPathMobile.style.strokeDashoffset = "0";
+        }, 500);
+
+        const modal = document.getElementById("serviceModal");
+        const closeBtn = document.getElementById("modalClose");
+
+        closeBtn.onclick = () => {
+          modal.style.display = "none";
+        };
+
+        window.onclick = (event) => {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        };
       });
-      
-      svgPath.setAttribute('d', pathData);
-      svgPathMobile.setAttribute('d', mobilePathData);
-      
-      const pathLength = svgPath.getTotalLength();
-      svgPath.style.strokeDasharray = pathLength;
-      svgPath.style.strokeDashoffset = pathLength;
 
-      const pathLengthMobile = svgPathMobile.getTotalLength();
-      svgPathMobile.style.strokeDasharray = pathLengthMobile;
-      svgPathMobile.style.strokeDashoffset = pathLengthMobile;
-      
-      setTimeout(() => {
-        svgPath.style.transition = 'stroke-dashoffset 2s ease-in-out';
-        svgPath.style.strokeDashoffset = '0';
-        svgPathMobile.style.transition = 'stroke-dashoffset 2s ease-in-out';
-        svgPathMobile.style.strokeDashoffset = '0';
-      }, 500);
+      function openModal(service) {
+        const modal = document.getElementById("serviceModal");
+        document.getElementById("modalTitle").textContent = service.title;
+        document.getElementById("modalDetails").textContent = service.details;
+        document.getElementById("modalImage").src = service.image;
 
-      const modal = document.getElementById('serviceModal');
-      const closeBtn = document.getElementById('modalClose');
+        const benefits = [
+          "Increase brand visibility",
+          "Drive more conversions",
+          "Enhance customer engagement",
+          "Improve SEO rankings",
+        ];
 
-      closeBtn.onclick = () => {
-        modal.style.display = 'none';
-      };
+        const benefitList = document.getElementById("benefitPoints");
+        benefitList.innerHTML = "";
 
-      window.onclick = (event) => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      };
-    });
+        benefits.forEach((point) => {
+          const li = document.createElement("li");
+          li.textContent = point;
+          benefitList.appendChild(li);
+        });
 
-    function openModal(service) {
-      const modal = document.getElementById('serviceModal');
-      document.getElementById('modalTitle').textContent = service.title;
-      document.getElementById('modalDetails').textContent = service.details;
-      document.getElementById('modalImage').src = service.image;
-      
-      const benefits = [
-        "Increase brand visibility",
-        "Drive more conversions",
-        "Enhance customer engagement",
-        "Improve SEO rankings"
-      ];
-      
-      const benefitList = document.getElementById('benefitPoints');
-      benefitList.innerHTML = '';
-      
-      benefits.forEach(point => {
-        const li = document.createElement('li');
-        li.textContent = point;
-        benefitList.appendChild(li);
-      });
-      
-      const marqueeContent = document.getElementById('marqueeContent');
-      marqueeContent.innerHTML = '';
-      
-      const refs = [
-        { img: './assets/images/worksankatservice1.png', url: 'https://example1.com' },
-        { img: './assets/images/mezbancard.jpg', url: 'https://example2.com' },
-        { img: './assets/images/ammcard.png', url: 'https://example3.com' },
-        { img: './assets/images/worksankatcard2.png', url: 'https://example4.com' }
-      ];
-      
-      refs.forEach(ref => {
-        const a = document.createElement('a');
-        a.href = ref.url;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        const img = document.createElement('img');
-        img.src = ref.img;
-        img.alt = 'Reference Image';
-        a.appendChild(img);
-        marqueeContent.appendChild(a);
-      });
-      
-      modal.style.display = 'block';
-    }
+        const marqueeContent = document.getElementById("marqueeContent");
+        marqueeContent.innerHTML = "";
 
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading footer:', error));
-  </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C4LN44JG9W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        const refs = [
+          {
+            img: "./assets/images/worksankatservice1.png",
+            url: "https://example1.com",
+          },
+          {
+            img: "./assets/images/mezbancard.jpg",
+            url: "https://example2.com",
+          },
+          { img: "./assets/images/ammcard.png", url: "https://example3.com" },
+          {
+            img: "./assets/images/worksankatcard2.png",
+            url: "https://example4.com",
+          },
+        ];
 
-  gtag('config', 'G-C4LN44JG9W');
-</script>
-</body>
+        refs.forEach((ref) => {
+          const a = document.createElement("a");
+          a.href = ref.url;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          const img = document.createElement("img");
+          img.src = ref.img;
+          img.alt = "Reference Image";
+          a.appendChild(img);
+          marqueeContent.appendChild(a);
+        });
+
+        modal.style.display = "block";
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C4LN44JG9W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C4LN44JG9W");
+    </script>
+  </body>
 </html>
