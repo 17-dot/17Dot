@@ -117,14 +117,14 @@
         cursor: pointer;
       }
 
-      @media (max-width: 768px) {
+@media (max-width: 768px) {
         .service-item {
           text-align: center;
           width: 80%;
           left: 10% !important;
-          padding: 0px 0px 0px 0px;
+          padding: 25px 25px 25px 25px;
           position: relative;
-          margin-bottom: 2px !important; /* Further reduced gap between services on mobile */
+          margin-bottom: 80px !important; /* Increased gap between services on mobile */
           opacity: 1; /* Make visible on mobile */
           transform: translateY(0);
           animation: none;
@@ -176,7 +176,7 @@
           font-size: 1rem;
         }
         .services-container {
-          min-height: 6800px; /* Adjust height on mobile */
+          /* min-height adjusted dynamically by script */
         }
         .snake-path {
           display: none; /* Hide snake path on mobile */
@@ -508,7 +508,7 @@
       .main-section-intro p {
         font-size: 1.1rem;
         line-height: 1.7;
-        margin-bottom: 0;
+        margin-bottom: 40;
         color: #555;
       }
       .main-section-intro span {
@@ -532,7 +532,6 @@
         }
       }
     </style>
-    <title>Contact Us - Servora</title>
   </head>
   <body>
     <!--Navbar!-->
@@ -578,7 +577,6 @@
             max-width: 1140px;
             margin: 0 auto;
             position: relative;
-            min: height 6800px;
           "
         >
           <!-- The snake path with gradient and glow effect -->
@@ -821,13 +819,7 @@
           details:
             "Custom graphics for social media, ads, brochures, and more. We ensure designs align with your brand and communicate messages effectively through visual storytelling.",
         },
-        {
-          title: "Digital Strategy",
-          desc: "Comprehensive digital roadmap tailored to your business goals.",
-          image: "./assets/images/digitalstrategy.jpg",
-          details:
-            "We create holistic strategies encompassing all digital channels, goal setting, timeline planning, and KPI tracking to achieve measurable growth and ROI.",
-        },
+        
       ];
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -835,20 +827,29 @@
         const svgPath = document.getElementById("snake");
         const svgPathMobile = document.getElementById("snake-mobile");
         const containerWidth = container.offsetWidth;
+        const isMobile = window.innerWidth <= 768;
 
         // Responsive itemHeight and spacing for mobile
         let itemHeight = 140;
         let spacing = 100;
         let extraPadding = 200;
-        if (window.innerWidth <= 768) {
-          itemHeight = 80; // Reduce height for mobile
-          spacing = 10; // Reduce spacing for mobile
-          extraPadding = 0; // Remove extra space for mobile
+        const marginBottomMobile = 20;
+        if (isMobile) {
+          itemHeight = 100; // Adjusted for content height
+          spacing = 0; // No additional spacing, use margin
+          extraPadding = 100; // Initial padding
         }
-        // Calculate the last service's bottom position
-        const lastTop = (services.length - 1) * (itemHeight + spacing) + 100;
-        const totalHeight = lastTop + itemHeight + extraPadding;
-        container.parentElement.style.minHeight = totalHeight + "px";
+        // Calculate the total height
+        let totalHeight;
+        if (isMobile) {
+          totalHeight = extraPadding + services.length * itemHeight + (services.length - 1) * marginBottomMobile;
+          container.style.minHeight = totalHeight + "px";
+        } else {
+          const lastTop = (services.length - 1) * (itemHeight + spacing) + 100;
+          const desktopTotalHeight = lastTop + itemHeight + extraPadding;
+          container.parentElement.style.minHeight = desktopTotalHeight + "px";
+          totalHeight = desktopTotalHeight;
+        }
 
         let pathData = "";
         let firstPoint = true;
@@ -856,45 +857,57 @@
         let previousY = 0;
 
         let mobilePathData = "";
+        let mobileY = 0;
 
         services.forEach((service, index) => {
-          const top = index * (itemHeight + spacing) + 100;
-          const isLeft = index % 2 === 0;
-          const left = isLeft ? "3%" : "57%";
-          const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
-          const y = top + itemHeight / 2;
-          if (firstPoint) {
-            pathData += `M ${x},${y}`;
-            // For mobile, always use 50% width for x (center)
-            mobilePathData += `M ${containerWidth / 2},${y}`;
-            firstPoint = false;
+          let top = 0;
+          let left = "";
+          if (!isMobile) {
+            top = index * (itemHeight + spacing) + 100;
+            const isLeft = index % 2 === 0;
+            left = isLeft ? "3%" : "57%";
+            const x = isLeft ? containerWidth * 0.03 : containerWidth * 0.57;
+            const y = top + itemHeight / 2;
+            if (firstPoint) {
+              pathData += `M ${x},${y}`;
+              firstPoint = false;
+            } else {
+              const cp1x = previousX + (x - previousX) / 3;
+              const cp1y = previousY;
+              const cp2x = x - (x - previousX) / 3;
+              const cp2y = y;
+              pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
+            }
+            previousX = x;
+            previousY = y;
           } else {
-            const cp1x = previousX + (x - previousX) / 3;
-            const cp1y = previousY;
-            const cp2x = x - (x - previousX) / 3;
-            const cp2y = y;
-            pathData += ` C ${cp1x},${cp1y} ${cp2x},${cp2y} ${x},${y}`;
-            // For mobile, vertical line at center
-            if (index < services.length) {
-              mobilePathData += ` L ${containerWidth / 2},${y}`;
+            // For mobile path - connect centers accounting for margin
+            if (index === 0) {
+              mobileY = extraPadding + itemHeight / 2;
+              mobilePathData += `M ${containerWidth / 2},${mobileY}`;
+            } else {
+              mobileY += itemHeight + marginBottomMobile;
+              mobilePathData += ` L ${containerWidth / 2},${mobileY}`;
             }
           }
-          previousX = x;
-          previousY = y;
 
           const serviceElement = document.createElement("div");
           serviceElement.className = "service-item";
-          serviceElement.style.top = `${top}px`;
-          serviceElement.style.left = left;
-          serviceElement.style.animationDelay = `${index * 0.1}s`;
+          if (!isMobile) {
+            serviceElement.style.position = "absolute";
+            serviceElement.style.top = `${top}px`;
+            serviceElement.style.left = left;
+            serviceElement.style.animationDelay = `${index * 0.1}s`;
+          }
           serviceElement.style.minHeight = `${itemHeight}px`;
 
           // For mobile, dot will be centered at the top; for desktop, keep zig-zag
           let dotStyle = "";
-          if (window.innerWidth <= 768) {
+          if (isMobile) {
             dotStyle =
               "left: 50%; top: -18px; transform: translateX(-50%); width: 22px; height: 22px;";
           } else {
+            const isLeft = index % 2 === 0;
             const dotPosition = isLeft ? "left" : "right";
             const dotOffset = isLeft ? "-12px" : "calc(100% - 12px)";
             dotStyle = `${dotPosition}: ${dotOffset};`;
@@ -911,7 +924,9 @@
           container.appendChild(serviceElement);
         });
 
-        svgPath.setAttribute("d", pathData);
+        if (!isMobile) {
+          svgPath.setAttribute("d", pathData);
+        }
         svgPathMobile.setAttribute("d", mobilePathData);
 
         const pathLength = svgPath.getTotalLength();
@@ -923,8 +938,10 @@
         svgPathMobile.style.strokeDashoffset = pathLengthMobile;
 
         setTimeout(() => {
-          svgPath.style.transition = "stroke-dashoffset 2s ease-in-out";
-          svgPath.style.strokeDashoffset = "0";
+          if (!isMobile) {
+            svgPath.style.transition = "stroke-dashoffset 2s ease-in-out";
+            svgPath.style.strokeDashoffset = "0";
+          }
           svgPathMobile.style.transition = "stroke-dashoffset 2s ease-in-out";
           svgPathMobile.style.strokeDashoffset = "0";
         }, 500);
